@@ -1,0 +1,14 @@
+name=PROJECT ECHO - Unified B42.21
+id=ProjectEcho
+modversion=2.0.2-local
+versionMin=42.21
+author=PROJECT ECHO community / original module authors
+description=PROJECT ECHO story and fixes, Phlea Market, Viewpoint Interface (Russian), NeatUI translations, admin-menu UI filter. Consolidated local B42.21 test build. Back up world and previous local mods.
+poster=poster.png
+require=TheMission42,Viewpoint,phunmart2
+loadModAfter=TheMission42,Viewpoint,phunmart2,ProximityInventory,NeatUI_Framework,NeatUI_Equipment,Neat_Crafting,Neat_Building,Neat_Building_Railings,ItemStoriesB42,ItemStoriesMPFix
+javaJarFile=media/java/client/ViewpointUI.jar
+javaPkgName=vpui
+ZBVersionMin=2.3.0
+pack=phleamarket
+tiledef=phleamarket 1425

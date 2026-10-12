@@ -1,0 +1,851 @@
+{
+  "schema": 1,
+  "channel": "stable",
+  "version": "0.1.8",
+  "updatedAt": "2026-10-12",
+  "title": "PROJECT ECHO - local mods 0.1.8",
+  "notes": "Official signed local mods: ProjectEcho",
+  "gameBuild": "42.21",
+  "server": {
+    "name": "NO SIGNAL",
+    "host": "",
+    "port": 16261,
+    "enabled": false
+  },
+  "files": [
+    {
+      "path": "config/echo-settings.json",
+      "url": "files/config/echo-settings.json",
+      "size": 7573,
+      "sha256": "5829a35bd118164480b1a79352aeb41c8afec8bf5a411346fa9523cf83e61c92"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/java/client/ViewpointUI.jar",
+      "url": "files/mods/ProjectEcho/42/media/java/client/ViewpointUI.jar",
+      "size": 23589,
+      "sha256": "b74284dbdcfa1f99882cb526cc65dd8c3d80bb7b5f0cb3de61730408bf7f0648"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/PZ42_PROJECT_ECHO_CleanAdmin_F9.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/PZ42_PROJECT_ECHO_CleanAdmin_F9.lua",
+      "size": 3415,
+      "sha256": "944fa635c42d6e83dd1694d7fddbbefb1525e624f07adb2e21abef33c68fbd41"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ProjectEcho_Client.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ProjectEcho_Client.lua",
+      "size": 7127,
+      "sha256": "73546a847d2052bdcb637975e00b6ff1f0592c0622b41e5a339b24672afa7f88"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ProjectEcho_DebugUI.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ProjectEcho_DebugUI.lua",
+      "size": 8600,
+      "sha256": "4952e9165890eefe3ec47366965ee7f94ecb600ac394d03e262536c385bcb3aa"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ProjectEcho_JournalUI.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ProjectEcho_JournalUI.lua",
+      "size": 12585,
+      "sha256": "21003e541d69b75b66c00bd0a264042b5fb6413e2905acaf26d4c31fdcd21979"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ProjectEcho_UICompat.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ProjectEcho_UICompat.lua",
+      "size": 4169,
+      "sha256": "dd17ecff1aed949be803c6b4c37c1f90b63b2219f5cc47b570a6476176b85f27"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/StoryItemSpawnerManager.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/StoryItemSpawnerManager.lua",
+      "size": 48031,
+      "sha256": "326d0bf3aa9ff8fb6b92d0ee80968fa0fb01f2e8805a7c19ba1df15def60154a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/API.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/API.lua",
+      "size": 2720,
+      "sha256": "cc38eb178b3f7401cc88cddf39330d59b46f7e92606fc663026d08cdf1512ca3"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Bridge.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Bridge.lua",
+      "size": 3851,
+      "sha256": "b8897763164a0e27b5009d1c595f5877f1aee500e93e763a85c40334eca032c5"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/BuildMode.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/BuildMode.lua",
+      "size": 17094,
+      "sha256": "dfb49f4739ae6708fe2f54b06d311d9fbfdfffcbaadf80e4e8f35dbdcd31486a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/DestroyMode.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/DestroyMode.lua",
+      "size": 15830,
+      "sha256": "df31dcfb6645d636a686a0fbe03cc04ef71b3d1056736eecdde44c23355cde78"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/MoveMode.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/MoveMode.lua",
+      "size": 15823,
+      "sha256": "303c8ca97a9d7ed5c47e308bc38b0fd1f35cc70d5c04735fc705c69960b3ae1e"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/PlaceMode.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/PlaceMode.lua",
+      "size": 13210,
+      "sha256": "4eaffe4b3c2a1b4b3921db4921f8e06f8eda60a93edb20509599a0d041c2d071"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/Preview.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Building/Preview.lua",
+      "size": 10833,
+      "sha256": "4710f856b7f495f8fe2d3c2112d4ce07120af191391d732fe74d0894907a8860"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Controller.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Controller.lua",
+      "size": 29956,
+      "sha256": "244882d0bb94121eb124db39e588372c65909a60b81564e9380006959e1b2cd7"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Core.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Core.lua",
+      "size": 4582,
+      "sha256": "04b2008fa3f8993615ef98f5cc95f7da12b3ab3a94075674217fb6f50f148367"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Crafting/Recipes.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Crafting/Recipes.lua",
+      "size": 6515,
+      "sha256": "76329ced84504ab271f826fd4a7485caa4674b630a6c54940784914e63809e10"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/Hotbar.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/Hotbar.lua",
+      "size": 4962,
+      "sha256": "83f62d69d07ab1d6e6890f8cb927a2fbe4dc6a77509c101b4a737abf9f397e79"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/StatusHUD.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/StatusHUD.lua",
+      "size": 5041,
+      "sha256": "bf74b8c2e25afa52053550f668c975e95b3d494075c27d7067282ca9f92e95cc"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/VanillaHUD.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/VanillaHUD.lua",
+      "size": 6904,
+      "sha256": "665f6f692d09d545f1d03ed2307543d456d956d46bda90c7a1de839a1ec76de6"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/VitalsHUD.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/VitalsHUD.lua",
+      "size": 3675,
+      "sha256": "dfc05d0f1f39fa379761f4ca4ebc963c3b6b9e8c11d0a6e12147c45687241895"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/WeaponHUD.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/HUD/WeaponHUD.lua",
+      "size": 5555,
+      "sha256": "e295f69dec86d06f8be88a6bb07095b1bc6fa89286460bbe13f0d5bc6347e24f"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Input.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Input.lua",
+      "size": 4178,
+      "sha256": "930b10de7bd6566387f7af023f2e60c21c0bd71887a015bd2bc514a23846332a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Executor.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Executor.lua",
+      "size": 1636,
+      "sha256": "42480fe78ea0ff7a5eea7068ac01de3b4ce8b85ae0f18889cbfdb2d63f5fdceb"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/NPC.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/NPC.lua",
+      "size": 11794,
+      "sha256": "5c9144923922a07a2116f44df1f205c890a9317fbec797513335fd8553a36cff"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Providers.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Providers.lua",
+      "size": 10886,
+      "sha256": "8f79e07a36893e22602917b0bea15466235db4b41e43a188b71658474b26beed"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/QuickLoot.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/QuickLoot.lua",
+      "size": 21537,
+      "sha256": "97502bb148758eb02aab29d98f555e2f97f88f6ccd1c5c6cdc71c4a4b8d6c4fc"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Registry.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Registry.lua",
+      "size": 4327,
+      "sha256": "31a8463eac065edf9da09fb7312ca8560fcd164121ec0e08416131f7c18f4581"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Target.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Interaction/Target.lua",
+      "size": 4625,
+      "sha256": "fdf6475c210e842ef63270695ac38eca6fb1cc19b67ea0ce50938e951ebc38fe"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Actions.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Actions.lua",
+      "size": 12983,
+      "sha256": "0768b438ae4574e6a6bfb9edff5279094baf6bffb259cfb41b372eb2f2550291"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Filter.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Filter.lua",
+      "size": 4165,
+      "sha256": "f9dfd20977bc458eba0dfef7924fe6c66ecb7953b06c02850930d0f9316327a0"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Gear.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Gear.lua",
+      "size": 12463,
+      "sha256": "24aad6681dd3b2f5aeccdf502971eb3441483c936747821b013fe1cd7226b881"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Model.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Inventory/Model.lua",
+      "size": 6837,
+      "sha256": "a8234eda2e25ef81a4c2190abe15c84459f895ca6238646b12acfa230cf32eff"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Legacy.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Legacy.lua",
+      "size": 13325,
+      "sha256": "455191d9708f201bb4d9ac1decb998ec64781bd8ab85f50bbf2dce161f2f0cba"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Main.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Main.lua",
+      "size": 4187,
+      "sha256": "b79f94193810beb74a32e90cecffc47ae8e0d10602c011182907ca3921a7f634"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/AdminTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/AdminTab.lua",
+      "size": 13581,
+      "sha256": "2f0a35deb5455d72b529f2dda37cf30fcdabe90992719e5f5237900113e62b24"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/BuildTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/BuildTab.lua",
+      "size": 2287,
+      "sha256": "246bbcb259c5330a91f9cc9b5148a35601811fb005d06006321fabaf73d8f9ff"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/CharacterTabs.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/CharacterTabs.lua",
+      "size": 17164,
+      "sha256": "1456e99f23e3b833553c0b75b5f1d72745534f5a627477a2c3a220653a9da19c"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/CraftingTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/CraftingTab.lua",
+      "size": 4747,
+      "sha256": "972a3150074f2274b32e11d604ef471abdf8d2fa08a4e60a05e5644ee7fa0534"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/GearPanel.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/GearPanel.lua",
+      "size": 22364,
+      "sha256": "c74c04965c72854cf84eb54d9575c314aff9468ad9031560f73fe6e499e6f12e"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/HealthTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/HealthTab.lua",
+      "size": 20540,
+      "sha256": "811504591da81a2d56f672d086e3df08ad9b0a27b60517caf181a731e6ff50c3"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/InventoryTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/InventoryTab.lua",
+      "size": 58085,
+      "sha256": "783e1bc19645da316f642038d9917592a70c9c67f3bd062667b64091ae0171ad"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/RecipeBrowser.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/RecipeBrowser.lua",
+      "size": 18574,
+      "sha256": "6659cfd0c85a76ba5bed7d68f0f644018ff123759ce0313fda891b262910f271"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/VehicleTab.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Screens/VehicleTab.lua",
+      "size": 14183,
+      "sha256": "ce99c2c6c240c4ee22f7bbca0fb930df036275913a445a26c0db8ca57d2aeceb"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Settings.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Settings.lua",
+      "size": 8875,
+      "sha256": "22d1c79eeac85e1d6209da0d2cccb7ee2c12a97b8cd997858da633303347b214"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Text.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Text.lua",
+      "size": 10698,
+      "sha256": "ed81b788e9b0855b2abc6bba70a1bf31803cdc9f05374360eb515dc60e19eacb"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/ChatStyle.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/ChatStyle.lua",
+      "size": 8767,
+      "sha256": "f822d2c1696ce0702c506e7bb8a4948235d350f3aee52ada15478ba1d1b06bc0"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/DeviceMedia.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/DeviceMedia.lua",
+      "size": 2880,
+      "sha256": "5c919ad8510ae63befd773efe6f61e2b9fb3d4a5a803527d2a54b9349c295472"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/PauseCursor.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/PauseCursor.lua",
+      "size": 1956,
+      "sha256": "2e1489e6c073a114c7eb934753adf978af1eeb5ea38d41952cdf96f39e2c7d00"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/RadialAim.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/RadialAim.lua",
+      "size": 6341,
+      "sha256": "2dae573d3e3f125b0a551f156cb726327607849e63d3227e9712a2df0764eaf0"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Region.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Region.lua",
+      "size": 22292,
+      "sha256": "14a280312413318f36703f3aac5e71042a9ccef7c0c8164eed7705aa57cbccc1"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Screen.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Screen.lua",
+      "size": 35410,
+      "sha256": "d6368485951cb8f633674df9c9a3fa707c30ea0e41469223dff439df2f6d2e0a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Theme.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Theme.lua",
+      "size": 3175,
+      "sha256": "d614819dcb3132c9e90b4b96e33b33bca890460f6aa68ea8c89d9912be368d23"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/ToggleUI.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/ToggleUI.lua",
+      "size": 6944,
+      "sha256": "cd3e048353536236b65632f6fc485576443a590e4083c8838886073e71e31b82"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Widgets.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/UI/Widgets.lua",
+      "size": 15789,
+      "sha256": "ad188800b08d6459f6136b1978e9132be1b831030b7e790e9c1ee4364ae6bd50"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/ViewpointUI/Util/Harvest.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/ViewpointUI/Util/Harvest.lua",
+      "size": 3675,
+      "sha256": "280c9af00782dcbfdb39bd800d6ca416e96a15ab0ad2051e2738ac4be83b6033"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/zz_ProjectEcho_HideAdminContext.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/zz_ProjectEcho_HideAdminContext.lua",
+      "size": 4256,
+      "sha256": "5dd649efe150db4adbf40a27d1cccc8d3a4c054c617362951dc53703ff5cd3d0"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/zzz_PROJECT_ECHO_DogsDebug_NOHOVER_V4.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/zzz_PROJECT_ECHO_DogsDebug_NOHOVER_V4.lua",
+      "size": 3325,
+      "sha256": "99cb2021e91de72cd6645d81bc4e9e3c4d9447f454b44973c9d4e19b917b4693"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/Items/Distributions_newMaps.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/Items/Distributions_newMaps.lua",
+      "size": 2639,
+      "sha256": "c4ff642916dab3bcb7b693a3a204461d1854b810cc92939fef6b75de5f916035"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/ProjectEcho_CryOfFearAdapter.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/ProjectEcho_CryOfFearAdapter.lua",
+      "size": 4059,
+      "sha256": "dc4954aba0ef093446d55386bc87f2ca06d2265ebd90e56a615542fbcd294b1c"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/ProjectEcho_PhunMart_Server.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/ProjectEcho_PhunMart_Server.lua",
+      "size": 4051,
+      "sha256": "616c905447ad9cd35a730f4eba5f75ee6a968bef63d6d90c7e81bb5f7216d4a2"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/ProjectEcho_ProgressGuard.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/ProjectEcho_ProgressGuard.lua",
+      "size": 8806,
+      "sha256": "e6e0937fb74e3f1633d6b41dc65fd5b2f19cdcec6c54c2ef97563ac5bc33924d"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/ProjectEcho_Server.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/ProjectEcho_Server.lua",
+      "size": 74122,
+      "sha256": "08d46b95d61d7acda323e2798aba0992ebc8a587ad74b7b96c0e24af26d24eea"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/ProjectEcho_SpecialEncounters_Server.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/ProjectEcho_SpecialEncounters_Server.lua",
+      "size": 15005,
+      "sha256": "f1184c30e23157e8bfcfe3898b233f307efb76c044a127a23424c251e6a22127"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/RM_ItemStoriesServerGuard.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/RM_ItemStoriesServerGuard.lua",
+      "size": 2022,
+      "sha256": "9d11206481405e6ce821391739a43c4f3ff4622818778117852c34636b42ced2"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/server/TCLootControl.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/server/TCLootControl.lua",
+      "size": 14868,
+      "sha256": "6378a365b3d31a561002bc21fb5ba91cc701d34458e0e274d1c41dbffc71adc6"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/AMC_AquaConfig.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/AMC_AquaConfig.lua",
+      "size": 2830,
+      "sha256": "f9aacd08807e86edb8bf39e3371a6c47eb1cc94fa9bfc5e712260500576ca357"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/BackpackCapacityOverride.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/BackpackCapacityOverride.lua",
+      "size": 3967,
+      "sha256": "701bb996026090e1d62a6f58443adb026c6d7a4d47fbf28fa2f38b5c8548eca9"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/Definitions/ContainerButtonIconsCTP.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/Definitions/ContainerButtonIconsCTP.lua",
+      "size": 1920,
+      "sha256": "b774a89eb559540043ee552bf1fdd684ae6ce1d8d563a16fd71cb94fbe19be9a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/Definitions/ContainerButtonIconsPert.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/Definitions/ContainerButtonIconsPert.lua",
+      "size": 826,
+      "sha256": "f9caa7946f4730312f11d49cf42e422e54b87f0de4ddce5d48dcbf88b360e5ab"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ItemStoriesMPFix.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ItemStoriesMPFix.lua",
+      "size": 18131,
+      "sha256": "6c76a89538f59e612971b9dc74fac67b34d5f3447e13f6bc8c446e398a0a6c81"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/Jukebox/Utility.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/Jukebox/Utility.lua",
+      "size": 68600,
+      "sha256": "c84f5e361bd0eeb45a4ab3ea4f789feb01ce044493ed53f3febc45b9b411b10b"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/NPCs/TombWardrobe_BodyLocations.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/NPCs/TombWardrobe_BodyLocations.lua",
+      "size": 6741,
+      "sha256": "c794fb3056456a81ff55422882fbbc80f6d1ffa782159242627368addefe3ac3"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/PZ42_GunworksDeferredGuard.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/PZ42_GunworksDeferredGuard.lua",
+      "size": 1946,
+      "sha256": "aa7a24f8a9d0c09a16c30dcb931be0a471cf9c134e030511175c83dfcf6e0629"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/PZ42_SpecialLootCallbackGuard.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/PZ42_SpecialLootCallbackGuard.lua",
+      "size": 1239,
+      "sha256": "a0725dcdd717be5b3e3928dfb5559f176da8e81deef87cd0d1d60f11c693f773"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_Core.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_Core.lua",
+      "size": 13691,
+      "sha256": "829ca7344af61ba492f951da3f405083f7f51d698b3214be9d2a91ba45fffbd8"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_JournalData.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_JournalData.lua",
+      "size": 8769,
+      "sha256": "ffe5ba60d96982b53b6ae08bba4d27bdc9b76f29fecefe4ebba386dd0c71bf30"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_Missions.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_Missions.lua",
+      "size": 86715,
+      "sha256": "2a2df5224bf6adef4bb785f2c9e7524e3edc533ab9ce6ac06217f795cc2c5691"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_RewardTiers.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_RewardTiers.lua",
+      "size": 4624,
+      "sha256": "b4fd2313c5efb9b471d204355a0319150bc24ee652b859147c0162cc351a333a"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_SpecialEncounters.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_SpecialEncounters.lua",
+      "size": 2025,
+      "sha256": "b11b056cd7073b468d9b2e77a0f5d763584f03e85d5d14a080a1ddb5ed93dbdd"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/ProjectEcho_StoryEnhancements.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/ProjectEcho_StoryEnhancements.lua",
+      "size": 1607,
+      "sha256": "c1940f5b275e7f54eb6ac615ba56db3c274b6e441b3be4115203fc9802ec29d2"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/TC_CassetteCase.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/TC_CassetteCase.lua",
+      "size": 1572,
+      "sha256": "8c17f5c6ba85a7cabff2c02754c3454d67e47e1651a118e164bb6c0628fb0e16"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/TM_CDCarryingCase.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/TM_CDCarryingCase.lua",
+      "size": 1567,
+      "sha256": "2959eff974b037e512167fc259213dc937933948c3f6f54e299614c2f65170ff"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/TraitsLogic/ETW_ItemTraits.lua",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/TraitsLogic/ETW_ItemTraits.lua",
+      "size": 39216,
+      "sha256": "0f8bfc0c3b800cf8b94a77d386ecd20b02ff19f41f79ff0fb5ce5b7139d8a8cc"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/Translate/EN/UI.json",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/Translate/EN/UI.json",
+      "size": 80657,
+      "sha256": "af1c0ce66eaba83ec2bde787fdcbf286cc56935325ee7c0a0c52ac04f7d6b3d5"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/shared/Translate/RU/UI.json",
+      "url": "files/mods/ProjectEcho/42/media/lua/shared/Translate/RU/UI.json",
+      "size": 90074,
+      "sha256": "7b8e0fc65eb25dc13e2847dc70df3a02c98b15196d54001bbad6837afe6968df"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/MDXmwp_weapons.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/MDXmwp_weapons.txt",
+      "size": 38546,
+      "sha256": "7b90f07a144dc50f3953f81c87c94d68388126b7cbfdfad404429b67b0beec56"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/MWP_Weapons.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/MWP_Weapons.txt",
+      "size": 82860,
+      "sha256": "a0bb188ddf8fd50618350efeb24c2bda8ac88f6e36bb9469aa1b437b69be91a8"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/ProjectEcho_Currency.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/ProjectEcho_Currency.txt",
+      "size": 1856,
+      "sha256": "35c86e11802e10ed78a83d688e851478244218b9f6ebd2e4099cf2e5e9d393f6"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/TCTrueModel.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/TCTrueModel.txt",
+      "size": 19648,
+      "sha256": "0b7da266699a95be7f1cc438adcd01489376a4d504f86841c605487d02eea2c8"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/items_forest_camo.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/items_forest_camo.txt",
+      "size": 18508,
+      "sha256": "189a9904249d712d49c369c2b53f217491aa6bb2b43cfeb966f162628fca388d"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/items_swat_uniform.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/items_swat_uniform.txt",
+      "size": 22515,
+      "sha256": "6a9b290c3e88d0416e591a376c7022553ce2a55db8bf570efe4cdb3e260b782e"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/models_swat_uniform.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/models_swat_uniform.txt",
+      "size": 403,
+      "sha256": "b69895528812394742ede43052ebd1fb689b71583a47dd6b99df78d93d860ea3"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/recipes/hgo_recipes_smoking.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/recipes/hgo_recipes_smoking.txt",
+      "size": 19303,
+      "sha256": "25617582bb91ffb3c93a0b4a578f1b3cfb6d0c4b155e7d2d27234269c2d19b7e"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/recipes_forest_camo.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/recipes_forest_camo.txt",
+      "size": 13552,
+      "sha256": "6f87f3bdc73b17bb596b9ebbc9c8c685eb49ae23108da37a98a0dad1b057a346"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/scripts/recipes_swat_uniform.txt",
+      "url": "files/mods/ProjectEcho/42/media/scripts/recipes_swat_uniform.txt",
+      "size": 16891,
+      "sha256": "d423cfcd726d0e726393cca72ca22fd5957465c17fe6b07c9ba5d8d5ca4bc253"
+    },
+    {
+      "path": "mods/ProjectEcho/42/mod.info",
+      "url": "files/mods/ProjectEcho/42/mod.info",
+      "size": 718,
+      "sha256": "cedb303fb3f10bdc18be383be1d4ae7d7669884fe5789eae2686f0424f3b7c0f"
+    },
+    {
+      "path": "mods/ProjectEcho/42/poster.png",
+      "url": "files/mods/ProjectEcho/42/poster.png",
+      "size": 2744,
+      "sha256": "57ce37926754e133647c9ef0a379299c82c67e855ad9b8532e7ffd72adbf24ca"
+    },
+    {
+      "path": "mods/ProjectEcho/README_RU_TEXTFIX.txt",
+      "url": "files/mods/ProjectEcho/README_RU_TEXTFIX.txt",
+      "size": 343,
+      "sha256": "887d81a95a0cd7999ed5f677bffcbddf5b02a79b5bbe8c7c28a2829e75d47003"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/admin_listings.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/admin_listings.lua",
+      "size": 14244,
+      "sha256": "cfc0206c6551054893c4ce066f439feb5de982565db4244bee3dc7e1e06e8bac"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/commands.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/commands.lua",
+      "size": 4733,
+      "sha256": "05c4add945b889dfa52fb12ddbefe16adb0820749631a8a0a2462abf06b6cb4f"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/modes.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/modes.lua",
+      "size": 38344,
+      "sha256": "3bb5841e46a84e5a6c8f26b35f1c1f5b4ce4a12ca2a9cefc9636b9995a4486dc"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/ui.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/client/PhleaMarket_Client/ui.lua",
+      "size": 33007,
+      "sha256": "a9c170011ad133b85c8aa40619c248763b36ef9aeea1e199fbcc6086dfec7ed7"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/commands.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/commands.lua",
+      "size": 26462,
+      "sha256": "10dc017959c5291066ab1efe1a820aebd2d9a7e3f87447e448e8c5c1b9614408"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/events.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/events.lua",
+      "size": 4020,
+      "sha256": "682628f0707a9057cc40f7c5ee2a109190c84cba3424358062f9f0e0078421cd"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/simulated.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/simulated.lua",
+      "size": 13953,
+      "sha256": "9ede9995f732adf17ffe54d17a4b00e91c8b8573ce061e39f42dc9a0070e2652"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/store.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/server/PhleaMarket_Server/store.lua",
+      "size": 17381,
+      "sha256": "ce0879826efd851c6da3e97f10f58319fa7851fef51d363391d2df319b490eac"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/chunking.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/chunking.lua",
+      "size": 4644,
+      "sha256": "7c92828b8c1731f302f617bb6dc4cff5983cfb0789e3462a40cc59e6ed016a70"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/commands.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/commands.lua",
+      "size": 1810,
+      "sha256": "9289e1b481b491183a07fa1788e78d4bc2b74a9fd75cf74f5632f4b5acbe39c4"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/core.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/core.lua",
+      "size": 31416,
+      "sha256": "3f43bb5f3eb576f24f070badce9bfa42ed6548b7fec643e59722e1dfd236360c"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/defaults/shops.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/defaults/shops.lua",
+      "size": 1782,
+      "sha256": "bc25209a548cb6a8f2a1c2745c905d08bee4a8730a03dc65b6855baef8eaa186"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/item_snapshot.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/item_snapshot.lua",
+      "size": 16121,
+      "sha256": "bc6cc1f5eead8e18ea596a9d0665b10ae97603d0cbc65a43561e5200cf4c4e31"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/PhleaMarket/listings.lua",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/PhleaMarket/listings.lua",
+      "size": 36754,
+      "sha256": "c49a58b03f40214013f705d0f869c46600e1daa255e839cfd6f965ca3630aa16"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/EN/IG_UI.json",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/EN/IG_UI.json",
+      "size": 6205,
+      "sha256": "78dea8cca4379e75f95f41c1679b805dd337f121eacdf71cad65f564363e695e"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/EN/Sandbox.json",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/EN/Sandbox.json",
+      "size": 6676,
+      "sha256": "8058bab38d48f1ef4e9ef937855f9d9676615d3d791606bf632c43d4368b71dd"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/RU/IG_UI.json",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/RU/IG_UI.json",
+      "size": 1076,
+      "sha256": "a30812c607e80548c51d702ab70d9d6b19bf13d5dee86bc86bbafa467c027608"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/RU/IG_UI_RU.txt",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/RU/IG_UI_RU.txt",
+      "size": 1101,
+      "sha256": "f1aa044266fb20c075a5c7c954222c812a6219ea56674ba1324cdba9a2e53084"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/RU/Sandbox.json",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/RU/Sandbox.json",
+      "size": 311,
+      "sha256": "18c872e181891b7f999864b332541964000884fc4c1b21655b9d5fa628640400"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/lua/shared/Translate/RU/Sandbox_RU.txt",
+      "url": "files/mods/ProjectEcho/common/media/lua/shared/Translate/RU/Sandbox_RU.txt",
+      "size": 328,
+      "sha256": "447440e9f1271bc483ba725da01c79745b8e0a4ddf8a5a2133a4ad223b320403"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/phleamarket.tiles",
+      "url": "files/mods/ProjectEcho/common/media/phleamarket.tiles",
+      "size": 2594,
+      "sha256": "90ae416c745bf37d080cef11866a420674f7b0f515d65da627419b359a04c3ce"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/sandbox-options.txt",
+      "url": "files/mods/ProjectEcho/common/media/sandbox-options.txt",
+      "size": 4041,
+      "sha256": "b0092f027cf2d51b18e2ea95704782a6cb737374cf96cbded254104d780cb0a2"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/scripts/PhleaMarket_Items.txt",
+      "url": "files/mods/ProjectEcho/common/media/scripts/PhleaMarket_Items.txt",
+      "size": 386,
+      "sha256": "37b84ee0bacc905ab9520c960a296f84f383db875342ba4dd359877d88ec7345"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/texturepacks/phleamarket.pack",
+      "url": "files/mods/ProjectEcho/common/media/texturepacks/phleamarket.pack",
+      "size": 202213,
+      "sha256": "f4c98d5c34f36a0ede0e45f25e558901bb06b36b99f2e0e84ee3b67416437828"
+    },
+    {
+      "path": "mods/ProjectEcho/common/media/textures/machine-phleamarket.png",
+      "url": "files/mods/ProjectEcho/common/media/textures/machine-phleamarket.png",
+      "size": 358975,
+      "sha256": "ae57d01bf1a706575b940544d2f66baf24c3de7a4901c34fdcae8d780d20d672"
+    },
+    {
+      "path": "mods/ProjectEcho/common/mod.info",
+      "url": "files/mods/ProjectEcho/common/mod.info",
+      "size": 718,
+      "sha256": "cedb303fb3f10bdc18be383be1d4ae7d7669884fe5789eae2686f0424f3b7c0f"
+    },
+    {
+      "path": "mods/ProjectEcho/mod.info",
+      "url": "files/mods/ProjectEcho/mod.info",
+      "size": 718,
+      "sha256": "cedb303fb3f10bdc18be383be1d4ae7d7669884fe5789eae2686f0424f3b7c0f"
+    },
+    {
+      "path": "mods/ProjectEcho/poster.png",
+      "url": "files/mods/ProjectEcho/poster.png",
+      "size": 2744,
+      "sha256": "57ce37926754e133647c9ef0a379299c82c67e855ad9b8532e7ffd72adbf24ca"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/java/client/Viewpoint.jar",
+      "url": "files/mods/Viewpoint_local/42/media/java/client/Viewpoint.jar",
+      "size": 2068978,
+      "sha256": "94fedda302ab6c17ba1b38495789e4c9781d52823fb8204214c85402e3cab41f"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/lua/client/Viewpoint_FrameCapOptions.lua",
+      "url": "files/mods/Viewpoint_local/42/media/lua/client/Viewpoint_FrameCapOptions.lua",
+      "size": 3535,
+      "sha256": "fb968c689920fa11f4b5f1ff18f4a926a2032c3d596bf5674b0c85d8f29a0405"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/lua/client/Viewpoint_Interact.lua",
+      "url": "files/mods/Viewpoint_local/42/media/lua/client/Viewpoint_Interact.lua",
+      "size": 11046,
+      "sha256": "40334e734637eb79cdc701c6c4e7080d6a786d21fc9237928e24b47624dfb74a"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/lua/client/Viewpoint_Loot.lua",
+      "url": "files/mods/Viewpoint_local/42/media/lua/client/Viewpoint_Loot.lua",
+      "size": 3162,
+      "sha256": "2bb2b2dee5e752daf71af0a817e850cbee17ffe6f612f049974f91d42a2f814c"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/lua/client/Viewpoint_Mouse.lua",
+      "url": "files/mods/Viewpoint_local/42/media/lua/client/Viewpoint_Mouse.lua",
+      "size": 538,
+      "sha256": "20214f6096fb1dcc9bfe95c608e270e1b99129c0df02d6f8fa40aa9944b2e092"
+    },
+    {
+      "path": "mods/Viewpoint_local/42/media/lua/client/Viewpoint_Options.lua",
+      "url": "files/mods/Viewpoint_local/42/media/lua/client/Viewpoint_Options.lua",
+      "size": 4503,
+      "sha256": "450895ae394a9ab223762f0706ffca169780e1cf41ff422b7bca6bd73ef953bc"
+    },
+    {
+      "path": "mods/Viewpoint_local/LICENSE",
+      "url": "files/mods/Viewpoint_local/LICENSE",
+      "size": 43,
+      "sha256": "d87ece7d7cde405b663227bc946044be0a272b93f8378f8ee66a283d9c5e0dac"
+    },
+    {
+      "path": "mods/Viewpoint_local/common/mod.info",
+      "url": "files/mods/Viewpoint_local/common/mod.info",
+      "size": 351,
+      "sha256": "39ad4ee14ef42bf057852a83e16ff440fb47f418c776c629f7dc213fd21f38b7"
+    },
+    {
+      "path": "mods/Viewpoint_local/common/poster.png",
+      "url": "files/mods/Viewpoint_local/common/poster.png",
+      "size": 391853,
+      "sha256": "6b1ef6292d8dd939e97e70b3968a47942bf63ef3dce1b736584605d6f8707d41"
+    },
+    {
+      "path": "release-notes-0.1.1.txt",
+      "url": "files/release-notes-0.1.1.txt",
+      "size": 169,
+      "sha256": "f1f516d10cd0f1612b899b2f3668b4f0e0e11dc16ba4b3388d59c975c2585e14"
+    },
+    {
+      "path": "welcome.txt",
+      "url": "files/welcome.txt",
+      "size": 188,
+      "sha256": "5316c45ce6576e980418f7daa9a461f92a5029b8c900cbda072be6078b0a250b"
+    }
+  ]
+}

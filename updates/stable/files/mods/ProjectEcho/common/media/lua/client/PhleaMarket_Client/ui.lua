@@ -1,0 +1,823 @@
+if isServer() then
+    return
+end
+
+-- Naming a price, and saying what happened.
+
+require "ISUI/ISPanel"
+require "ISUI/ISButton"
+require "ISUI/ISTextEntryBox"
+require "PhleaMarket/core"
+require "PhleaMarket/commands"
+require "PhleaMarket_Client/commands"
+
+local Core = PhunMart
+local Market = PhleaMarket
+local tools = require "PhunMart_Client/ui/ui_utils"
+local Client = Market.client
+local C = Market.commands
+
+local UI = {}
+Market.ui = UI
+
+local FS = tools.FONT_SCALE
+local FONT_SM = tools.FONT_HGT_SMALL
+
+---------------------------------------------------------------------------
+-- Words
+---------------------------------------------------------------------------
+
+-- Every reason a command can refuse, in the words a player would use.
+--
+-- Mapped rather than shown raw: "NotStackable" is the server explaining itself
+-- to another programmer, and a message that says what went wrong without saying
+-- what to do about it is only half an error.
+local FAILURES = {
+    Disabled = "IGUI_PhleaMarket_Err_Disabled",
+    NoItem = "IGUI_PhleaMarket_Err_NoItem",
+    NotListable = "IGUI_PhleaMarket_Err_NotListable",
+    NotStackable = "IGUI_PhleaMarket_Err_NotStackable",
+    NotHeld = "IGUI_PhleaMarket_Err_NotHeld",
+    NotEnough = "IGUI_PhleaMarket_Err_NotEnough",
+    TooManyListings = "IGUI_PhleaMarket_Err_TooManyListings",
+    PriceTooLow = "IGUI_PhleaMarket_Err_PriceTooLow",
+    PriceTooHigh = "IGUI_PhleaMarket_Err_PriceTooHigh",
+    BadPrice = "IGUI_PhleaMarket_Err_BadPrice",
+    CannotAffordFee = "IGUI_PhleaMarket_Err_CannotAffordFee",
+    InsufficientFunds = "IGUI_PhleaMarket_Err_InsufficientFunds",
+    NotFound = "IGUI_PhleaMarket_Err_NotFound",
+    NotActive = "IGUI_PhleaMarket_Err_NotActive",
+    NotYours = "IGUI_PhleaMarket_Err_NotYours",
+    ItemUnavailable = "IGUI_PhleaMarket_Err_ItemUnavailable",
+    CouldNotDeliver = "IGUI_PhleaMarket_Err_CouldNotDeliver",
+    CouldNotList = "IGUI_PhleaMarket_Err_CouldNotList"
+}
+
+function UI.failureText(message)
+    local key = FAILURES[message]
+    if key then
+        return getText(key)
+    end
+    return getText("IGUI_PhleaMarket_Err_Unknown", tostring(message))
+end
+
+function UI.successText(payload)
+    payload = payload or {}
+    if payload.action == "list" or payload.action == "relist" then
+        if (payload.fee or 0) > 0 then
+            return getText("IGUI_PhleaMarket_Msg_ListedWithFee", Market.formatAmount(Market.feePool(), payload.fee))
+        end
+        return getText("IGUI_PhleaMarket_Msg_Listed")
+    elseif payload.action == "buy" then
+        return getText("IGUI_PhleaMarket_Msg_Bought", tostring(payload.qty or 1))
+    elseif payload.action == "cancel" then
+        return getText("IGUI_PhleaMarket_Msg_Cancelled")
+    elseif payload.action == "adminCancel" then
+        return getText("IGUI_PhleaMarket_Msg_Cancelled")
+    elseif payload.action == "adminCancelAll" then
+        -- Says the number, because clearing a board an admin believed was empty
+        -- and clearing one with two hundred listings on it look identical
+        -- otherwise, and only one of those wants checking.
+        return getText("IGUI_PhleaMarket_Msg_CancelledAll", tostring(payload.cancelled or 0))
+    elseif payload.action == "collect" then
+        -- Says what is still waiting rather than only what arrived. A collect
+        -- that leaves money behind because the wallet is full otherwise looks
+        -- like a collect that did nothing.
+        --
+        -- But it has to know the difference between leaving some behind and
+        -- moving nothing at all. A wallet already at its ceiling collects
+        -- exactly nothing, and every one of these lines used to open with the
+        -- word "Collected", so the window announced a payment against a balance
+        -- the player could see had not changed. That is the same lie the
+        -- toast on a sale was telling, one screen further along.
+        local pool = Market.currencyPool()
+        local held = payload.stillHeld or 0
+        local kept = payload.keptBack or 0
+        local moved = (payload.items or 0) > 0 or (payload.credited or 0) > 0
+
+        -- Named only when there is a whole unit of it. On an item currency a
+        -- remainder is usually a fraction of one item, left behind by
+        -- commission and waiting for the next sale to complete it. Reporting
+        -- that as "0 Money still held" describes accounting dust as a problem.
+        local worthNaming = held >= Market.poolScale(pool)
+
+        if not moved then
+            if worthNaming then
+                return getText("IGUI_PhleaMarket_Msg_NotCollectedFull", Market.formatAmount(pool, held))
+            end
+            if kept > 0 then
+                return getText("IGUI_PhleaMarket_Msg_NotCollectedNoRoom")
+            end
+            return getText("IGUI_PhleaMarket_Msg_NothingToCollect")
+        end
+
+        if worthNaming then
+            return getText("IGUI_PhleaMarket_Msg_CollectedPartial", Market.formatAmount(pool, held))
+        end
+        if kept > 0 then
+            return getText("IGUI_PhleaMarket_Msg_CollectedNoRoom")
+        end
+        return getText("IGUI_PhleaMarket_Msg_Collected")
+    end
+    return getText("IGUI_PhleaMarket_Msg_Done")
+end
+
+--- The colour a result should be said in.
+---
+--- Amber for one that succeeded without anything actually moving. Collect is
+--- the only command that can: a wallet at its ceiling and a bag with no room
+--- both answer ok having handed over nothing, and saying that in the same green
+--- as a completed sale is the window nodding along with a payment the player can
+--- see did not happen.
+function UI.resultColor(payload)
+    payload = payload or {}
+    if payload.action == "collect" and (payload.items or 0) <= 0 and (payload.credited or 0) <= 0 then
+        return 0.95, 0.8, 0.35
+    end
+    return 0.4, 0.9, 0.4
+end
+
+---------------------------------------------------------------------------
+-- What happened while you were away
+---------------------------------------------------------------------------
+
+--- Tell somebody what sold, once, when they arrive.
+---
+--- One toast rather than one per sale. A player back after a week does not want
+--- eleven notifications queued behind each other, and the thing they actually
+--- want to know -- that money is waiting and roughly how much -- fits in a line.
+--- The detail is in Mine and Returns, which is where they are going next.
+local function showNotices(payload)
+    local notices = payload and payload.notices or {}
+    if #notices == 0 then
+        return
+    end
+
+    local total, items, held = 0, 0, 0
+    for _, notice in ipairs(notices) do
+        total = total + (notice.net or 0)
+        items = items + (notice.qty or 1)
+        held = held + (notice.held or 0)
+    end
+    local missed = payload.missed or 0
+    local pool = Market.currencyPool()
+
+    local text
+    if #notices == 1 and missed == 0 then
+        local one = notices[1]
+        text = getText("IGUI_PhleaMarket_SoldOne", tostring(one.qty or 1), tostring(one.itemName or "?"),
+            Market.formatAmount(pool, one.net or 0))
+    else
+        text = getText("IGUI_PhleaMarket_SoldMany", tostring(#notices + missed), tostring(items),
+            Market.formatAmount(pool, total))
+    end
+
+    -- What the sale came to is not always what reached the wallet: anything
+    -- over the ceiling waits in Returns. Saying only the first number told a
+    -- seller they had been paid in full and left them to notice the shortfall
+    -- in their balance, which is what "I sold it and never got the money"
+    -- actually was.
+    --
+    -- Named only once there is a whole unit of it, the same rule the collect
+    -- message follows: a fraction of an item held back by commission is dust,
+    -- and the tile in Returns carries the exact figure either way.
+    if held >= Market.poolScale(pool) then
+        text = text .. " " .. getText("IGUI_PhleaMarket_SoldHeld", Market.formatAmount(pool, held))
+    end
+
+    local toast = Core.ui and Core.ui.toast
+    if toast and toast.show then
+        toast.show({
+            text = text,
+            duration = 6,
+            -- Named fields, not a positional triple. The toast reads color.r
+            -- and friends, and a positional table hands it three nils, which
+            -- surfaces as a NullPointerException inside the render loop rather
+            -- than anywhere near the call.
+            color = {
+                r = 0.4,
+                g = 0.9,
+                b = 0.5
+            }
+        })
+    else
+        -- No toast to show it in is not a reason to swallow it.
+        local player = getPlayer()
+        if player then
+            player:Say(text)
+        end
+    end
+end
+
+Events[Market.events.OnData].Add(function(kind, payload)
+    if kind == "notices" then
+        showNotices(payload)
+    end
+end)
+
+---------------------------------------------------------------------------
+-- Naming a price
+---------------------------------------------------------------------------
+
+local Dialog = ISPanel:derive("PhleaMarketPriceDialog")
+
+-- Taller than the figures alone need, for the three lines of guidance under
+-- them. Naming a price with nothing to go on is the hardest thing this mod
+-- asks of a player, and it is the one place where a few numbers turn a guess
+-- into a decision.
+local W, H = 320, 330
+
+function Dialog:new(x, y, window, row)
+    local o = ISPanel:new(x, y, math.floor(W * FS), math.floor(H * FS))
+    setmetatable(o, self)
+    self.__index = self
+    o.window = window
+    o.row = row
+    o.moveWithMouse = true
+    o.backgroundColor = {
+        r = 0.05,
+        g = 0.05,
+        b = 0.06,
+        a = 0.95
+    }
+    o.borderColor = {
+        r = 0.25,
+        g = 0.45,
+        b = 0.28,
+        a = 1
+    }
+    o.duration = "medium"
+    -- Whatever the server currently calls money. Named once rather than
+    -- repeated at each of the places that ask the pool how to say a figure or
+    -- how to read one, because they all have to agree: a dialog writing prices
+    -- in one unit and reading them back in another is how a rifle gets listed
+    -- for a nickel. The server decides this again when the listing lands, so
+    -- what is held here only has to be right for what the seller is shown.
+    o.pool = Market.currencyPool()
+    return o
+end
+
+function Dialog:createChildren()
+    ISPanel.createChildren(self)
+    local pad = math.floor(12 * FS)
+    local lineH = FONT_SM + math.floor(8 * FS)
+    local y = pad + FONT_SM * 2
+
+    local boxW = math.floor(90 * FS)
+    self.priceBox = ISTextEntryBox:new("", self.width - pad - boxW, y, boxW, lineH)
+    self.priceBox:initialise()
+    self.priceBox:instantiate()
+    -- Digits only would be right if the box took cents. It takes dollars, and
+    -- a dollar figure needs its point: setOnlyNumbers would swallow the key and
+    -- leave a seller unable to type 12.50 at all. Anything unparseable comes
+    -- back as a price of nothing, which the dead OK button already covers.
+    if not Market.isSubunitPool(self.pool) then
+        self.priceBox:setOnlyNumbers(true)
+    end
+    -- Opens at the floor, and moves to what this account asked for one of these
+    -- last time once the server says. That answer cannot be here yet -- it is
+    -- still in flight when the dialog is built -- so render applies it, and only
+    -- while the box still holds this untouched starting value.
+    -- Snapped, because a remembered ask was named under whatever the step was
+    -- at the time and the box should never open on a price it would refuse.
+    self._initialText = Market.amountToText(self.pool, math.max(Market.limits().minPrice,
+        Market.snapPrice(Market.lastAsk and Market.lastAsk[self.row.fullType] or Market.limits().minPrice)))
+    self.priceBox:setText(self._initialText)
+    self:addChild(self.priceBox)
+
+    -- A line's worth of room under the box for the allowed range. A limit a
+    -- seller only discovers by being refused is a limit that should have been
+    -- on screen before they typed.
+    self.rangeY = y + lineH + math.floor(2 * FS)
+    y = y + lineH + FONT_SM + math.floor(8 * FS)
+
+    -- Only offered for something where every one is interchangeable. A stack of
+    -- axes cannot be listed as a stack, because the listing holds one snapshot
+    -- and the rest would come back wearing its condition.
+    if self.row.stackable and self.row.count > 1 then
+        self.qtyBox = ISTextEntryBox:new("1", self.width - pad - boxW, y, boxW, lineH)
+        self.qtyBox:initialise()
+        self.qtyBox:instantiate()
+        self.qtyBox:setOnlyNumbers(true)
+        self:addChild(self.qtyBox)
+        y = y + lineH + math.floor(6 * FS)
+    end
+    self.qtyY = y
+
+    local btnW = math.floor((self.width - pad * 2 - math.floor(8 * FS)) / 3)
+    self.durationBtns = {}
+    local tiers = {"short", "medium", "long"}
+    for i, tier in ipairs(tiers) do
+        local btn = ISButton:new(pad + (i - 1) * (btnW + math.floor(4 * FS)), y + FONT_SM + math.floor(4 * FS), btnW,
+            lineH, getText("IGUI_PhleaMarket_Dur_" .. tier), self, Dialog.onDuration)
+        btn.internal = tier
+        btn:initialise()
+        btn:instantiate()
+        btn.font = UIFont.Small
+        self:addChild(btn)
+        self.durationBtns[tier] = btn
+    end
+    y = y + FONT_SM + lineH + math.floor(12 * FS)
+    self.feeY = y
+
+    local okW = math.floor((self.width - pad * 2 - math.floor(8 * FS)) / 2)
+    self.okBtn = ISButton:new(pad, self.height - pad - lineH, okW, lineH, getText("IGUI_PhleaMarket_List"), self,
+        Dialog.onOK)
+    self.okBtn:initialise()
+    self.okBtn:instantiate()
+    self.okBtn.backgroundColor = {
+        r = 0.06,
+        g = 0.26,
+        b = 0.08,
+        a = 0.95
+    }
+    self:addChild(self.okBtn)
+
+    self.cancelBtn = ISButton:new(self.width - pad - okW, self.height - pad - lineH, okW, lineH,
+        getText("IGUI_PhleaMarket_Close"), self, Dialog.onCancel)
+    self.cancelBtn:initialise()
+    self.cancelBtn:instantiate()
+    self:addChild(self.cancelBtn)
+
+    self:paintDuration()
+end
+
+function Dialog:onDuration(btn)
+    self.duration = btn.internal
+    self:paintDuration()
+end
+
+function Dialog:paintDuration()
+    for tier, btn in pairs(self.durationBtns) do
+        local on = tier == self.duration
+        btn.backgroundColor = on and {
+            r = 0.09,
+            g = 0.28,
+            b = 0.10,
+            a = 0.95
+        } or {
+            r = 0.08,
+            g = 0.08,
+            b = 0.09,
+            a = 0.9
+        }
+        btn.borderColor = on and {
+            r = 0.22,
+            g = 0.72,
+            b = 0.24,
+            a = 1
+        } or {
+            r = 0.25,
+            g = 0.25,
+            b = 0.28,
+            a = 1
+        }
+    end
+end
+
+function Dialog:values()
+    -- Read as dollars and converted to the pool's own units, which is what the
+    -- rest of this function, the server and the listing all deal in. Everything
+    -- below this line is cents on a change pool; everything the player types or
+    -- reads is dollars.
+    local price = Market.parseAmount(self.pool, self.priceBox:getInternalText()) or 0
+    local qty = self.qtyBox and (tonumber(self.qtyBox:getInternalText()) or 1) or 1
+    if qty < 1 then
+        qty = 1
+    end
+    if qty > self.row.count then
+        qty = self.row.count
+    end
+    -- Snapped to the step the server will snap it to, so the total, the fee and
+    -- the take-home shown below are all worked out from the price that will
+    -- actually be listed.
+    --
+    -- The box is deliberately left holding what was typed rather than being
+    -- rewritten the way the quantity is. Snapping fires on every keystroke, so
+    -- correcting it in place would eat digits as they arrived: under a whole
+    -- dollar step, typing the 5 of 12.50 would rewrite the box to 12.00 and
+    -- take the keyboard off the player mid-figure. The amount written out
+    -- beside the box says what the price really is, and the range line
+    -- underneath says the rule before a key is pressed.
+    return Market.snapPrice(price), math.floor(qty)
+end
+
+--- Draw a line that ends in a figure, with the currency's icon after it.
+---
+--- The icon goes after the text rather than inside it, which is why several of
+--- these strings were reworded to finish on their number: a texture cannot be
+--- placed mid-sentence, but a line that ends on its figure can have one drawn
+--- at the end of it.
+---
+--- Falls back to naming the currency in words when there is no icon, which is
+--- every change-pool server and any item whose script did not load. Nothing
+--- here assumes an item currency; it just reads better on one.
+function Dialog:drawWithIcon(text, x, y, r, g, b)
+    self:drawText(text, x, y, r, g, b, 1, UIFont.Small)
+    local tex = Market.currencyTexture(self.pool)
+    if tex then
+        local w = getTextManager():MeasureStringX(UIFont.Small, text)
+        self:drawTextureScaledAspect(tex, x + w + math.floor(3 * FS), y, FONT_SM, FONT_SM, 1, 1, 1, 1)
+    end
+end
+
+--- The same for a line that is only one figure and its label.
+function Dialog:drawMoney(key, amount, x, y, r, g, b)
+    local figure = self:figure(amount)
+    self:drawWithIcon(key and getText(key, figure) or figure, x, y, r, g, b)
+end
+
+--- A figure written the way this dialog is about to draw it: bare when an icon
+--- will follow it, named in words when none will.
+function Dialog:figure(amount)
+    if Market.currencyTexture(self.pool) then
+        return Market.amountFigure(self.pool, amount)
+    end
+    return Market.formatAmount(self.pool, amount)
+end
+
+function Dialog:render()
+    ISPanel.render(self)
+    local pad = math.floor(12 * FS)
+    local Listings = require "PhleaMarket/listings"
+
+    self:drawText(getText("IGUI_PhleaMarket_ListTitle", self.row.itemName), pad, pad, 1, 1, 1, 1, UIFont.Medium)
+
+    local priceY = pad + FONT_SM * 2
+    self:drawText(getText("IGUI_PhleaMarket_UnitPrice"), pad, priceY + math.floor(4 * FS), 0.8, 0.8, 0.8, 1,
+        UIFont.Small)
+    if self.qtyBox then
+        self:drawText(getText("IGUI_PhleaMarket_Quantity", tostring(self.row.count)), pad,
+            self.qtyBox:getY() + math.floor(4 * FS), 0.8, 0.8, 0.8, 1, UIFont.Small)
+    end
+    self:drawText(getText("IGUI_PhleaMarket_Duration"), pad, self.qtyY, 0.8, 0.8, 0.8, 1, UIFont.Small)
+
+    -- The exact figures the server will use, worked out from the same shared
+    -- functions it will use, so what is shown here and what is charged cannot
+    -- drift apart.
+    local price, qty = self:values()
+
+    -- Put the clamp back in the box the moment it is exceeded.
+    --
+    -- values() has always clamped what gets sent, but the box went on showing
+    -- whatever was typed, so asking for a thousand of something looked like it
+    -- had been accepted right up until the listing came back holding twelve.
+    -- Showing one number and acting on another is the part that was wrong.
+    if self.qtyBox and tostring(qty) ~= self.qtyBox:getInternalText() then
+        local typed = tonumber(self.qtyBox:getInternalText())
+        if typed and typed > self.row.count then
+            self.qtyBox:setText(tostring(qty))
+        end
+    end
+
+    local total = price * qty
+    local fee = Market.listingFeeFor(total, self.duration)
+    local commission = Listings.applyFee(Market.commissionRule(), total)
+    local pool = self.pool
+
+    -- The allowed range, said before it is enforced rather than after. Shown
+    -- only where there is a floor to speak of, since a minimum of zero is not
+    -- a rule worth taking up a line.
+    local limits = Market.limits()
+    local tooLow = price < (limits.minPrice or 0)
+    local tooHigh = price > (limits.maxPrice or math.huge)
+    if (limits.minPrice or 0) > 0 or tooHigh then
+        -- Every figure on this line is the same currency, so one icon after the
+        -- whole line speaks for all of them rather than three in a row.
+        local function fmt(_, amount)
+            return self:figure(amount)
+        end
+        local text, r, g, b
+        if tooLow then
+            text = getText("IGUI_PhleaMarket_RangeTooLow", fmt(pool, limits.minPrice))
+            r, g, b = 0.95, 0.45, 0.4
+        elseif tooHigh then
+            text = getText("IGUI_PhleaMarket_RangeTooHigh", fmt(pool, limits.maxPrice))
+            r, g, b = 0.95, 0.45, 0.4
+        elseif (limits.step or 1) > 1 then
+            -- The step is said here rather than left to be discovered by typing
+            -- a figure and watching it change into a different one.
+            text = getText("IGUI_PhleaMarket_RangeStep", fmt(pool, limits.minPrice), fmt(pool, limits.maxPrice),
+                fmt(pool, limits.step))
+            r, g, b = 0.55, 0.55, 0.55
+        else
+            text = getText("IGUI_PhleaMarket_Range", fmt(pool, limits.minPrice), fmt(pool, limits.maxPrice))
+            r, g, b = 0.55, 0.55, 0.55
+        end
+        self:drawWithIcon(text, pad, self.rangeY, r, g, b)
+    end
+
+    -- Out of range cannot be listed, so the button says so by being dead. The
+    -- alternative is what shipped: let them press it, send it, and explain
+    -- afterwards.
+    self.okBtn:setEnable(not tooLow and not tooHigh and price > 0)
+
+    -- Beside the box, saying what the price will actually be. The box takes
+    -- dollars, so this is no longer translating a unit at the player; it is
+    -- what confirms the step, since a figure typed between steps comes down and
+    -- this is where that is visible.
+    self:drawMoney(nil, price, self.priceBox:getX() - math.floor(72 * FS), priceY + math.floor(4 * FS), 0.6, 0.85,
+        0.6)
+
+    local y = self.feeY
+    self:drawMoney("IGUI_PhleaMarket_AskingTotal", total, pad, y, 0.85, 0.85, 0.85)
+    y = y + FONT_SM + math.floor(2 * FS)
+    -- Named as non-refundable, because it is: cancelling a listing returns the
+    -- goods and not the fee, and that is better learned before paying it.
+    local feeKey = fee > 0 and "IGUI_PhleaMarket_FeeNow" or "IGUI_PhleaMarket_FeeFree"
+    if fee > 0 then
+        self:drawMoney(feeKey, fee, pad, y, 0.9, 0.75, 0.4)
+    else
+        self:drawText(getText(feeKey), pad, y, 0.9, 0.75, 0.4, 1, UIFont.Small)
+    end
+    y = y + FONT_SM + math.floor(2 * FS)
+    -- Take-home, not the asking price. The number a seller actually cares about
+    -- is what lands in their wallet if it all sells.
+    self:drawMoney("IGUI_PhleaMarket_YouGet", total - commission, pad, y, 0.5, 0.9, 0.5)
+
+    -- What anybody would want to know before naming a figure: what the market
+    -- is asking for one of these, what it has actually been paying, and what
+    -- this account asked the last time. Only shown for the item in hand, since
+    -- a reply for a different one is worse than none.
+    y = y + FONT_SM + math.floor(8 * FS)
+    local info = Client.data.priceInfo
+    if info and info.fullType == self.row.fullType then
+        -- Fill in the remembered price, once, and never over something typed:
+        -- an answer arriving a moment after the player started typing must not
+        -- take the keyboard off them.
+        if info.lastAsk and not self._prefilled then
+            self._prefilled = true
+            if self.priceBox:getInternalText() == self._initialText then
+                self.priceBox:setText(Market.amountToText(pool,
+                    math.max(limits.minPrice, Market.snapPrice(info.lastAsk))))
+            end
+        end
+
+        local guide = info.guide
+        if guide then
+            -- Reworded so it ends on a figure: the count moved to the front so
+            -- the icon has somewhere to sit.
+            self:drawWithIcon(getText("IGUI_PhleaMarket_Listed", tostring(guide.count), self:figure(guide.low),
+                self:figure(guide.high)), pad, y, 0.7, 0.75, 0.85)
+        else
+            self:drawText(getText("IGUI_PhleaMarket_NoneListed"), pad, y, 0.55, 0.55, 0.55, 1, UIFont.Small)
+        end
+        y = y + FONT_SM + math.floor(2 * FS)
+
+        local sold = info.sold or {}
+        if #sold > 0 then
+            -- The most recent few rather than an average. An average of three
+            -- sales says less than the three sales do, and hides that there
+            -- were only three.
+            local parts = {}
+            for i = 1, math.min(#sold, 3) do
+                table.insert(parts, self:figure(sold[i].unit))
+            end
+            self:drawWithIcon(getText("IGUI_PhleaMarket_SoldFor", table.concat(parts, ", ")), pad, y, 0.7, 0.75, 0.85)
+        else
+            self:drawText(getText("IGUI_PhleaMarket_NeverSold"), pad, y, 0.55, 0.55, 0.55, 1, UIFont.Small)
+        end
+        y = y + FONT_SM + math.floor(2 * FS)
+
+        if info.lastAsk then
+            self:drawMoney("IGUI_PhleaMarket_YouAsked", info.lastAsk, pad, y, 0.6, 0.6, 0.6)
+        end
+    end
+end
+
+function Dialog:onOK()
+    local price, qty = self:values()
+
+    -- The button is dead when the price is out of range, so this should not be
+    -- reachable. Checked anyway: the enable state is set in render, and a
+    -- dialog that has not drawn yet has never set it.
+    local limits = Market.limits()
+    if price <= 0 or price < (limits.minPrice or 0) or price > (limits.maxPrice or math.huge) then
+        return
+    end
+
+    Client.send(C.list, {
+        fullType = self.row.fullType,
+        qty = qty,
+        unitPrice = price,
+        duration = self.duration
+    })
+    -- Remembered locally as well as on the server, so the next listing in this
+    -- session is prefilled even before the server answers.
+    Market.lastAsk = Market.lastAsk or {}
+    Market.lastAsk[self.row.fullType] = price
+    self:onCancel()
+end
+
+function Dialog:onCancel()
+    self:removeFromUIManager()
+    self:setVisible(false)
+end
+
+--- Ask what they want for it.
+function UI.askPrice(window, row)
+    if UI.dialog then
+        UI.dialog:onCancel()
+    end
+
+    -- Cleared before asking, so a stale answer for the last item cannot be read
+    -- as this one's while the reply is in flight. render checks the type too;
+    -- this stops the wrong figures appearing for even a frame.
+    Client.data.priceInfo = nil
+    Client.send(C.priceInfo, {
+        fullType = row.fullType
+    })
+    local core = getCore()
+    local x = math.floor((core:getScreenWidth() - W * FS) / 2)
+    local y = math.floor((core:getScreenHeight() - H * FS) / 2)
+    local dialog = Dialog:new(x, y, window, row)
+    dialog:initialise()
+    dialog:addToUIManager()
+    UI.dialog = dialog
+    return dialog
+end
+
+
+---------------------------------------------------------------------------
+-- How many to buy
+---------------------------------------------------------------------------
+
+local Buy = ISPanel:derive("PhleaMarketBuyDialog")
+
+local BW, BH = 300, 190
+
+function Buy:new(x, y, row)
+    local o = ISPanel:new(x, y, math.floor(BW * FS), math.floor(BH * FS))
+    setmetatable(o, self)
+    self.__index = self
+    o.row = row
+    o.moveWithMouse = true
+    o.backgroundColor = {
+        r = 0.05,
+        g = 0.05,
+        b = 0.06,
+        a = 0.95
+    }
+    o.borderColor = {
+        r = 0.25,
+        g = 0.45,
+        b = 0.28,
+        a = 1
+    }
+    return o
+end
+
+function Buy:createChildren()
+    ISPanel.createChildren(self)
+    local pad = math.floor(12 * FS)
+    local lineH = FONT_SM + math.floor(8 * FS)
+    local y = pad + FONT_SM * 2
+
+    local boxW = math.floor(70 * FS)
+    local maxW = math.floor(52 * FS)
+
+    self.qtyBox = ISTextEntryBox:new("1", self.width - pad - boxW - maxW - math.floor(4 * FS), y, boxW, lineH)
+    self.qtyBox:initialise()
+    self.qtyBox:instantiate()
+    self.qtyBox:setOnlyNumbers(true)
+    self:addChild(self.qtyBox)
+
+    -- Because "all of them" is the common answer and typing it is not.
+    self.maxBtn = ISButton:new(self.width - pad - maxW, y, maxW, lineH, getText("IGUI_PhleaMarket_Max"), self,
+        Buy.onMax)
+    self.maxBtn:initialise()
+    self.maxBtn:instantiate()
+    self.maxBtn.font = UIFont.Small
+    self:addChild(self.maxBtn)
+
+    self.figuresY = y + lineH + math.floor(10 * FS)
+
+    local okW = math.floor((self.width - pad * 2 - math.floor(8 * FS)) / 2)
+    self.okBtn = ISButton:new(pad, self.height - pad - lineH, okW, lineH, getText("IGUI_PhunMart_Buy"), self,
+        Buy.onOK)
+    self.okBtn:initialise()
+    self.okBtn:instantiate()
+    self.okBtn.backgroundColor = {
+        r = 0.06,
+        g = 0.26,
+        b = 0.08,
+        a = 0.95
+    }
+    self:addChild(self.okBtn)
+
+    self.cancelBtn = ISButton:new(self.width - pad - okW, self.height - pad - lineH, okW, lineH,
+        getText("IGUI_PhleaMarket_Close"), self, Buy.onCancel)
+    self.cancelBtn:initialise()
+    self.cancelBtn:instantiate()
+    self:addChild(self.cancelBtn)
+end
+
+function Buy:onMax()
+    self.qtyBox:setText(tostring(self.row.qty or 1))
+end
+
+--- What is being bought, clamped to what is there.
+---
+--- Clamped here and put back in the box by render, so the number on screen is
+--- the number that will be charged for. The server clamps again, because a
+--- figure arriving from a client is a request.
+function Buy:value()
+    local qty = math.floor(tonumber(self.qtyBox:getInternalText()) or 1)
+    if qty < 1 then
+        qty = 1
+    end
+    if qty > (self.row.qty or 1) then
+        qty = self.row.qty or 1
+    end
+    return qty
+end
+
+function Buy:render()
+    ISPanel.render(self)
+    local pad = math.floor(12 * FS)
+    local pool = self.row.pool or Market.currencyPool()
+
+    self:drawText(getText("IGUI_PhleaMarket_BuyTitle", self.row.itemName or "?"), pad, pad, 1, 1, 1, 1, UIFont.Medium)
+
+    local qty = self:value()
+    if tostring(qty) ~= self.qtyBox:getInternalText() then
+        local typed = tonumber(self.qtyBox:getInternalText())
+        if typed and typed > (self.row.qty or 1) then
+            self.qtyBox:setText(tostring(qty))
+        end
+    end
+
+    self:drawText(getText("IGUI_PhleaMarket_HowManyOf", tostring(self.row.qty or 1)), pad,
+        self.qtyBox:getY() + math.floor(4 * FS), 0.8, 0.8, 0.8, 1, UIFont.Small)
+
+    local total = (self.row.unit or 0) * qty
+    local balance = Market.balanceOf(getPlayer(), pool)
+    local afford = balance >= total
+
+    local y = self.figuresY
+    self:drawText(getText("IGUI_PhleaMarket_EachAt", Market.formatAmount(pool, self.row.unit or 0)), pad, y, 0.75,
+        0.75, 0.75, 1, UIFont.Small)
+    y = y + FONT_SM + math.floor(3 * FS)
+    self:drawText(getText("IGUI_PhleaMarket_Total", Market.formatAmount(pool, total)), pad, y, 1, 0.88, 0.45, 1,
+        UIFont.Small)
+    y = y + FONT_SM + math.floor(3 * FS)
+
+    -- Said whichever way it falls. Knowing the balance is only useful next to
+    -- the total, and knowing it is short is the thing worth colouring.
+    if afford then
+        self:drawText(getText("IGUI_PhleaMarket_YouHave", Market.formatAmount(pool, balance)), pad, y, 0.55, 0.55,
+            0.55, 1, UIFont.Small)
+    else
+        self:drawText(getText("IGUI_PhleaMarket_ShortBy", Market.formatAmount(pool, total - balance)), pad, y, 0.95,
+            0.45, 0.4, 1, UIFont.Small)
+    end
+
+    self.okBtn:setEnable(afford and qty >= 1)
+end
+
+function Buy:onOK()
+    local qty = self:value()
+    local balance = Market.balanceOf(getPlayer(), self.row.pool or Market.currencyPool())
+    if qty < 1 or balance < (self.row.unit or 0) * qty then
+        return
+    end
+    Client.send(C.buy, {
+        listingId = self.row.id,
+        qty = qty
+    })
+    self:onCancel()
+end
+
+function Buy:onCancel()
+    self:removeFromUIManager()
+    self:setVisible(false)
+    UI.buyDialog = nil
+end
+
+--- Ask how many, when there is more than one to be had.
+---
+--- Only then. A listing of one has no question to put, and a dialog that only
+--- ever has one answer is a click asking permission to do what was already
+--- asked for.
+function UI.askQuantity(row)
+    if (row.qty or 1) <= 1 then
+        Client.send(C.buy, {
+            listingId = row.id,
+            qty = 1
+        })
+        return nil
+    end
+    if UI.buyDialog then
+        UI.buyDialog:onCancel()
+    end
+    local core = getCore()
+    local x = math.floor((core:getScreenWidth() - BW * FS) / 2)
+    local y = math.floor((core:getScreenHeight() - BH * FS) / 2)
+    local dialog = Buy:new(x, y, row)
+    dialog:initialise()
+    dialog:addToUIManager()
+    UI.buyDialog = dialog
+    return dialog
+end
+
+return UI

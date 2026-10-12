@@ -1,0 +1,517 @@
+module Base
+{
+craftRecipe SWATHelmetAM-95Visor
+    {
+        timedAction = Making,
+        Time = 180,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.SWAT_Helmet_Patriot;Base.SWAT_Helmet_Patriot_NoBelts;Base.SWAT_Helmet_Rook_FaceShield;Base.SWAT_Helmet_Rook_FaceShieldUp;Base.SWAT_Helmet;Base.SWAT_Helmet_NoBelts],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Helmet_AM-95_VisorDown,
+        }
+    }
+
+    craftRecipe SWATVisorHelmetRook
+    {
+        timedAction = Making,
+        Time = 180,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.SWAT_Helmet_Patriot;Base.SWAT_Helmet_Patriot_NoBelts;Base.SWAT_Helmet_AM-95_VisorDown;Base.SWAT_Helmet_AM-95_VisorUp;Base.SWAT_Helmet;Base.SWAT_Helmet_NoBelts],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Helmet_Rook_FaceShield,
+        }
+    }
+
+    craftRecipe SWATHelmetDefender
+    {
+        timedAction = Making,
+        Time = 150,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.SWAT_Helmet_Patriot;Base.SWAT_Helmet_Patriot_NoBelts;Base.SWAT_Helmet_Rook_FaceShield;Base.SWAT_Helmet_Rook_FaceShieldUp;Base.SWAT_Helmet_AM-95_VisorDown;Base.SWAT_Helmet_AM-95_VisorUp],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Helmet,
+        }
+    }
+
+    craftRecipe SWATHelmetPatriot
+    {
+        timedAction = Making,
+        Time = 140,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.SWAT_Helmet_Rook_FaceShield;Base.SWAT_Helmet_Rook_FaceShieldUp;Base.SWAT_Helmet_AM-95_VisorDown;Base.SWAT_Helmet_AM-95_VisorUp;Base.SWAT_Helmet;Base.SWAT_Helmet_NoBelts],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Helmet_Patriot,
+        }
+    }
+
+    craftRecipe SWATCap
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Hat,
+        }
+    }
+
+    craftRecipe SWATBalaclava
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Balaclava,
+        }
+    }
+
+    craftRecipe SWATJacket
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 6 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 2 tags[base:button],
+            item 2 tags[base:twine],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Jacket,
+        }
+    }
+
+    craftRecipe SWATVestLight
+    {
+        timedAction = Making,
+        Time = 180,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.Sheet],
+            item 1 tags[base:wire],
+            item 2 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_LightVest,
+        }
+    }
+
+    craftRecipe SWATVestHeavy
+    {
+        timedAction = Making,
+        Time = 200,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 6 tags[base:thread],
+            item 2 [Base.Sheet],
+            item 1 tags[base:wire],
+            item 4 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Vest,
+        }
+    }
+
+    craftRecipe SWATShoulderPads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_ShoulderPads_Patriot,
+        }
+    }
+
+    craftRecipe SWATShoulderPadsHeavy
+    {
+        timedAction = Making,
+        Time = 150,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 2 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_ShoulderPads_Vanguard,
+        }
+    }
+
+    craftRecipe SWATElbowPads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Elbow_Pads,
+        }
+    }
+
+    craftRecipe SWATThighPads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Thigh_Pads,
+        }
+    }
+
+
+    craftRecipe SWATKneePads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Knee_Pads,
+        }
+    }
+
+    craftRecipe SWATKneePadsHeavy
+    {
+        timedAction = Making,
+        Time = 160,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 2 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_KneePads_Defender,
+        }
+    }
+
+    craftRecipe SWATGloves
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Gloves_LeatherGloves;Base.Gloves_LeatherGlovesBlack;Base.Gloves_LeatherGlovesBrown;Base.Gloves_HuntingCamo;Base.Gloves_FingerlessLeatherGloves;Base.Gloves_FingerlessLeatherGloves_Black],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Gloves,
+        }
+    }
+
+    craftRecipe SWATPants
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 1 tags[base:button],
+            item 2 tags[base:twine],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Pants,
+        }
+    }
+
+    craftRecipe SWATBoots
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Shoes_ArmyBoots;Base.Shoes_ArmyBootsDesert;Base.Shoes_WorkBoots;Base.Shoes_HikingBoots;Base.Shoes_BlackBoots;Base.SWAT_TacBoots],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Boots,
+        }
+    }
+
+    craftRecipe SWATTacBoots
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Shoes_ArmyBoots;Base.Shoes_ArmyBootsDesert;Base.Shoes_WorkBoots;Base.Shoes_HikingBoots;Base.Shoes_BlackBoots;Base.SWAT_Boots],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_TacBoots,
+        }
+    }
+
+    craftRecipe SWATBackpackRadio
+    {
+        timedAction = Making,
+        Time = 160,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Bag_SurvivorBag;Base.Bag_ALICEpack;Base.Bag_ALICEpack_Army;Base.Bag_ALICEpack_DesertCamo;Base.Bag_Schoolbag;Base.Bag_Schoolbag_Travel;Base.Bag_Schoolbag_Patches;Base.Bag_Schoolbag_Kids;Base.Bag_Schoolbag_Medical;Base.Bag_BigHikingBag;Base.Bag_BigHikingBag_Travel],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 1 [Base.Sheet],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_Backpack_Radio_Tight,
+        }
+    }
+
+    craftRecipe SWATGasMask
+    {
+        timedAction = Making,
+        Time = 200,
+        category = Tailoring,
+        tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Hat_GasMask;Base.Hat_GasMask_nofilter;Base.Hat_ImprovisedGasMask;Base.Hat_ImprovisedGasMask_nofilter],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+        }
+        outputs
+        {
+            item 1 Base.SWAT_GasMask-M80,
+        }
+    }
+}
