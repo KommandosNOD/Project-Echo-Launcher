@@ -1,0 +1,52 @@
+{
+  "schema": 2,
+  "kind": "PROJECT_ECHO_LOCAL_MODS",
+  "channel": "stable",
+  "version": "20261020-172918-453",
+  "createdUtc": "2026-10-20T17:29:18.4666461+00:00",
+  "files": [
+    {
+      "path": "mods/default.txt",
+      "size": 713,
+      "sha256": "a4515a428e051e9e09702332647ec0b33915391f7d39ef786c7d0003f23a7e0a",
+      "url": "files/mods/default.txt"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/42/media/lua/client/ZZZ_ProjectEchoBetterBeltsSlotsRU.lua",
+      "size": 796,
+      "sha256": "dbbe63552ea4125cd6a227d208014de9fa638561195cb9e0165dc687b07cd110",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/42/media/lua/client/ZZZ_ProjectEchoBetterBeltsSlotsRU.lua"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/IG_UI.json",
+      "size": 193,
+      "sha256": "f453464bb93cc07bc4cc632f350f35aedf33949421044fd56fa78d81f5713486",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/IG_UI.json"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/ItemName.json",
+      "size": 851,
+      "sha256": "ffc5fcd24cadd177342e626bea82cc5cb0e5a337cb458d144321fb14f3b12708",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/ItemName.json"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/Recipes.json",
+      "size": 2524,
+      "sha256": "9b7623450ddcbc1a67fb51b2bf88a80f33b9def9f5e9363622314bd9ff33eade",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/42/media/lua/shared/Translate/RU/Recipes.json"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/42/mod.info",
+      "size": 217,
+      "sha256": "94bbd0b985aac81a24cb32490d5f375b53e919ecbcca3c28b03c513af3ded9db",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoBetterBeltsRU/README_INSTALL_RU.txt",
+      "size": 1242,
+      "sha256": "d32b6b287d5e29c68a6619e530911c4fea31c55d1464760c3469577456c9ea8c",
+      "url": "files/mods/ProjectEchoBetterBeltsRU/README_INSTALL_RU.txt"
+    }
+  ],
+  "retired": []
+}

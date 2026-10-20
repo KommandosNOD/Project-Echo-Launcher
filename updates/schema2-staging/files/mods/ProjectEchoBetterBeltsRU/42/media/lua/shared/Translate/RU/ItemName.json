@@ -1,0 +1,15 @@
+{
+  "Base.FrontBeltR": "Крючок на пояс (справа)",
+  "Base.FrontBeltL": "Крючок на пояс (слева)",
+  "Base.HolsterSimpleL": "Кобура (слева)",
+  "Base.Belt3": "Ремень с дополнительным слотом",
+  "Radio.CDplayer": "ValuTech PortaDisc",
+  "Base.ToolBoxB": "Ящик для инструментов (на крючке)",
+  "Base.FirstAidKitB": "Аптечка (на крючке)",
+  "Base.AFAK": "Расширенная аптечка",
+  "Base.AFAKB": "Расширенная аптечка (на крючке)",
+  "Base.LunchboxB": "Контейнер для еды (на крючке)",
+  "Base.Lunchbox2B": "Контейнер для еды (на крючке)",
+  "Base.PistolCase1B": "Кейс для пистолета (на крючке)",
+  "Base.QuiverB": "Колчан"
+}

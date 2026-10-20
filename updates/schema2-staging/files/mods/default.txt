@@ -1,0 +1,35 @@
+VERSION = 1,
+
+mods
+{
+    mod = ZombieBuddy,
+    mod = ModLoadOrderSorter_b42,
+    mod = ModManager,
+    mod = ETO_P,
+    mod = SPNCC,
+    mod = SPNCCDetails,
+    mod = SPNCCDetailsHD,
+    mod = TombBodyTexNUDE,
+    mod = TombGothTexNUDE,
+    mod = Lugli_FastLoading,
+    mod = NoMenuMusic,
+    mod = PZOptPreloader,
+    mod = Tempo_PerfKit,
+    mod = Viewpoint,
+    mod = ViewpointFixes,
+    mod = FH,
+    mod = TombBody,
+    mod = TombBodyCustom,
+    mod = AddSlopFacesGoth,
+    mod = AddSlopFacesMaleGoth,
+    mod = ChuckleberryFinnAlertSystem,
+    mod = errorMagnifier,
+    mod = mapmodmanager,
+    mod = TombGothHair,
+    mod = TombGothMakeup,
+    mod = KNOXTV,
+}
+
+maps
+{
+}
