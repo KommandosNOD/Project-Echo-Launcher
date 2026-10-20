@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261020-172918-453",
-  "createdUtc": "2026-10-20T17:29:18.4666461+00:00",
+  "version": "20261020-175343-848",
+  "createdUtc": "2026-10-20T17:53:43.8598877+00:00",
   "files": [
     {
       "path": "mods/default.txt",
