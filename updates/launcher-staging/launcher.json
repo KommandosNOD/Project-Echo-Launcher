@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "kind": "PROJECT_ECHO_LAUNCHER",
+  "channel": "staging",
+  "version": "0.4.4",
+  "tag": "echo-launcher-test-v0.4.4",
+  "asset": "ProjectEchoLauncher_STAGING.exe",
+  "size": 132125399,
+  "sha256": "1cf3c4adf4885d9b72890170b532f9924fac53bb8e8862f21b14efaab853587d",
+  "createdUtc": "2026-10-20T18:35:05.8118779\u002B00:00"
+}
