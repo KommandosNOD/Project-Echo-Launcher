@@ -1,0 +1,6 @@
+{
+  "UI_ProjectEcho_VPUI_moveScrap": "Разобрать",
+  "UI_ProjectEcho_VPUI_moveScrapAction": "Разобрать %s",
+  "UI_PushVehicle_Action": "Толкать машину",
+  "UI_optionscreen_binding_PushVehicle_Hotkey": "Толкать машину"
+}

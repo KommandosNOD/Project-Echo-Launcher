@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Kitsune Crossbows Russian
+id=ProjectEchoKitsuneCrossbowRU
+description=Русский перевод Kitsune Crossbow; original mod required.
+versionMin=42.20
+modversion=1.0.1
+require=alicesKitsunesCrossbowMod

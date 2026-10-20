@@ -1,0 +1,6 @@
+name=Project Echo Sandbox Loader
+id=ProjectEchoSandboxLoader
+author=PROJECT ECHO
+modversion=1.0.0
+description=Dedicated B42 MP: restore sandbox settings from a mod-local preset at boot and periodically.
+versionMin=42.0.0

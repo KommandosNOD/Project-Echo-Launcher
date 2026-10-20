@@ -1,0 +1,19 @@
+{
+  "UI_PEME_Title": "PROJECT ECHO — Exchange money for PhunWallet",
+  "UI_PEME_One": "1 bill → $0.05",
+  "UI_PEME_Ten": "10 bills → $0.50",
+  "UI_PEME_Fifty": "50 bills → $2.50",
+  "UI_PEME_All": "All bills (up to 250 per exchange)",
+  "UI_PEME_Success": "Exchanged",
+  "UI_PEME_Balance": "balance",
+  "UI_PEME_NoCash": "No Base.Money in your inventory",
+  "UI_PEME_NotEnough": "Not enough banknotes in your inventory",
+  "UI_PEME_WalletFull": "PhunWallet change balance limit reached",
+  "UI_PEME_WalletDisabled": "PhunMart change wallet is disabled",
+  "UI_PEME_MissingPhunMart": "PhunMart wallet API unavailable",
+  "UI_PEME_RemoveFailed": "Unable to remove banknotes",
+  "UI_PEME_SlowDown": "Please wait a second before exchanging again",
+  "UI_PEME_Invalid": "Invalid exchange request",
+  "UI_PEME_Error": "Exchange error — see server console",
+  "UI_PEME_MissingServer": "Exchange handler was not loaded"
+}

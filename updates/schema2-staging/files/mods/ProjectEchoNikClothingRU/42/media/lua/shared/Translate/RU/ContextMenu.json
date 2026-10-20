@@ -1,0 +1,19 @@
+{
+  "ContextMenu_Face": "Надеть на лицо",
+  "ContextMenu_Side": "Надеть сбоку",
+  "ContextMenu_Left": "Надеть слева",
+  "ContextMenu_Right": "Надеть справа",
+  "ContextMenu_FrontLeft": "Надеть спереди слева",
+  "ContextMenu_FrontRight": "Надеть спереди справа",
+  "ContextMenu_Back": "Надеть сзади",
+  "ContextMenu_RightThigh": "Надеть на правое бедро",
+  "ContextMenu_LeftThigh": "Надеть на левое бедро",
+  "ContextMenu_Female": "Для женщин",
+  "ContextMenu_Male": "Для мужчин",
+  "ContextMenu_OpenHoodieUp": "Расстегнуть куртку, капюшон поднять",
+  "ContextMenu_OpenHoodieDown": "Расстегнуть куртку, капюшон опустить",
+  "ContextMenu_ClosedHoodieUp": "Застегнуть куртку, капюшон поднять",
+  "ContextMenu_ClosedHoodieDown": "Застегнуть куртку, капюшон опустить",
+  "ContextMenu_2d": "Плоская текстура",
+  "ContextMenu_3d": "3D-модель"
+}

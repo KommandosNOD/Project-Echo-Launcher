@@ -1,0 +1,8 @@
+name=PROJECT ECHO - Item Stories Ground Ghost Fix v0.1.0 TEST
+id=ProjectEchoItemStoriesGroundFix
+modversion=0.1.0
+versionMin=42.21
+author=PROJECT ECHO
+description=Test fix for client-only Item Stories ghost world items. Adds removeFromSquare after removeFromWorld. Load after ProjectEcho. Backup world first.
+require=ProjectEcho
+loadModAfter=ProjectEcho,ItemStoriesB42,ItemStoriesMPFix,ProjectEchoGuns93MPFix

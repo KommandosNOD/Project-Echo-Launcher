@@ -1,0 +1,8 @@
+{
+  "Tooltip_AlicesKCM_BoltSwapInventory": "Арбалет должен находиться у вас в инвентаре.",
+  "Tooltip_AlicesKCM_BoltSwapUnload": "Перед сменой типа болтов разрядите арбалет.",
+  "Tooltip_AlicesKCM_BoltSwapReloading": "Перед сменой типа болтов завершите перезарядку.",
+  "Tooltip_AlicesKCM_BoltSwapUnavailable": "Сейчас нельзя изменить тип болтов.",
+  "Tooltip_AlicesKCM_SalvageMetalBolt": "75%% шанс получить и наконечник, и оперение; иначе удастся извлечь только одну из деталей.",
+  "Tooltip_AlicesKCM_SalvageWoodenBolt": "Позволяет получить либо металлолом, либо заострённый камень (случайно)."
+}

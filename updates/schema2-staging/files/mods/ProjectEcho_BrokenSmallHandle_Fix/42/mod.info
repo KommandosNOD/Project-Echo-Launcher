@@ -1,0 +1,5 @@
+name=PROJECT ECHO - Hand Models Fix (Test)
+id=PEBrokenSmallHandle3DFix
+modversion=0.2.0
+pzversion=42
+description=Client-side 3D workaround for oversized broken Small Handle and vanilla sleeping bags in hands. B42.21 test.

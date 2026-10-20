@@ -1,0 +1,8 @@
+name=PROJECT ECHO | Money to PhunWallet (5 cents)
+id=ProjectEchoMoneyExchange
+author=PROJECT ECHO local compatibility addon
+modversion=1.0.0
+versionMin=42.21
+require=phunmart2
+loadModAfter=phunmart2,ProjectEcho
+description=Converts vanilla Base.Money into PhunMart 2 change balance at 5 cents per bill. Validated and consumed server-side. Inventory context actions and F8 fallback. No edits to PhunMart or world.

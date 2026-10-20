@@ -1,0 +1,986 @@
+module Tsarcraft
+{
+    imports
+    {
+        Base
+
+    }
+
+  /************************ BoomBox ************************/
+
+    /* RM_ServerCompatPatch: B42 script comment syntax - Namespaced v2 models to avoid legacy addon model-name collisions. */
+	model TMB42_TCBoomboxGrey
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColor,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxBase
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColor,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxGrey_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColor,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxRed
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorRed,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxRed_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorRed,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxBlue
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorBlue,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxBlue_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorBlue,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxCamo
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorCamo,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxCamo_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorCamo,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxBlack
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorBlack,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxBlack_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorBlack,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxGreen
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorGreen,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxGreen_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorGreen,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TMB42_TCBoomboxPink
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorPink,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxPink_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColorPink,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoombox
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColor,
+		scale = 0.0012,
+	}
+
+	model TMB42_TCBoomboxBase_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/TMB42/Boombox/TCBoombox_BaseColor,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+
+	model TCBoombox_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColor,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxBlue
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorBlue,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxBlue_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorBlue,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxCamo
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorCamo,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxCamo_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorCamo,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxBlack
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorBlack,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxBlack_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorBlack,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxGreen
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorGreen,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxGreen_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorGreen,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxPink
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorPink,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxPink_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorPink,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+	model TCBoomboxRed
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorRed,
+		scale = 0.0012,
+	}
+
+
+	model TCBoomboxRed_Ground
+	{
+		mesh = WorldItems/TCBoombox,
+		texture = WorldItems/Boombox/TCBoombox_BaseColorRed,
+		scale = 0.0013,
+		attachment world
+		{
+			offset = 0.0 0.0 -0.24,
+			rotate = 0.0 90.0 90.0,
+		}
+	}
+
+
+
+  /************************ Cassettes ************************/
+
+	model TCTape1
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape1,
+		scale	=	0.0005,
+	}
+	
+	model TCTape2
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape2,
+		scale	=	0.0005,
+	}
+	
+	model TCTape3
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape3,
+		scale	=	0.0005,
+	}
+	
+	model TCTape4
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape4,
+		scale	=	0.0005,
+	}
+	
+	model TCTape5
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape5,
+		scale	=	0.0005,
+	}
+	model TCTape6
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape6,
+		scale	=	0.0005,
+	}
+	model TCTape7
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape7,
+		scale	=	0.0005,
+	}
+	model TCTape8
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape8,
+		scale	=	0.0005,
+	}
+	model TCTape9
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape9,
+		scale	=	0.0005,
+	}
+	model TCTape10
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape10,
+		scale	=	0.0005,
+	}
+	model TCTape11
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape11,
+		scale	=	0.0005,
+	}
+	model TCTape12
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape12,
+		scale	=	0.0005,
+	}
+	model TCTape13
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape13,
+		scale	=	0.0005,
+	}
+	model TCTape14
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape14,
+		scale	=	0.0005,
+	}
+	model TCTape15
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape15,
+		scale	=	0.0005,
+	}
+	model TCTape16
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape16,
+		scale	=	0.0005,
+	}
+	model TCTape17
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape17,
+		scale	=	0.0005,
+	}
+	model TCTape18
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape18,
+		scale	=	0.0005,
+	}
+	model TCTape19
+	{
+		mesh			=	WorldItems/TCTape,
+		texture			=	WorldItems/Cassette/TCTape19,
+		scale	=	0.0005,
+	}
+	
+ /************************ Walkman ************************/
+
+	model TCWalkman
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColor,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkman_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColor,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanPurple
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorPurple,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanPurple_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorPurple,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanRed
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorRed,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanRed_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorRed,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanBlack
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorBlack,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanBlack_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorBlack,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanPink
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorPink,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanPink_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorPink,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanGreen
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorGreen,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanGreen_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorGreen,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+	model TCWalkmanCamoGreen
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorCamoGreen,
+		scale = 0.1,
+		/*
+		attachment walkie_belt_left
+		{
+			offset = 0.0 0.04 0.03,
+			rotate = -20.0 -100.0 -10.0,
+			scale = 7.5,
+		}
+		attachment walkie_belt_right
+		{
+			offset = 0.01 0.04 -0.02,
+			rotate = -20.0 -120.0 -20.0,
+			scale = 7.5,
+		}
+		attachment webbing_left_walkie
+		{
+			offset = -0.0143 0.0697 0.0887,
+			rotate = -101.3686 2.3431 -90.4975,
+			scale = 1.0,
+		}
+		attachment webbing_right_walkie
+		{
+			offset = -0.0147 -0.0694 0.0895,
+			rotate = -78.9636 -2.2401 -90.466,
+			scale = 1.0,
+		}
+		*/
+	}
+
+	model TCWalkmanCamoGreen_Ground
+	{
+		mesh = WorldItems/TCWalkman,
+		texture = WorldItems/Walkman/TCWalkman_BaseColorCamoGreen,
+		scale = 1,
+		attachment world
+		{
+			offset = 0.0 0.0 0.0,
+			rotate = 0.0 0.0 0.0,
+		}
+	}
+
+ /************************ Walkman Belt Slot ************************/
+
+    model FemaleBody
+	{
+		mesh = Skinned/FemaleBody,
+		static = false,
+		animationsMesh = Human,
+
+		/*  */
+		
+		/*  */
+	}
+
+	model MaleBody
+	{
+		mesh = Skinned/MaleBody,
+		static = false,
+		animationsMesh = Human,
+
+		/*  */
+
+		/*  */	
+	}
+
+
+ /************************ Vinyl Player ************************/
+
+	model TMB42_TCVinyl_Ground
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/TMB42/Vinyl/TCVinyl_BaseColor,
+		scale = 0.015,
+	}
+
+	model TMB42_TCVinylBlack_Ground
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/TMB42/Vinyl/TCVinyl_BaseColorBlack,
+		scale = 0.015,
+	}
+
+	model TCVinyl_Ground
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinyl_BaseColor,
+		scale = 0.015,
+	}
+	
+
+  /************************ Vinylrecords ************************/
+
+	model TCVinylrecord1
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord1,
+		scale = 0.0013,
+	}
+	model TCVinylrecord2
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord2,
+		scale = 0.0013,
+	}
+	model TCVinylrecord3
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord3,
+		scale = 0.0013,
+	}
+	model TCVinylrecord4
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord4,
+		scale = 0.0013,
+	}
+	model TCVinylrecord5
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord5,
+		scale = 0.0013,
+	}
+	model TCVinylrecord6
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord6,
+		scale = 0.0013,
+	}
+	model TCVinylrecord7
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord7,
+		scale = 0.0013,
+	}
+	model TCVinylrecord8
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord8,
+		scale = 0.0013,
+	}
+	model TCVinylrecord9
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord9,
+		scale = 0.0013,
+	}
+	model TCVinylrecord10
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord10,
+		scale = 0.0013,
+	}
+	model TCVinylrecord11
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord11,
+		scale = 0.0013,
+	}
+	model TCVinylrecord12
+	{
+		mesh = WorldItems/TCVinyl,
+		texture = WorldItems/Vinyl/TCVinylrecord12,
+		scale = 0.0013,
+	}
+
+  /************************ TM Vinyl Records ************************/
+
+	model TMVinylrecord1
+	{
+		mesh = WorldItems/TMVinylrecord,
+		texture = WorldItems/Vinyl/TMVinylrecord1,
+		scale = 0.12,
+	}
+	model TMVinylrecord2
+	{
+		mesh = WorldItems/TMVinylrecord,
+		texture = WorldItems/Vinyl/TMVinylrecord2,
+		scale = 0.12,
+	}
+	model TMVinylrecord3
+	{
+		mesh = WorldItems/TMVinylrecord,
+		texture = Zomboid/WorldItems/World_TMZomboid_Vinyl,
+		scale = 0.12,
+	}
+	model TMVinylrecord4
+	{
+		mesh = WorldItems/TMVinylrecord,
+		texture = WorldItems/Vinyl/TMVinylrecord4,
+		scale = 0.12,
+	}
+	model TMVinylrecord5
+	{
+		mesh = WorldItems/TMVinylrecord,
+		texture = WorldItems/Vinyl/TMVinylrecord5,
+		scale = 0.12,
+	}
+	model TMVinylalbum1
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum2
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum3
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum4
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum5
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum6
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum7
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum8
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum9
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum10
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum11
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMVinylalbum12
+	{
+		mesh = WorldItems/TMVinylalbum,
+		texture = Zomboid/WorldItems/World_TMZomboid_Album,
+		scale = 0.12,
+	}
+	model TMZomboidCassette
+	{
+		mesh = WorldItems/TCTape,
+		texture = Zomboid/WorldItems/World_TMZomboid_Cassette,
+		scale = 0.0005,
+	}
+
+
+	
+}
+	
+
+
+
+

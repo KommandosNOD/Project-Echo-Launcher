@@ -1,0 +1,6 @@
+name=PROJECT ECHO - DAMN Library Russian
+id=ProjectEchoDAMNLibraryRU
+description=Русский перевод названий деталей и рецептов KI5, требуется damnlib.
+versionMin=42.20
+modversion=1.0.0
+require=damnlib

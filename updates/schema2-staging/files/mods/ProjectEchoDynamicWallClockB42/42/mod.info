@@ -1,0 +1,11 @@
+name=PROJECT ECHO - Dynamic Wall Clock (B42.21 MP)
+id=ProjectEchoDynamicWallClockB42
+author=nPocTo_4eJI (original sprite artwork), PROJECT ECHO (B42 compatibility), Viewpoint Living Props (3D artwork)
+modversion=1.2.0-3D-TEST
+versionMin=42.21
+versionMax=42.21
+category=features
+description=CLIENT-ONLY clock compatibility for Viewpoint Living Props. 32/33 use native 3D clock hands without overlay conflicts; 34/35 add experimental reverse-facing model bindings and 3D hands. For B42.21 MP.
+pack=WallClock
+require=ViewpointLivingProps
+incompatible=DynamicWallClock

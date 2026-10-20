@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Authentic Z Russian (B42.21)
+id=ProjectEchoAuthenticZRU
+description=Improves and completes Russian translations for Authentic Z - Current (B42). Translation-only, no original Workshop changes.
+authors=PROJECT ECHO
+pzversion=42
+require=Authentic Z - Current

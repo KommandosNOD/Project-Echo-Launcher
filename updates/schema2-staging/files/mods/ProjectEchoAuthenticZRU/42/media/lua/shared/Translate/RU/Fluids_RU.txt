@@ -1,0 +1,5 @@
+﻿Fluids_RU = {
+    Fluid_Container_AuthenticCanteen = "Фляга",
+    Fluid_Container_AquaBottle = "Бутылка для воды",
+    Fluid_Container_GymBottle = "Спортивная бутылка",
+}

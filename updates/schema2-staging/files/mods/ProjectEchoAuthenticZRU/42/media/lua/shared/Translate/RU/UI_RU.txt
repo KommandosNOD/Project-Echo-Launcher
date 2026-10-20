@@ -1,0 +1,4 @@
+﻿UI_RU = {
+    ["UI_optionscreen_binding_Hotbar 6"] = "Слот панели быстрого доступа 6",
+    UI_Fuel_Remaining = "Осталось топлива: ",
+}

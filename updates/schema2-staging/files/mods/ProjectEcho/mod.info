@@ -1,0 +1,12 @@
+name=PROJECT ECHO - Unified B42.21
+id=ProjectEcho
+modversion=2.0.5-itemstories-guard
+versionMin=42.21
+author=PROJECT ECHO community / original module authors
+description=PROJECT ECHO campaign and fixes with a lightweight RU translation adapter for the official ViewpointUI Workshop mod. No duplicated ViewpointUI Lua or Java.
+poster=poster.png
+require=TheMission42,Viewpoint,ViewpointUI,phunmart2
+loadModAfter=TheMission42,Viewpoint,ViewpointUI,phunmart2,ProximityInventory,NeatUI_Framework,NeatUI_Equipment,Neat_Crafting,Neat_Building,Neat_Building_Railings,ItemStoriesB42,ItemStoriesMPFix
+ZBVersionMin=2.3.0
+pack=phleamarket
+tiledef=phleamarket 1425

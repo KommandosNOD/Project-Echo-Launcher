@@ -1,0 +1,19 @@
+{
+  "Sandbox_AlicesKCM": "Арбалеты Kitsune",
+  "Sandbox_AlicesKCM_CrossbowSpawnMultiplier": "Множитель появления всех арбалетов",
+  "Sandbox_AlicesKCM_CrossbowSpawnMultiplier_tooltip": "Умножает вероятность появления всех арбалетов в добыче. Учитывается также индивидуальный множитель каждого арбалета. 0 — отключить появление, 1 — обычная частота, 2 — вдвое чаще.",
+  "Sandbox_AlicesKCM_RecurveCrossbowSpawnMultiplier": "Множитель появления рекурсивного арбалета",
+  "Sandbox_AlicesKCM_RecurveCrossbowSpawnMultiplier_tooltip": "Дополнительный множитель появления рекурсивного арбалета. Умножается на общий множитель арбалетов: например, 2 × 0,5 дают исходную частоту.",
+  "Sandbox_AlicesKCM_HandCrossbowSpawnMultiplier": "Множитель появления ручного арбалета",
+  "Sandbox_AlicesKCM_HandCrossbowSpawnMultiplier_tooltip": "Дополнительный множитель появления ручного арбалета. Умножается на общий множитель арбалетов: например, 2 × 0,5 дают исходную частоту.",
+  "Sandbox_AlicesKCM_ScoutCompoundSpawnMultiplier": "Множитель появления блочного арбалета Scout",
+  "Sandbox_AlicesKCM_ScoutCompoundSpawnMultiplier_tooltip": "Дополнительный множитель появления блочного арбалета Scout. Умножается на общий множитель арбалетов: например, 2 × 0,5 дают исходную частоту.",
+  "Sandbox_AlicesKCM_HazeCompoundSpawnMultiplier": "Множитель появления блочного арбалета Haze 470",
+  "Sandbox_AlicesKCM_HazeCompoundSpawnMultiplier_tooltip": "Дополнительный множитель появления блочного арбалета Haze 470. Умножается на общий множитель арбалетов: например, 2 × 0,5 дают исходную частоту.",
+  "Sandbox_AlicesKCM_BoltSpawnMultiplier": "Множитель появления арбалетных болтов",
+  "Sandbox_AlicesKCM_BoltSpawnMultiplier_tooltip": "Умножает вероятность появления отдельных болтов и коробок с болтами. 0 — отключить появление, 1 — обычная частота, 2 — вдвое чаще.",
+  "Sandbox_AlicesKCM_MagazineSpawnMultiplier": "Множитель появления журналов о выживании",
+  "Sandbox_AlicesKCM_MagazineSpawnMultiplier_tooltip": "Умножает вероятность появления журналов «Подготовка к концу света». 0 — отключить появление, 1 — обычная частота, 2 — вдвое чаще.",
+  "Sandbox_AlicesKCM_SkillBookSpawnMultiplier": "Множитель появления учебников",
+  "Sandbox_AlicesKCM_SkillBookSpawnMultiplier_tooltip": "Умножает вероятность появления добавленных модом учебников по стрельбе и перезарядке. 0 — отключить появление, 1 — обычная частота, 2 — вдвое чаще."
+}

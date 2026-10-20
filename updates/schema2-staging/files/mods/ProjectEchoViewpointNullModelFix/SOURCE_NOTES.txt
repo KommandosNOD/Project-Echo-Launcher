@@ -1,0 +1,7 @@
+BUILD INFO
+javac --release 17; independent compile-time annotation interfaces from
+ZombieBuddy ModdingGuide. No ZombieBuddy runtime library is redistributed.
+One Java patch class + one Main class. No external dependencies bundled.
+Target: zombie.scripting.ScriptBucketCollection.getScript(String)
+Guard: skip original only when first argument is null; return default null.
+INTEGRATION TEST pending on actual user's B42.21 runtime.

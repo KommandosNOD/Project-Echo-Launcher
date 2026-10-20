@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Weapon Visual Refresh
+id=ProjectEchoWeaponVisualFix
+author=PROJECT ECHO
+modversion=0.2.0
+description=CLIENT TEST: refresh equipped firearm visual model when equipping or switching Viewpoint camera. F10 manual. No ammo, inventory, or damage modifications.
+require=Viewpoint

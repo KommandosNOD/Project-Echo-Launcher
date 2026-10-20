@@ -1,0 +1,12 @@
+{
+  "ContextMenu_WearSideways": "Надеть набок",
+  "ContextMenu_UntieBonnet": "Развязать чепчик",
+  "ContextMenu_TieBonnet": "Завязать чепчик",
+  "ContextMenu_Wear1XS": "Надеть размер XS",
+  "ContextMenu_Wear1XL": "Надеть размер XL",
+  "ContextMenu_Wear2XL": "Надеть размер 2XL",
+  "ContextMenu_Wear3XL": "Надеть размер 3XL",
+  "ContextMenu_Stopping_Chainsaw": "Остановить бензопилу",
+  "ContextMenu_Fuel_Left": "Осталось топлива: ",
+  "ContextMenu_RetrieveFuel_Chainsaw": "Слить топливо"
+}

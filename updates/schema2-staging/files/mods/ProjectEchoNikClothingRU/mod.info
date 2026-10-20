@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Nik Random Clothing RU
+id=ProjectEchoNikClothingRU
+description=Russkaya lokalizatsiya Nik Random Clothing B42.21; item names, crafting, context menu.
+versionMin=42.20
+modversion=1.0.0
+require=RandomClothing

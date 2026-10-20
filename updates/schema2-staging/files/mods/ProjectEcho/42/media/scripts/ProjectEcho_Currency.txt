@@ -1,0 +1,89 @@
+module ProjectEcho
+{
+    item Credits100
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = 100 ECHO Credits,
+        Icon = Money,
+        Weight = 0.01,
+    }
+
+    item Credits250
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = 250 ECHO Credits,
+        Icon = Money,
+        Weight = 0.01,
+    }
+
+    item Credits500
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = 500 ECHO Credits,
+        Icon = Money,
+        Weight = 0.01,
+    }
+
+    item Credits1000
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = 1000 ECHO Credits,
+        Icon = Money,
+        Weight = 0.01,
+    }
+
+    item Credits2000
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = 2000 ECHO Credits,
+        Icon = Money,
+        Weight = 0.01,
+    }
+
+
+    item PhunMartPayoutT1
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = PhunMart payout - $5.00,
+        Icon = Money,
+        Weight = 0.0,
+    }
+    item PhunMartPayoutT2
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = PhunMart payout - $8.00,
+        Icon = Money,
+        Weight = 0.0,
+    }
+    item PhunMartPayoutT3
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = PhunMart payout - $12.00,
+        Icon = Money,
+        Weight = 0.0,
+    }
+    item PhunMartPayoutT4
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = PhunMart payout - $18.00,
+        Icon = Money,
+        Weight = 0.0,
+    }
+    item PhunMartPayoutT5
+    {
+        DisplayCategory = Currency,
+        Type = Normal,
+        DisplayName = PhunMart payout - $25.00,
+        Icon = Money,
+        Weight = 0.0,
+    }
+}

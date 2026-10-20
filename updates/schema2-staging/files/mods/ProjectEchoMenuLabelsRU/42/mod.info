@@ -1,0 +1,5 @@
+name=PROJECT ECHO | Menu Labels RU (ViewpointUI + PushVehicle)
+id=ProjectEchoMenuLabelsRU
+author=PROJECT ECHO
+version=1.0.0
+description=Client-side Russian interface labels for ViewpointUI and PushVehicle; local copies of two small ViewpointUI source files generated on install. B42.21 MP.

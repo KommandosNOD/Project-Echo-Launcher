@@ -1,0 +1,7 @@
+name=Project Echo - Viewpoint Null Model Fix (TEST)
+id=ProjectEchoViewpointNullModelFix
+description=Client-only crash guard for Viewpoint 0.1.6.1: null model script name in ground-item FloorDecals on PZ B42.21. Experimental.
+require=\ZombieBuddy
+javaJarFile=media/java/client/ProjectEchoViewpointNullModelFix.jar
+javaPkgName=projectecho.viewpoint.nullmodel
+ZBVersionMin=2.0.0

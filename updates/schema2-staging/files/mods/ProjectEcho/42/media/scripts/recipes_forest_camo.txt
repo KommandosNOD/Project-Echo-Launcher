@@ -1,0 +1,423 @@
+module Base
+{
+craftRecipe ForestCamoHelmetDefender
+    {
+        timedAction = Making,
+        Time = 150,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.Forest_Camo_Helmet_Patriot;Base.Forest_Camo_Helmet_Patriot_NoBelts],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Helmet,
+        }
+    }
+
+    craftRecipe ForestCamoHelmetPatriot
+    {
+        timedAction = Making,
+        Time = 140,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 1 [Base.Hat_Army;Base.Hat_ArmyDesert;Base.Hat_MetalScrapHelmet;Base.Hat_RiotHelmet;Base.Hat_SPHhelmet;Base.Forest_Camo_Helmet;Base.Forest_Camo_Helmet_NoBelts],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Helmet_Patriot,
+        }
+    }
+
+    craftRecipe ForestCamoCap
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        NeedToBeLearn = True,
+        xpAward = Tailoring:1,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Hat,
+        }
+    }
+
+    craftRecipe ForestCamoBalaclava
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Balaclava,
+        }
+    }
+
+    craftRecipe ForestCamoJacket
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 6 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 2 tags[base:button],
+            item 2 tags[base:twine],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Jacket,
+        }
+    }
+
+    craftRecipe ForestCamoVestLight
+    {
+        timedAction = Making,
+        Time = 180,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.Sheet],
+            item 1 tags[base:wire],
+            item 2 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_LightVest,
+        }
+    }
+
+    craftRecipe ForestCamoVestHeavy
+    {
+        timedAction = Making,
+        Time = 200,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 6 tags[base:thread],
+            item 2 [Base.Sheet],
+            item 1 tags[base:wire],
+            item 4 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Vest,
+        }
+    }
+
+    craftRecipe ForestCamoShoulderPads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_ShoulderPads_Patriot,
+        }
+    }
+
+
+    craftRecipe ForestCamoElbowPads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Elbow_Pads,
+        }
+    }
+
+    craftRecipe ForestCamoKneePads
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 1 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Knee_Pads,
+        }
+    }
+
+    craftRecipe ForestCamoKneePadsHeavy
+    {
+    timedAction = Making,
+    Time = 160,
+    category = Tailoring,
+    Tags = AnySurfaceCraft,
+    SkillRequired = Tailoring:6,
+    xpAward = Tailoring:1,
+    NeedToBeLearn = True,
+    AutoLearnAny = Tailoring:6,
+    inputs
+    {
+        item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+        item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+        item 2 [Base.LeatherStrips],
+        item 4 tags[base:thread],
+        item 4 [Base.RippedSheets],
+        item 2 tags[base:smallsheetmetal] mode:destroy flags[ItemCount],
+    }
+    outputs
+    {
+        item 1 Base.Forest_Camo_KneePads_Defender,
+    }
+    }
+
+    craftRecipe ForestCamoGloves
+    {
+        timedAction = Making,
+        Time = 100,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Gloves_LeatherGloves;Base.Gloves_LeatherGlovesBlack;Base.Gloves_LeatherGlovesBrown;Base.Gloves_HuntingCamo;Base.Gloves_FingerlessLeatherGloves;Base.Gloves_FingerlessLeatherGloves_Black],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+            item 2 [Base.LeatherStrips],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Gloves,
+        }
+    }
+
+    craftRecipe ForestCamoPants
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 2 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 4 [Base.RippedSheets],
+            item 1 tags[base:button],
+            item 2 tags[base:twine],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Pants,
+        }
+    }
+
+    craftRecipe ForestCamoBoots
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Shoes_ArmyBoots;Base.Shoes_ArmyBootsDesert;Base.Shoes_WorkBoots;Base.Shoes_HikingBoots;Base.Shoes_BlackBoots;Base.Forest_Camo_TacBoots],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Boots,
+        }
+    }
+
+    craftRecipe ForestCamoTacBoots
+    {
+        timedAction = Making,
+        Time = 120,
+        category = Tailoring,
+        Tags = InHandCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Shoes_ArmyBoots;Base.Shoes_ArmyBootsDesert;Base.Shoes_WorkBoots;Base.Shoes_HikingBoots;Base.Shoes_BlackBoots;Base.Forest_Camo_Boots],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+            item 2 [Base.RippedSheets],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_TacBoots,
+        }
+    }
+
+    craftRecipe ForestCamoBackpack
+    {
+        timedAction = Making,
+        Time = 160,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Bag_SurvivorBag;Base.Bag_ALICEpack;Base.Bag_ALICEpack_Army;Base.Bag_ALICEpack_DesertCamo;Base.Bag_Schoolbag;Base.Bag_Schoolbag_Travel;Base.Bag_Schoolbag_Patches;Base.Bag_Schoolbag_Kids;Base.Bag_Schoolbag_Medical;Base.Bag_BigHikingBag;Base.Bag_BigHikingBag_Travel],
+            item 2 [Base.LeatherStrips],
+            item 4 tags[base:thread],
+            item 1 [Base.Sheet],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_Backpack_Ranger_Tight,
+        }
+    }
+
+    craftRecipe ForestCamoGasMask
+    {
+        timedAction = Making,
+        Time = 200,
+        category = Tailoring,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Tailoring:6,
+        xpAward = Tailoring:1,
+        NeedToBeLearn = True,
+        AutoLearnAny = Tailoring:6,
+        inputs
+        {
+            item 1 tags[base:sewingneedle] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors] mode:keep flags[MayDegradeLight],
+            item 1 [Base.Hat_GasMask;Base.Hat_GasMask_nofilter;Base.Hat_ImprovisedGasMask;Base.Hat_ImprovisedGasMask_nofilter],
+            item 4 [Base.LeatherStrips],
+            item 2 tags[base:thread],
+        }
+        outputs
+        {
+            item 1 Base.Forest_Camo_GasMask-M80,
+        }
+    }
+}

@@ -1,0 +1,5 @@
+Sandbox_RU = {
+    Sandbox_ProximityInventory = "Ближайшие предметы (Proximity Inventory)",
+    Sandbox_ZombieOnly = "Только зомби",
+    Sandbox_ZombieOnly_tooltip = "Показывать в интерфейсе ближайших предметов только содержимое зомби.",
+}

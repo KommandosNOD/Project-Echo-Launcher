@@ -1,0 +1,13 @@
+{
+  "HEADER_Sandbox_EN_damnlib": "3171167894",
+  "Sandbox_DAMN_Spawns": "KI5 | Гарантированное появление",
+  "Sandbox_DAMN_Options": "damnlib | Настройки",
+  "Sandbox_DAMN_AllowVanillaVehicleDismantling": "Разрешить переработку деталей стандартных автомобилей",
+  "Sandbox_DAMN_AllowVanillaWorldItemDismantling": "Разрешить переработку окон и зеркал из зданий",
+  "HEADER_Sandbox_EN_49powerWagon": "2900580391",
+  "Sandbox_DAMN_AllowPowerChadSpawns": "Включить заданные места появления Dodge Power Wagon 1949 года",
+  "HEADER_Sandbox_EN_97bushmaster": "2897390033",
+  "Sandbox_DAMN_AllowBushmasterSpawns": "Включить заданные места появления ADI Bushmaster 1997 года",
+  "HEADER_Sandbox_EN_80manKat1": "3248388837",
+  "Sandbox_DAMN_AllowManlyMANSpawns": "Включить заданные места появления MAN KAT1 1980 года"
+}

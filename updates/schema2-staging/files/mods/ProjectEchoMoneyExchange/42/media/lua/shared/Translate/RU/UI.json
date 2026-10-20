@@ -1,0 +1,19 @@
+{
+  "UI_PEME_Title": "PROJECT ECHO — Обменять деньги на PhunWallet",
+  "UI_PEME_One": "1 купюра → $0.05",
+  "UI_PEME_Ten": "10 купюр → $0.50",
+  "UI_PEME_Fifty": "50 купюр → $2.50",
+  "UI_PEME_All": "Все купюры (до 250 за раз)",
+  "UI_PEME_Success": "Обменено",
+  "UI_PEME_Balance": "баланс",
+  "UI_PEME_NoCash": "Нет купюр Base.Money в инвентаре",
+  "UI_PEME_NotEnough": "Недостаточно купюр в инвентаре",
+  "UI_PEME_WalletFull": "Достигнут лимит баланса PhunWallet",
+  "UI_PEME_WalletDisabled": "Кошелёк PhunMart Change отключён",
+  "UI_PEME_MissingPhunMart": "API кошелька PhunMart недоступен",
+  "UI_PEME_RemoveFailed": "Не удалось списать купюры",
+  "UI_PEME_SlowDown": "Подожди секунду перед следующим обменом",
+  "UI_PEME_Invalid": "Неверный запрос обмена",
+  "UI_PEME_Error": "Ошибка обмена — проверь консоль сервера",
+  "UI_PEME_MissingServer": "Не загрузился обработчик обмена"
+}

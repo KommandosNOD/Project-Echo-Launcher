@@ -1,0 +1,4 @@
+name=PROJECT ECHO - Direct Ammo Compatibility v0.2.8 (B42.21)
+id=ProjectEcho_AmmoCompat
+description=Direct equivalent-caliber ammo support for Gunworks, PSA and Guns93. Test on backup. Direct ammo adapter plus native B42 ammo-box unpack repair; no crafted conversion.
+modversion=0.2.8

@@ -1,0 +1,4 @@
+name=PROJECT ECHO - Furniture Push & Pull RU
+id=ProjectEchoFurniturePushPullRU
+description=Russian localization for Furniture Push & Pull (B42.21). Requires FurniturePushPull.
+require=FurniturePushPull

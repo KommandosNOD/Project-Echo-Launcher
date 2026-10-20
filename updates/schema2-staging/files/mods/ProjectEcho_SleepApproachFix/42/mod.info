@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Safe Sleep Approach Fix (B42.21 MP)
+id=ProjectEcho_SleepApproachFix
+author=PROJECT ECHO
+modversion=0.1.0
+description=Guards empty path-to-nearest destinations when sleeping on multi-tile beds, couches and chairs. Uses ordinary walk actions and refuses inaccessible targets. No world or save changes.
+versionMin=42.21.0
