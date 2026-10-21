@@ -1,0 +1,82 @@
+name: Build PROJECT ECHO 0.8.1 + Builder 0.6.1 (Windows)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Windows x64 (review only, NO publishing)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Unpack production launcher sources
+        shell: pwsh
+        run: |
+          $ErrorActionPreference='Stop'
+          $zip='source/PROJECT_ECHO_Production_Source_v0.8.1.zip'
+          if (!(Test-Path -LiteralPath $zip)) { throw 'Missing source/PROJECT_ECHO_Production_Source_v0.8.1.zip' }
+          Expand-Archive -LiteralPath $zip -DestinationPath 'working' -Force
+          if (!(Test-Path 'working/launcher/PZLauncher.csproj') -or !(Test-Path 'working/updater/ProjectEchoUpdater.csproj')) {
+            throw 'Launcher sources are incomplete.'
+          }
+          $project=Get-Content 'working/launcher/PZLauncher.csproj' -Raw
+          if ($project -notmatch '<Version>0\.8\.1</Version>' -or $project -notmatch 'ECHO_PRODUCTION_CLIENT') {
+            throw 'Wrong source: expected production version 0.8.1'
+          }
+
+      - name: Build dedicated EXE updater
+        shell: pwsh
+        run: |
+          dotnet publish working/updater/ProjectEchoUpdater.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:NuGetAudit=false -o working/build/updater
+          if ($LASTEXITCODE -ne 0) { throw 'Updater build failed.' }
+          if (!(Test-Path 'working/build/updater/ProjectEchoUpdater.exe')) { throw 'Updater file missing.' }
+
+      - name: Build launcher 0.8.1
+        shell: pwsh
+        run: |
+          dotnet publish working/launcher/PZLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=false -p:NuGetAudit=false -o dist-launcher
+          if ($LASTEXITCODE -ne 0) { throw 'Launcher build failed.' }
+          if (!(Test-Path 'dist-launcher/ProjectEchoLauncher.exe')) { throw 'Launcher EXE missing.' }
+          $sha=(Get-FileHash -Algorithm SHA256 'dist-launcher/ProjectEchoLauncher.exe').Hash.ToLowerInvariant()
+          "$sha  ProjectEchoLauncher.exe" | Set-Content 'dist-launcher/SHA256SUMS.txt' -Encoding ascii
+
+      - name: Upload launcher candidate - not published
+        uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Launcher-0.8.1-RC
+          path: |
+            dist-launcher/ProjectEchoLauncher.exe
+            dist-launcher/SHA256SUMS.txt
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Unpack Launcher Builder 0.6.1
+        shell: pwsh
+        run: |
+          $ErrorActionPreference='Stop'
+          $zip='source/ProjectEcho_LauncherBuilder_v0.6.1_PRODUCTION_EXE.zip'
+          if (!(Test-Path -LiteralPath $zip)) { throw 'Missing source/ProjectEcho_LauncherBuilder_v0.6.1_PRODUCTION_EXE.zip' }
+          Expand-Archive -LiteralPath $zip -DestinationPath 'builder-src' -Force
+          if (!(Test-Path 'builder-src/ProjectEcho_LauncherBuilder_v0.6.1_PRODUCTION_EXE/ProjectEcho.Builder.csproj')) { throw 'Builder source missing' }
+
+      - name: Build Launcher Builder 0.6.1
+        shell: pwsh
+        run: |
+          dotnet publish builder-src/ProjectEcho_LauncherBuilder_v0.6.1_PRODUCTION_EXE/ProjectEcho.Builder.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -p:NuGetAudit=false -o dist-builder
+          if ($LASTEXITCODE -ne 0) { throw 'Builder build failed.' }
+          if (!(Test-Path 'dist-builder/ProjectEcho.Builder.exe')) { throw 'Builder EXE missing.' }
+
+      - name: Upload Builder - keep files together
+        uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Builder-0.6.1-Windows-x64
+          path: dist-builder/
+          retention-days: 14
+          if-no-files-found: error
