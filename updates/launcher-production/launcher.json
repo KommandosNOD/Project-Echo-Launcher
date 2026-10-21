@@ -2,10 +2,10 @@
   "schema": 1,
   "kind": "PROJECT_ECHO_LAUNCHER",
   "channel": "production",
-  "version": "0.8.1",
-  "tag": "echo-launcher-v0.8.1",
+  "version": "0.8.2",
+  "tag": "echo-launcher-v0.8.2",
   "asset": "ProjectEchoLauncher.exe",
   "size": 214078576,
-  "sha256": "2f999720638d8c66d4f9aa8d00161eb158e30559fec2d0342e4624bf9409ba6b",
-  "createdUtc": "2026-10-21T11:48:02.8342258\u002B00:00"
+  "sha256": "eafb5a6db13f1948bd2dcb96ed9a6de2b136e2863e63ef92b7162bfd354914b8",
+  "createdUtc": "2026-10-21T13:22:51.0364286\u002B00:00"
 }
