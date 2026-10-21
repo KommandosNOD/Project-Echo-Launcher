@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261020-180923-674",
-  "createdUtc": "2026-10-20T18:09:23.9085651+00:00",
+  "version": "20261021-135757-086",
+  "createdUtc": "2026-10-21T13:57:57.3427746+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -1608,6 +1608,18 @@
       "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_Backup_20261020-172922/UI.json.old"
     },
     {
+      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/Text.lua.bak",
+      "size": 12172,
+      "sha256": "84683794d3dd587a125e8bc2e1666ceb7a1e794c4e89e825f03e8d6d90002e6c",
+      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/Text.lua.bak"
+    },
+    {
+      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/UI.json.bak",
+      "size": 280,
+      "sha256": "5f7687fc1fd2729bb2cd45f0fd41e628e51b8e06b03c3c409cacba22de78f01a",
+      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/UI.json.bak"
+    },
+    {
       "path": "mods/ProjectEchoMoneyExchange/42/media/lua/client/PEME_ExchangeClient.lua",
       "size": 4857,
       "sha256": "a77afd3a091c7d8fa2592a2d0d2ef6bb6f27f86fae0572aef565eda677d64e8b",
@@ -1864,6 +1876,30 @@
       "size": 46,
       "sha256": "b012e8e3c2c5229aa194d5127e93a419781ab7a6a038647f8c65339480f396c6",
       "url": "files/mods/ProjectEchoWeaponVisualFix/common/README.txt"
+    },
+    {
+      "path": "mods/ProjectEchoZombieWindowPacketFix/42/media/java/client/ProjectEchoZombieWindowPacketFix.jar",
+      "size": 1034,
+      "sha256": "7101744f86bfda69a3d365bf1e28ee1216e7ef36de572941c67eb09a078933cd",
+      "url": "files/mods/ProjectEchoZombieWindowPacketFix/42/media/java/client/ProjectEchoZombieWindowPacketFix.jar"
+    },
+    {
+      "path": "mods/ProjectEchoZombieWindowPacketFix/42/mod.info",
+      "size": 515,
+      "sha256": "c99df6c5a0d1af80780d0394c29128f50cbd2128f414cec6c20364c8761a3905",
+      "url": "files/mods/ProjectEchoZombieWindowPacketFix/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoZombieWindowPacketFix/README_RU.txt",
+      "size": 139,
+      "sha256": "33318fda4872b717d5b7d71819b32cb4ab6d986cfad9ff4f004a742d6f58165b",
+      "url": "files/mods/ProjectEchoZombieWindowPacketFix/README_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoZombieWindowPacketFix/src/com/projectecho/zombiewindowfix/Patch_ZombieWindowDrop.java",
+      "size": 870,
+      "sha256": "3ff72ea506b72822f1fd1f5081e8189d4b4fcb83320caab8c3dc8adb5a5bf4f4",
+      "url": "files/mods/ProjectEchoZombieWindowPacketFix/src/com/projectecho/zombiewindowfix/Patch_ZombieWindowDrop.java"
     },
     {
       "path": "mods/ProjectEcho_AmmoCompat/42/media/lua/client/zzzz_PEAC_AmmoBox_Fix.lua",

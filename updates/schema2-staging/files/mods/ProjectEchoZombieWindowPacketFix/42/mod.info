@@ -1,0 +1,8 @@
+name=PROJECT ECHO — Исправление ошибки зомби у окон (B42.21)
+id=ProjectEchoZombieWindowPacketFix
+description=Исправляет ошибку PlayerDropHeldItemsPacket при перелезании зомби через окна. Для B42.21 MP. Нужен ZombieBuddy 2.3.x. Тестовая версия v0.1.1.
+require=ZombieBuddy
+javaJarFile=media/java/client/ProjectEchoZombieWindowPacketFix.jar
+javaPkgName=com.projectecho.zombiewindowfix
+ZBVersionMin=2.0.0
+ZBVersionMax=2.9.9
