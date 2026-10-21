@@ -2,10 +2,10 @@
   "schema": 1,
   "kind": "PROJECT_ECHO_LAUNCHER",
   "channel": "staging",
-  "version": "0.4.5",
-  "tag": "echo-launcher-test-v0.4.5",
+  "version": "0.4.6",
+  "tag": "echo-launcher-test-v0.4.6",
   "asset": "ProjectEchoLauncher_STAGING.exe",
   "size": 205550295,
-  "sha256": "63b4f6d2a96646ecef7c2f061427206e1b697fa74f55a1e2009e572ad573789b",
-  "createdUtc": "2026-10-21T05:03:51.8474059\u002B00:00"
+  "sha256": "ca2154c43c103febf7789b3040f4702012ae3eded4412700f0f77c27b26c1e79",
+  "createdUtc": "2026-10-21T05:21:01.0413934\u002B00:00"
 }
