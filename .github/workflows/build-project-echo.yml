@@ -1,0 +1,44 @@
+name: Build PROJECT ECHO Launcher (Windows)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Extract production sources
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = 'source/PROJECT_ECHO_Production_Source_v0.8.0.zip'
+          if (!(Test-Path $zip)) { throw 'Missing production source ZIP in source/' }
+          Expand-Archive $zip -DestinationPath working -Force
+          if (!(Test-Path working/launcher/PZLauncher.csproj)) { throw 'Launcher source is missing' }
+      - name: Build updater
+        shell: pwsh
+        run: |
+          dotnet publish working/updater/ProjectEchoUpdater.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:NuGetAudit=false -o working/build/updater
+          if ($LASTEXITCODE -ne 0) { throw 'Updater build failed' }
+      - name: Build launcher
+        shell: pwsh
+        run: |
+          dotnet publish working/launcher/PZLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=false -p:NuGetAudit=false -o dist
+          if ($LASTEXITCODE -ne 0) { throw 'Launcher build failed' }
+          $hash = (Get-FileHash -Algorithm SHA256 'dist/ProjectEchoLauncher.exe').Hash.ToLowerInvariant()
+          "$hash  ProjectEchoLauncher.exe" | Set-Content -Encoding ascii 'dist/SHA256SUMS.txt'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Production-0.8.0-RC
+          path: |
+            dist/ProjectEchoLauncher.exe
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 14
