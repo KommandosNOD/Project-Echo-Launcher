@@ -1,0 +1,77 @@
+name: PROJECT ECHO — Builder automated Windows candidate
+run-name: PROJECT ECHO v${{ inputs.version }} (${{ inputs.commit }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Launcher version, e.g. 0.8.2'
+        required: true
+        type: string
+      commit:
+        description: 'Exact 40-character source commit from Builder upload'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Windows x64 • build and verify (NO RELEASE)
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact reviewed source snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commit }}
+          persist-credentials: false
+
+      - name: Install .NET 10 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Verify uploaded production sources
+        shell: pwsh
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:RELEASE_VERSION -notmatch '^\d+\.\d+\.\d+$') { throw 'Invalid version.' }
+          $source = 'source/auto/PROJECT_ECHO_Production_Source.zip'
+          if (!(Test-Path -LiteralPath $source)) { throw 'Missing source archive.' }
+          Expand-Archive -LiteralPath $source -DestinationPath 'working' -Force
+          $project = 'working/launcher/PZLauncher.csproj'
+          $updater = 'working/updater/ProjectEchoUpdater.csproj'
+          if (!(Test-Path $project) -or !(Test-Path $updater)) { throw 'Invalid archive structure.' }
+          [xml]$xml = Get-Content -LiteralPath $project -Raw
+          $prod = $xml.Project.PropertyGroup | Where-Object { $_.DefineConstants -match 'ECHO_PRODUCTION_CLIENT' } | Select-Object -First 1
+          if ($null -eq $prod -or $prod.Version -ne $env:RELEASE_VERSION) { throw 'Source version or production configuration mismatch.' }
+
+      - name: Build isolated EXE updater
+        shell: pwsh
+        run: |
+          dotnet publish working/updater/ProjectEchoUpdater.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:NuGetAudit=false -o working/build/updater
+          if ($LASTEXITCODE -ne 0) { throw 'Updater build failed.' }
+          if (!(Test-Path 'working/build/updater/ProjectEchoUpdater.exe')) { throw 'Updater EXE missing.' }
+
+      - name: Build production Launcher.exe
+        shell: pwsh
+        run: |
+          dotnet publish working/launcher/PZLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=false -p:NuGetAudit=false -o dist
+          if ($LASTEXITCODE -ne 0) { throw 'Launcher build failed.' }
+          if (!(Test-Path 'dist/ProjectEchoLauncher.exe')) { throw 'Launcher EXE missing.' }
+          $hash = (Get-FileHash -Algorithm SHA256 'dist/ProjectEchoLauncher.exe').Hash.ToLowerInvariant()
+          "$hash  ProjectEchoLauncher.exe" | Set-Content -Encoding ascii 'dist/SHA256SUMS.txt'
+
+      - name: Save Windows candidate (never publish)
+        uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Launcher-${{ inputs.version }}-RC
+          path: |
+            dist/ProjectEchoLauncher.exe
+            dist/SHA256SUMS.txt
+          retention-days: 14
+          if-no-files-found: error
