@@ -1,0 +1,41 @@
+name: Build PROJECT ECHO Builder 0.7.0 (Windows)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Extract Builder 0.7.0 source
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = 'source/ProjectEcho_LauncherBuilder_v0.7.0_SOURCE.zip'
+          if (!(Test-Path -LiteralPath $zip)) { throw 'Missing Builder 0.7.0 source ZIP.' }
+          Expand-Archive -LiteralPath $zip -DestinationPath 'working' -Force
+          $proj='working/ProjectEcho_LauncherBuilder_v0.7.0/ProjectEcho.Builder.csproj'
+          if (!(Test-Path $proj)) { throw 'ProjectEcho.Builder.csproj missing.' }
+          $p=Get-Content -LiteralPath $proj -Raw
+          if ($p -notmatch '<Version>0\.7\.0</Version>') { throw 'Unexpected Builder version.' }
+      - name: Build Builder Windows x64
+        shell: pwsh
+        run: |
+          dotnet publish 'working/ProjectEcho_LauncherBuilder_v0.7.0/ProjectEcho.Builder.csproj' -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -p:NuGetAudit=false -o dist-builder
+          if ($LASTEXITCODE -ne 0) { throw 'Builder compile error.' }
+          if (!(Test-Path 'dist-builder/ProjectEcho.Builder.exe')) { throw 'Builder.exe missing.' }
+      - name: Upload Builder, all DLLs and assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Builder-0.7.0-Windows-x64
+          path: dist-builder/
+          if-no-files-found: error
+          retention-days: 14
