@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "kind": "PROJECT_ECHO_LAUNCHER",
+  "channel": "production",
+  "version": "0.8.1",
+  "tag": "echo-launcher-v0.8.1",
+  "asset": "ProjectEchoLauncher.exe",
+  "size": 214078576,
+  "sha256": "2f999720638d8c66d4f9aa8d00161eb158e30559fec2d0342e4624bf9409ba6b",
+  "createdUtc": "2026-10-21T11:48:02.8342258\u002B00:00"
+}
