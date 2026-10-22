@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261022-124707-518",
-  "createdUtc": "2026-10-22T12:47:07.842625+00:00",
+  "version": "20261022-124850-333",
+  "createdUtc": "2026-10-22T12:48:50.6768648+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -1900,6 +1900,18 @@
       "size": 1519,
       "sha256": "bd7314781854f8d00123c9bbbc2a1c4468b1dda27ef88b49d1470d52515e5409",
       "url": "files/mods/ProjectEchoSandboxLoader/README_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoSpongieClothingRUFix/42/mod.info",
+      "size": 149,
+      "sha256": "c301cd9c2fc5615854d0bb32e7e3422f6aa296b82a856d92b6937a184cffd18d",
+      "url": "files/mods/ProjectEchoSpongieClothingRUFix/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoSpongieClothingRUFix/common/media/lua/shared/Translate/RU/ItemName.json",
+      "size": 4420,
+      "sha256": "a2d34c1e73ebf79ae3139dc2d93f1262d2cce68578ddb4dc8344f24c0604f9df",
+      "url": "files/mods/ProjectEchoSpongieClothingRUFix/common/media/lua/shared/Translate/RU/ItemName.json"
     },
     {
       "path": "mods/ProjectEchoVGERU/42/media/lua/shared/Translate/RU/ItemName.json",
