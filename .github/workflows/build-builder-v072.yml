@@ -1,0 +1,46 @@
+name: Build PROJECT ECHO Builder 0.7.2 (PRODUCTION ONLY)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Extract safe source and confirm exact version
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = 'source/ProjectEcho_LauncherBuilder_v0.7.2_PRODUCTION_ONLY_SOURCE.zip'
+          if (!(Test-Path -LiteralPath $zip)) { throw 'Builder 0.7.2 source ZIP is missing in source/.' }
+          Expand-Archive -LiteralPath $zip -DestinationPath working -Force
+          $proj = 'working/ProjectEcho_LauncherBuilder_v0.7.2_PRODUCTION_ONLY/ProjectEcho.Builder.csproj'
+          if (!(Test-Path -LiteralPath $proj)) { throw 'Builder .csproj not found.' }
+          [xml]$xml = Get-Content -LiteralPath $proj -Raw
+          $version = ($xml.Project.PropertyGroup | Where-Object { $_.Version } | Select-Object -First 1).Version
+          if ($version -ne '0.7.2') { throw "Wrong Builder version: $version" }
+          $xaml = Get-Content -LiteralPath 'working/ProjectEcho_LauncherBuilder_v0.7.2_PRODUCTION_ONLY/MainWindow.xaml' -Raw
+          foreach ($forbidden in @('Header="GITHUB (ТЕСТ)"', 'Header="EXE (ТЕСТ)"', 'Header="ЛОКАЛЬНЫЙ ТЕСТ"')) {
+            if ($xaml.Contains($forbidden)) { throw "Unexpected test controls present: $forbidden" }
+          }
+      - name: Build signed-release-capable owner application
+        shell: pwsh
+        run: |
+          dotnet publish 'working/ProjectEcho_LauncherBuilder_v0.7.2_PRODUCTION_ONLY/ProjectEcho.Builder.csproj' -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=false -p:NuGetAudit=false -o dist-builder
+          if ($LASTEXITCODE -ne 0) { throw 'Builder compile error.' }
+          if (!(Test-Path -LiteralPath 'dist-builder/ProjectEcho.Builder.exe')) { throw 'Built EXE not found.' }
+      - name: Upload Builder v0.7.2 (EXE + all DLL files)
+        uses: actions/upload-artifact@v4
+        with:
+          name: PROJECT-ECHO-Builder-0.7.2-PRODUCTION-ONLY-Windows-x64
+          path: dist-builder/
+          if-no-files-found: error
+          retention-days: 30
