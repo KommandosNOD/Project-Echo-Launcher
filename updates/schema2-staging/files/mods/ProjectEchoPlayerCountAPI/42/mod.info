@@ -1,0 +1,6 @@
+name=PROJECT ECHO Player Count API
+id=ProjectEchoPlayerCountAPI
+modversion=1.0.0
+versionMin=42.0.0
+author=PROJECT ECHO / KommandosNOD
+description=Server-only real player count telemetry; no network tokens in the game mod.

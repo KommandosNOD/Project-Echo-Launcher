@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261021-135757-086",
-  "createdUtc": "2026-10-21T13:57:57.3427746+00:00",
+  "version": "20261022-055304-921",
+  "createdUtc": "2026-10-22T05:53:05.1674197+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -1555,14 +1555,14 @@
     },
     {
       "path": "mods/ProjectEchoMenuLabelsRU/42/media/lua/client/ViewpointUI/Extras/Interactions.lua",
-      "size": 17397,
-      "sha256": "5a6cb46fbe1ed8cca6942a60143333052f3f68c4657df07a52f6259733aa25a1",
+      "size": 18196,
+      "sha256": "40af919cf197cda144bb770c53ef2fb20a29d5aeb6c94fa9afed27f930d5c1f2",
       "url": "files/mods/ProjectEchoMenuLabelsRU/42/media/lua/client/ViewpointUI/Extras/Interactions.lua"
     },
     {
       "path": "mods/ProjectEchoMenuLabelsRU/42/media/lua/client/ViewpointUI/Text.lua",
-      "size": 12172,
-      "sha256": "84683794d3dd587a125e8bc2e1666ceb7a1e794c4e89e825f03e8d6d90002e6c",
+      "size": 13383,
+      "sha256": "ff2ed9db51d13004cb9495b39711ef17fbc5001257d315196adbd2f337be85d8",
       "url": "files/mods/ProjectEchoMenuLabelsRU/42/media/lua/client/ViewpointUI/Text.lua"
     },
     {
@@ -1585,14 +1585,14 @@
     },
     {
       "path": "mods/ProjectEchoMenuLabelsRU/42/media/lua/shared/Translate/RU/UI.json",
-      "size": 280,
-      "sha256": "5f7687fc1fd2729bb2cd45f0fd41e628e51b8e06b03c3c409cacba22de78f01a",
+      "size": 337,
+      "sha256": "d8b30a3f39e821e64be6039084e8400bb3c3d8a4437b7472a518268b0f41d75c",
       "url": "files/mods/ProjectEchoMenuLabelsRU/42/media/lua/shared/Translate/RU/UI.json"
     },
     {
       "path": "mods/ProjectEchoMenuLabelsRU/42/mod.info",
-      "size": 290,
-      "sha256": "edde90d1abad6202a0ab84451ec7d11c4e5a40652f04f53cb1be6d51a70b94b5",
+      "size": 237,
+      "sha256": "6f833ed2416889827b6b334ac1e9e46b3713f3c9395885ce8261edda47d8c146",
       "url": "files/mods/ProjectEchoMenuLabelsRU/42/mod.info"
     },
     {
@@ -1738,6 +1738,24 @@
       "size": 2074,
       "sha256": "9034c2bcc8c620d3b05a44ff9b115754575dd1b4947a58ccb88c61f2ac0c791e",
       "url": "files/mods/ProjectEchoPALSClothingRU/README_INSTALL_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoPlayerCountAPI/42/media/lua/server/ProjectEchoPlayerCountServer.lua",
+      "size": 2240,
+      "sha256": "897d45350a8b6a4ce59b1fcbb55c8fe26625fc11d26c56a816d87489148db855",
+      "url": "files/mods/ProjectEchoPlayerCountAPI/42/media/lua/server/ProjectEchoPlayerCountServer.lua"
+    },
+    {
+      "path": "mods/ProjectEchoPlayerCountAPI/42/mod.info",
+      "size": 222,
+      "sha256": "b081c2ca8eec984be0db7a522325dbb94c626fe0c615539d1df8dbf78f092a76",
+      "url": "files/mods/ProjectEchoPlayerCountAPI/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoPlayerCountAPI/common/.keep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "files/mods/ProjectEchoPlayerCountAPI/common/.keep"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua",

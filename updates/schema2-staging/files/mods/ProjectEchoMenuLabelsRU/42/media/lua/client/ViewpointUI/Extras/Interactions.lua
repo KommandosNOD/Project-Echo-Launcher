@@ -153,6 +153,24 @@ local function doorFor(target)
     return nil
 end
 
+-- Translate at interaction time, when RU JSON has already been loaded.
+-- Avoid raw non-ASCII Lua literals: they caused broken text in ViewpointUI.
+local function peJiggleLabel()
+    if type(getTextOrNull) == "function" then
+        local ok, value = pcall(getTextOrNull, "UI_ProjectEcho_JiggleLock")
+        if ok and type(value) == "string" and value ~= "" and value ~= "UI_ProjectEcho_JiggleLock" then
+            return value
+        end
+    end
+    if type(getText) == "function" then
+        local ok, value = pcall(getText, "UI_ProjectEcho_JiggleLock")
+        if ok and type(value) == "string" and value ~= "" and value ~= "UI_ProjectEcho_JiggleLock" then
+            return value
+        end
+    end
+    return "Jiggle lock"
+end
+
 local function registerDoorProvider(V)
     V.Interactions.register({
         id = "vpuix.door",
@@ -163,7 +181,7 @@ local function registerDoorProvider(V)
             if not door or not isLockedDoor(door) then return end
             -- the vanilla key-in-hand path is already offered by the game's menu
             -- (Unlock Door); jiggling is what the isometric interact key does
-            add({ id = "vpuix.door:jiggle", label = "Подёргать ручку", primary = true,
+            add({ id = "vpuix.door:jiggle", label = peJiggleLabel(), primary = true,
                   run = function(p)
                       ISTimedActionQueue.add(ISOpenCloseDoor:new(p, door))
                   end })
@@ -306,6 +324,7 @@ local function smartPrimary(target, result)
     -- only step in when the current tap action is a known loser, or none is set
     local demote = currentPrimary == nil
     if currentPrimary then
+        if currentPrimary.id == "vpuix.door:jiggle" then demote = true end
         local lc = X.lower(currentPrimary.label)
         for _, l in ipairs(LOSERS_LC) do
             if lc:find(l, 1, true) then demote = true break end

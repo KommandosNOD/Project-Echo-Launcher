@@ -170,7 +170,7 @@ ViewpointUI.Text = {
     movePickup = "Pick up",
     movePlace = "Place",
     moveRotate = "Rotate",
-    moveScrap = "Разобрать",
+    moveScrap = "Disassemble",
     moveRepair = "Repair",
     moveReady = "Ready",
     moveCannot = "Not possible here",
@@ -265,7 +265,7 @@ ViewpointUI.Text = {
     cursorHint = "%s: do it   wheel: turn / next   %s: stop",
     -- repair / disassemble furniture (Interaction/Providers.lua, vpui.moveable)
     moveRepairAction = "Repair %s",
-    moveScrapAction = "Разобрать %s",
+    moveScrapAction = "Disassemble %s",
     moveNeedsParts = "parts needed",
     moveTooBroken = "too broken to repair",
     -- PvP safety and war readout (HUD/PvPHUD.lua)
@@ -305,6 +305,26 @@ ViewpointUI.Text = {
     searchDistance = "%.1f tiles",
 }
 
+-- PE RU v1.3: Keep Lua sources ASCII-only. Cyrillic literals in a Lua table
+-- were truncated to their low Unicode byte by this B42/3D loading path:
+-- the word for disassemble appeared as ASCII punctuation and digits.
+-- Read translations from the game's Unicode-aware text manager instead.
+local function peTranslated(key)
+    if type(getTextOrNull) == "function" then
+        local ok, value = pcall(getTextOrNull, key)
+        if ok and type(value) == "string" and value ~= "" and value ~= key then
+            return value
+        end
+    end
+    if type(getText) == "function" then
+        local ok, value = pcall(getText, key)
+        if ok and type(value) == "string" and value ~= "" and value ~= key then
+            return value
+        end
+    end
+    return nil
+end
+
 -- Our key -> the game's translation key with the same meaning.
 local GAME_KEYS = {
     invTakeAll = "IGUI_invpage_Loot_all",
@@ -321,9 +341,15 @@ local GAME_KEYS = {
 local function useGameText()
     local text = ViewpointUI.Text
     for ours, key in pairs(GAME_KEYS) do
-        local value = getTextOrNull(key)
-        if value and value ~= "" then text[ours] = value end
+        local value = peTranslated(key)
+        if value then text[ours] = value end
     end
+    -- Vanilla RU fallback works even if our custom translation is absent.
+    local scrap = peTranslated("ContextMenu_Disassemble") or peTranslated("IGUI_Scrap") or "Disassemble"
+    text.moveScrap = peTranslated("UI_ProjectEcho_VPUI_moveScrap") or scrap
+    text.moveScrapAction = peTranslated("UI_ProjectEcho_VPUI_moveScrapAction") or (scrap .. " %s")
 end
 
+-- B42 can initialize translations during boot; refresh again on join.
 Events.OnGameBoot.Add(useGameText)
+Events.OnGameStart.Add(useGameText)
