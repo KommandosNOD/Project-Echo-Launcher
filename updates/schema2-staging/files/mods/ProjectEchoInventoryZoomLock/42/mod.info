@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Inventory Zoom Lock (TEST)
+id=ProjectEchoInventoryZoomLock
+description=Client-side ViewpointUI inventory wheel/camera zoom conflict fix; compatible with ProjectViewpointQOL and CameraPlus. Does not modify item transfers or game files.
+require=ViewpointUI
+modversion=0.1.0
+versionMin=42.21

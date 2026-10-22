@@ -1,0 +1,17 @@
+{
+  "IGUI_ProperRoofs_Close": "Закрыть",
+  "IGUI_ProperRoofs_Copied": "Скопировано в буфер обмена.",
+  "IGUI_ProperRoofs_Copy": "Копировать",
+  "IGUI_ProperRoofs_NoAnswer": "Нет ответа от сервера. Возможно, используется старая версия Proper Roofs. Обновите мод и перезапустите сервер.",
+  "IGUI_ProperRoofs_Reload": "Перезагрузить это здание",
+  "IGUI_ProperRoofs_ReloadFailed": "Не выполнено:",
+  "IGUI_ProperRoofs_ReloadHelp": "Удаляет элементы крыш мода в этом здании и заново размещает элементы текущей версии. Полезно после обновления. Постройки игроков сохраняются.",
+  "IGUI_ProperRoofs_Reloaded": "Готово: размещено %d элементов крыши, пропущено %d.",
+  "IGUI_ProperRoofs_Reloading": "Перезагрузка...",
+  "IGUI_ProperRoofs_Remove": "Удалить элементы с этого здания",
+  "IGUI_ProperRoofs_RemoveHelp": "Удаляет элементы крыш мода и восстанавливает исходные элементы карты. Изменения действуют до повторной загрузки этого здания через меню.",
+  "IGUI_ProperRoofs_Removed": "Удалено: восстановлена крыша карты (%d элементов остаются скрытыми до перезагрузки).",
+  "IGUI_ProperRoofs_ReportHelp": "Скопируйте эту строку в отчёт на странице мода в Workshop и опишите проблему.",
+  "IGUI_ProperRoofs_ReportTitle": "Viewpoint — Правильные крыши: сообщить о проблеме",
+  "IGUI_ProperRoofs_Working": "Обработка большого здания (%d областей)..."
+}

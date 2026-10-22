@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261022-055304-921",
-  "createdUtc": "2026-10-22T05:53:05.1674197+00:00",
+  "version": "20261022-124707-518",
+  "createdUtc": "2026-10-22T12:47:07.842625+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -466,6 +466,36 @@
       "size": 535,
       "sha256": "884877c2a7e2438964e361d0009c7701aa4e8c0f643aa607734ea520ca2cc72d",
       "url": "files/mods/ProjectEcho/README_VIEWPOINT_WORKSHOP_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoAdminCommands/42/media/lua/client/ProjectEchoAdminCommands/PEAC_Client.lua",
+      "size": 6338,
+      "sha256": "870046ea6a42fe11ac3fecce01c3ccf09732195cd06f4461456c3ac52d41c881",
+      "url": "files/mods/ProjectEchoAdminCommands/42/media/lua/client/ProjectEchoAdminCommands/PEAC_Client.lua"
+    },
+    {
+      "path": "mods/ProjectEchoAdminCommands/42/media/lua/server/ProjectEchoAdminCommands/PEAC_Server.lua",
+      "size": 10152,
+      "sha256": "bf015156dcb35c9010438897e39733195f329320516c91a1a7634adb1e40bf16",
+      "url": "files/mods/ProjectEchoAdminCommands/42/media/lua/server/ProjectEchoAdminCommands/PEAC_Server.lua"
+    },
+    {
+      "path": "mods/ProjectEchoAdminCommands/42/media/lua/server/ProjectEchoAdminCommands/PEAC_ServerConfig.lua",
+      "size": 696,
+      "sha256": "de83d1b8e81479555cbb49eb3685a5f59532ade8d0d8c3137736c717ad2dc6a3",
+      "url": "files/mods/ProjectEchoAdminCommands/42/media/lua/server/ProjectEchoAdminCommands/PEAC_ServerConfig.lua"
+    },
+    {
+      "path": "mods/ProjectEchoAdminCommands/42/mod.info",
+      "size": 228,
+      "sha256": "dc4e6ddc6153a8e0dc1893984c4d41aef86019f7b0924e9c87fa65d699d1dcc0",
+      "url": "files/mods/ProjectEchoAdminCommands/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoAdminCommands/README_RU.txt",
+      "size": 3657,
+      "sha256": "835108722ef953dda34ea504819161c6e7f0f33d23d37cd8b8b9d9379ab04472",
+      "url": "files/mods/ProjectEchoAdminCommands/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoAuthenticZRU/42/media/lua/shared/Translate/RU/ContextMenu.json",
@@ -1470,6 +1500,42 @@
       "url": "files/mods/ProjectEchoFurniturePushPullRU/README_\u0423\u0421\u0422\u0410\u041D\u041E\u0412\u041A\u0410.txt"
     },
     {
+      "path": "mods/ProjectEchoHideZombieInteraction/42/media/lua/client/zz_ProjectEchoHideZombieInteraction.lua",
+      "size": 1990,
+      "sha256": "032cf35cc973df0fc22c808e1be3ec4aa373569f9619c29a92ef654c2fc11199",
+      "url": "files/mods/ProjectEchoHideZombieInteraction/42/media/lua/client/zz_ProjectEchoHideZombieInteraction.lua"
+    },
+    {
+      "path": "mods/ProjectEchoHideZombieInteraction/42/mod.info",
+      "size": 286,
+      "sha256": "73a45d5fb5375c94a6a50ff29756f44cb27fe98f051ca074d97642b9c0f01cfe",
+      "url": "files/mods/ProjectEchoHideZombieInteraction/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoHideZombieInteraction/mod.info",
+      "size": 286,
+      "sha256": "73a45d5fb5375c94a6a50ff29756f44cb27fe98f051ca074d97642b9c0f01cfe",
+      "url": "files/mods/ProjectEchoHideZombieInteraction/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoInventoryZoomLock/42/media/lua/client/ProjectEchoInventoryZoomLock/InventoryZoomLock.lua",
+      "size": 6731,
+      "sha256": "33857639d5b9f2a201dc8f5a176fc42d230b1ff27fa97429248f7f38dd02970d",
+      "url": "files/mods/ProjectEchoInventoryZoomLock/42/media/lua/client/ProjectEchoInventoryZoomLock/InventoryZoomLock.lua"
+    },
+    {
+      "path": "mods/ProjectEchoInventoryZoomLock/42/mod.info",
+      "size": 309,
+      "sha256": "6806153e01fd4961d5fb4eabed60e230e2ca353530556b0e73148838233833da",
+      "url": "files/mods/ProjectEchoInventoryZoomLock/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoInventoryZoomLock/README_RU.txt",
+      "size": 1517,
+      "sha256": "32bc007bea7ee3636023e17d834b73b06be24c335e21bd8a3524a2f9341c634c",
+      "url": "files/mods/ProjectEchoInventoryZoomLock/README_RU.txt"
+    },
+    {
       "path": "mods/ProjectEchoItemStoriesGroundFix/42/media/lua/shared/ItemStoriesMPFix.lua",
       "size": 18926,
       "sha256": "87af3a98020b536145d7f0318435a19eded68104667bb13dbe05b5afc4421977",
@@ -1596,30 +1662,6 @@
       "url": "files/mods/ProjectEchoMenuLabelsRU/42/mod.info"
     },
     {
-      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_Backup_20261020-172922/ContextMenu.json.old",
-      "size": 54,
-      "sha256": "f34f33e369a1b32e9832e0839d649a3abbdad216ccfb3489517b2fb544b3e5e6",
-      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_Backup_20261020-172922/ContextMenu.json.old"
-    },
-    {
-      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_Backup_20261020-172922/UI.json.old",
-      "size": 263,
-      "sha256": "6d2dec4d3f65c9630c8c360389463adcf323931ddc9c312162655f8189568a20",
-      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_Backup_20261020-172922/UI.json.old"
-    },
-    {
-      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/Text.lua.bak",
-      "size": 12172,
-      "sha256": "84683794d3dd587a125e8bc2e1666ceb7a1e794c4e89e825f03e8d6d90002e6c",
-      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/Text.lua.bak"
-    },
-    {
-      "path": "mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/UI.json.bak",
-      "size": 280,
-      "sha256": "5f7687fc1fd2729bb2cd45f0fd41e628e51b8e06b03c3c409cacba22de78f01a",
-      "url": "files/mods/ProjectEchoMenuLabelsRU/PE_MenuLabelsRU_backup_v12_20261021-144424/UI.json.bak"
-    },
-    {
       "path": "mods/ProjectEchoMoneyExchange/42/media/lua/client/PEME_ExchangeClient.lua",
       "size": 4857,
       "sha256": "a77afd3a091c7d8fa2592a2d0d2ef6bb6f27f86fae0572aef565eda677d64e8b",
@@ -1666,6 +1708,30 @@
       "size": 1197,
       "sha256": "74772af743f3fabf80edac5a2714bf5335a8d4b11340f5af3274f37cdeef13c1",
       "url": "files/mods/ProjectEchoMoneyExchange/README_INSTALL_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoNestedContainers/42/media/lua/client/ProjectEchoNestedContainers_Client.lua",
+      "size": 9298,
+      "sha256": "21b33782621ebeab278b7a0ba276441c289527e575e3a50570d861a4a14f9ef9",
+      "url": "files/mods/ProjectEchoNestedContainers/42/media/lua/client/ProjectEchoNestedContainers_Client.lua"
+    },
+    {
+      "path": "mods/ProjectEchoNestedContainers/42/media/lua/server/ProjectEchoNestedContainers_Server.lua",
+      "size": 8168,
+      "sha256": "0271e8114471495885d6fefd32bea4d28e3df73473b428da43ef4f7827e0c21a",
+      "url": "files/mods/ProjectEchoNestedContainers/42/media/lua/server/ProjectEchoNestedContainers_Server.lua"
+    },
+    {
+      "path": "mods/ProjectEchoNestedContainers/42/mod.info",
+      "size": 405,
+      "sha256": "bb796da0a61c02cb38f33a8a4dd81a231c65d6d9036889f470e4195c4705feee",
+      "url": "files/mods/ProjectEchoNestedContainers/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoNestedContainers/README_RU.txt",
+      "size": 4216,
+      "sha256": "3e6c732c89d87522eafbd7771d6d174a4169e3227ce2e41559f2dfef82b0a635",
+      "url": "files/mods/ProjectEchoNestedContainers/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoNikClothingRU/42/media/lua/shared/Translate/RU/ContextMenu.json",
@@ -1756,6 +1822,24 @@
       "size": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "url": "files/mods/ProjectEchoPlayerCountAPI/common/.keep"
+    },
+    {
+      "path": "mods/ProjectEchoQuickLootResponsive/42/media/lua/client/ViewpointUI/Interaction/QuickLoot.lua",
+      "size": 22920,
+      "sha256": "11c60aa52fe185f0a443820a647b43ed1e11d4cdaa63e0f79a1cce44aaf3d0e0",
+      "url": "files/mods/ProjectEchoQuickLootResponsive/42/media/lua/client/ViewpointUI/Interaction/QuickLoot.lua"
+    },
+    {
+      "path": "mods/ProjectEchoQuickLootResponsive/42/mod.info",
+      "size": 271,
+      "sha256": "981aca355cba30ee180ffa6fbb60c0e985ac3044ab86d992b5fd986e361fb09c",
+      "url": "files/mods/ProjectEchoQuickLootResponsive/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoQuickLootResponsive/README.txt",
+      "size": 1162,
+      "sha256": "848b7aca1343b74173901a53ba2cd862510fe2eef91c3efb73b56c406bd92c06",
+      "url": "files/mods/ProjectEchoQuickLootResponsive/README.txt"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua",
@@ -1860,22 +1944,34 @@
       "url": "files/mods/ProjectEchoViewpointNullModelFix/SOURCE_NOTES.txt"
     },
     {
-      "path": "mods/ProjectEchoViewpointNullModelFix/src/Main.java",
-      "size": 257,
-      "sha256": "c4236d86db7f2cec3e12f44d61c59fc93b23af4d959128f65506bc01356bad71",
-      "url": "files/mods/ProjectEchoViewpointNullModelFix/src/Main.java"
+      "path": "mods/ProjectEchoViewpointSettingsRU/42/media/lua/client/ProjectEchoViewpointSettingsRU.lua",
+      "size": 46911,
+      "sha256": "d312acf58dedb0fe8bd8596170e9cc3c40b40ad2377fe76d2db3044a15925f20",
+      "url": "files/mods/ProjectEchoViewpointSettingsRU/42/media/lua/client/ProjectEchoViewpointSettingsRU.lua"
     },
     {
-      "path": "mods/ProjectEchoViewpointNullModelFix/src/Patch_NullScriptName.java",
-      "size": 1332,
-      "sha256": "8b54997cc6da771ddfcb66e8bdbf17ff0469a024b9b0b05398e2d3468439ad9f",
-      "url": "files/mods/ProjectEchoViewpointNullModelFix/src/Patch_NullScriptName.java"
+      "path": "mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/IG_UI.json",
+      "size": 2002,
+      "sha256": "4ecea8ba2e9676b77ab495c505a9cd7db493be691c2f0a8b7e94ea883fe3faf3",
+      "url": "files/mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/IG_UI.json"
     },
     {
-      "path": "mods/ProjectEchoViewpointNullModelFix/src/TestNullModel.java",
-      "size": 963,
-      "sha256": "e6f2c683618744e780ec7906285d2e9995612145fe24f9b1923392f882a9035f",
-      "url": "files/mods/ProjectEchoViewpointNullModelFix/src/TestNullModel.java"
+      "path": "mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/Sandbox.json",
+      "size": 10506,
+      "sha256": "1988ae2d3772320b769ad6da55207283a0fe7619bd149bbff59e82071d47b61a",
+      "url": "files/mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/Sandbox.json"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/UI.json",
+      "size": 75121,
+      "sha256": "0ac8370b8bda5bf1e7338d55c2f7a465b262e944405f58d9613fbe89bb3add6a",
+      "url": "files/mods/ProjectEchoViewpointSettingsRU/42/media/lua/shared/Translate/RU/UI.json"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointSettingsRU/42/mod.info",
+      "size": 188,
+      "sha256": "115e7ecf246faed18274bf046a1b947ac6e3870d9346bbd4dbd1b4cb27671deb",
+      "url": "files/mods/ProjectEchoViewpointSettingsRU/42/mod.info"
     },
     {
       "path": "mods/ProjectEchoWeaponVisualFix/42/media/lua/client/PE_WeaponVisualFix.lua",
@@ -1912,12 +2008,6 @@
       "size": 139,
       "sha256": "33318fda4872b717d5b7d71819b32cb4ab6d986cfad9ff4f004a742d6f58165b",
       "url": "files/mods/ProjectEchoZombieWindowPacketFix/README_RU.txt"
-    },
-    {
-      "path": "mods/ProjectEchoZombieWindowPacketFix/src/com/projectecho/zombiewindowfix/Patch_ZombieWindowDrop.java",
-      "size": 870,
-      "sha256": "3ff72ea506b72822f1fd1f5081e8189d4b4fcb83320caab8c3dc8adb5a5bf4f4",
-      "url": "files/mods/ProjectEchoZombieWindowPacketFix/src/com/projectecho/zombiewindowfix/Patch_ZombieWindowDrop.java"
     },
     {
       "path": "mods/ProjectEcho_AmmoCompat/42/media/lua/client/zzzz_PEAC_AmmoBox_Fix.lua",

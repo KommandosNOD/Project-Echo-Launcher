@@ -1,0 +1,5 @@
+name=PROJECT ECHO | Admin Commands (chat response; invisible)
+id=ProjectEchoAdminCommands
+author=PROJECT ECHO
+version=0.1.2
+description=/pe replies in chat instead of overhead; /pe invisible on/off/status. Build 42.21 MP. TEST.

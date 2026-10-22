@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Quick Loot Responsive (TEST)
+id=ProjectEchoQuickLootResponsive
+description=Optional client-side ViewpointUI 0.13.1 Quick Loot refresh and text-fit optimization. Requires ViewpointUI. TEST ON COPY.
+require=ViewpointUI
+modversion=0.1.0
+versionMin=42.21

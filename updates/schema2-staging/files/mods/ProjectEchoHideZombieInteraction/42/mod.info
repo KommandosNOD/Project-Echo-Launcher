@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Hide Zombie Interaction Menu
+id=ProjectEchoHideZombieInteraction
+description=Client patch for ViewpointUI: hide action menu while aiming at IsoZombie; leave corpse loot and interactions with the world unchanged.
+require=ViewpointUI
+modversion=1.0.0
+versionMin=42.21

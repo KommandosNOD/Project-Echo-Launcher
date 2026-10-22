@@ -1,0 +1,7 @@
+name=PROJECT ECHO - Nested Containers (42.21 MP TEST)
+id=ProjectEchoNestedContainers
+description=Experimental server-authoritative take from nested bags in world containers. Requires installation on both server and client. Based on analysis of NestedContainers by CJ187 (Workshop 3797079676).
+author=PROJECT ECHO (adaptation); original approach by CJ187
+modversion=0.1.0
+versionMin=42.21
+versionMax=42.21
