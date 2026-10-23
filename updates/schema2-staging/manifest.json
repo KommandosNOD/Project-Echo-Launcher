@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261023-154434-017",
-  "createdUtc": "2026-10-23T15:44:34.5068203+00:00",
+  "version": "20261023-171010-841",
+  "createdUtc": "2026-10-23T17:10:11.2292363+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -634,6 +634,30 @@
       "size": 1242,
       "sha256": "d32b6b287d5e29c68a6619e530911c4fea31c55d1464760c3469577456c9ea8c",
       "url": "files/mods/ProjectEchoBetterBeltsRU/README_INSTALL_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoCursorHUDCompat/42/media/lua/client/ViewpointUI/Legacy.lua",
+      "size": 25255,
+      "sha256": "8970579a3ec4858fe706f568088a5acbfab13b49224d74528acbb70ec5e37400",
+      "url": "files/mods/ProjectEchoCursorHUDCompat/42/media/lua/client/ViewpointUI/Legacy.lua"
+    },
+    {
+      "path": "mods/ProjectEchoCursorHUDCompat/42/mod.info",
+      "size": 278,
+      "sha256": "a8fa68de152ba41e47cf7936237b0dd8f362e7ef14bdcb9a5226b50189ce04f4",
+      "url": "files/mods/ProjectEchoCursorHUDCompat/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoCursorHUDCompat/ORIGIN_SHA256.txt",
+      "size": 112,
+      "sha256": "4a1111890c09492cdac05cf5274a68ba793672100e0b9e84704194fc416f13ad",
+      "url": "files/mods/ProjectEchoCursorHUDCompat/ORIGIN_SHA256.txt"
+    },
+    {
+      "path": "mods/ProjectEchoCursorHUDCompat/README_RU.txt",
+      "size": 3268,
+      "sha256": "2e01bc2282e2779a6a391e6fa8126c134a6a4d11fcf351c7ccda57114fb9a08b",
+      "url": "files/mods/ProjectEchoCursorHUDCompat/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoDAMNLibraryRU/42/media/lua/shared/Translate/RU/Fluids.json",

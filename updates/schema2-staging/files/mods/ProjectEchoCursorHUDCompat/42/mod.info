@@ -1,0 +1,6 @@
+name=PROJECT ECHO - Cursor HUD Compat (TM42)
+id=ProjectEchoCursorHUDCompat
+description=ViewpointUI v0.13.2: treat TM42_MiniTracker as passive HUD so cursor returns to camera after inventory closes; client-side Lua override.
+require=ViewpointUI
+modversion=0.1.0
+versionMin=42.21
