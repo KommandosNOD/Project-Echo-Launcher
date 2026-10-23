@@ -1,0 +1,4 @@
+name=PROJECT ECHO | Radio Sync Fix
+id=ProjectEchoRadioSyncFix
+description=Server controlled TrueMusicRadio42 track changes; MP anti-double-play and leader election. TEST v0.1.0.
+versionMin=42.20

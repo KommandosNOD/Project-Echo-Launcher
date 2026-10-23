@@ -1,0 +1,4 @@
+name=PROJECT ECHO | Street Light Fix (TEST)
+id=ProjectEchoStreetLightFix
+description=Client-only experimental fix for street lamps emitting light after the grid shutdown. Does not change world/switch state. B42.21 MP.
+modversion=0.1.0

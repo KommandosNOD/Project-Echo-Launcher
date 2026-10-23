@@ -1,0 +1,5 @@
+name=PROJECT ECHO - Guns93 Spawner Guard v0.1.0 TEST
+id=ProjectEchoGuns93SpawnerGuard
+description=MP server-side orphan spawner recovery. Test build.
+require=guns93
+loadModAfter=guns93,ProjectEcho

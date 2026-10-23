@@ -2,13 +2,13 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261023-191951-866",
-  "createdUtc": "2026-10-23T19:19:52.5200623+00:00",
+  "version": "20261023-202747-595",
+  "createdUtc": "2026-10-23T20:27:48.0247298+00:00",
   "files": [
     {
       "path": "mods/default.txt",
-      "size": 686,
-      "sha256": "c1d2df1947d8a625574faa01bda7efcb727cd596eb4e8498fa3f448f4b1f7576",
+      "size": 1049,
+      "sha256": "1d87c4d7baf643c76a88af0b2d9600199e27a789728404ee98514e6f75070e02",
       "url": "files/mods/default.txt"
     },
     {
@@ -1578,6 +1578,24 @@
       "url": "files/mods/ProjectEchoFurniturePushPullRU/README_\u0423\u0421\u0422\u0410\u041D\u041E\u0412\u041A\u0410.txt"
     },
     {
+      "path": "mods/ProjectEchoGuns93SpawnerGuard/42/media/lua/server/zzzz_PE_Guns93SpawnerGuard.lua",
+      "size": 10756,
+      "sha256": "e21840b73456c560e57fcc79035084b8a54de890b97b4d471c67b484999b32c5",
+      "url": "files/mods/ProjectEchoGuns93SpawnerGuard/42/media/lua/server/zzzz_PE_Guns93SpawnerGuard.lua"
+    },
+    {
+      "path": "mods/ProjectEchoGuns93SpawnerGuard/42/mod.info",
+      "size": 197,
+      "sha256": "8730f871b5ffaacb2d252ced1152abc6efb47d70fc70c115ba1df93c739d0df3",
+      "url": "files/mods/ProjectEchoGuns93SpawnerGuard/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoGuns93SpawnerGuard/mod.info",
+      "size": 298,
+      "sha256": "95b809ef6705891b2175aaa6be6a0f5836db592588cb0b46d677cb98da5d466e",
+      "url": "files/mods/ProjectEchoGuns93SpawnerGuard/mod.info"
+    },
+    {
       "path": "mods/ProjectEchoHideZombieInteraction/42/media/lua/client/zz_ProjectEchoHideZombieInteraction.lua",
       "size": 1990,
       "sha256": "032cf35cc973df0fc22c808e1be3ec4aa373569f9619c29a92ef654c2fc11199",
@@ -1920,6 +1938,36 @@
       "url": "files/mods/ProjectEchoQuickLootResponsive/README.txt"
     },
     {
+      "path": "mods/ProjectEchoRadioSyncFix/42/media/lua/client/PE_RadioSync_Client.lua",
+      "size": 3557,
+      "sha256": "8cb4cbaf38a9c1704b0892f82bdad621cd4b4faf8cf3faccd7192bb1472acf09",
+      "url": "files/mods/ProjectEchoRadioSyncFix/42/media/lua/client/PE_RadioSync_Client.lua"
+    },
+    {
+      "path": "mods/ProjectEchoRadioSyncFix/42/media/lua/server/PE_RadioSync_Server.lua",
+      "size": 6865,
+      "sha256": "9ec50a14d459e36fb1b406cdc36b20ea01f0df8988e7aff242c3403ce90ed0c3",
+      "url": "files/mods/ProjectEchoRadioSyncFix/42/media/lua/server/PE_RadioSync_Server.lua"
+    },
+    {
+      "path": "mods/ProjectEchoRadioSyncFix/42/media/lua/shared/PE_RadioSync_Config.lua",
+      "size": 382,
+      "sha256": "2de5a5e53e514c76c3bb48e84655d2665da079d690df817b6827b1f932f78d46",
+      "url": "files/mods/ProjectEchoRadioSyncFix/42/media/lua/shared/PE_RadioSync_Config.lua"
+    },
+    {
+      "path": "mods/ProjectEchoRadioSyncFix/42/mod.info",
+      "size": 195,
+      "sha256": "4003e74cdc3e72f3ed7518394fc6020ae30ff0567e648a2b4ac9c9b7764f701b",
+      "url": "files/mods/ProjectEchoRadioSyncFix/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoRadioSyncFix/mod.info",
+      "size": 195,
+      "sha256": "4003e74cdc3e72f3ed7518394fc6020ae30ff0567e648a2b4ac9c9b7764f701b",
+      "url": "files/mods/ProjectEchoRadioSyncFix/mod.info"
+    },
+    {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua",
       "size": 4546,
       "sha256": "b47511f8265703d13f0f743347e7a402604245714e30edf746f8520f60cea061",
@@ -1980,6 +2028,24 @@
       "url": "files/mods/ProjectEchoSandboxLoader/README_RU.txt"
     },
     {
+      "path": "mods/ProjectEchoSP/default-sp.txt",
+      "size": 15218,
+      "sha256": "37cbd6cfa7d94a9f2857cdfd33b2bc7055116b46b0ce65796d1298778c806751",
+      "url": "files/mods/ProjectEchoSP/default-sp.txt"
+    },
+    {
+      "path": "mods/ProjectEchoSP/profiles/default_MENU_RECOMMENDED_38.txt",
+      "size": 1049,
+      "sha256": "1d87c4d7baf643c76a88af0b2d9600199e27a789728404ee98514e6f75070e02",
+      "url": "files/mods/ProjectEchoSP/profiles/default_MENU_RECOMMENDED_38.txt"
+    },
+    {
+      "path": "mods/ProjectEchoSP/profiles/default_SOLO.txt",
+      "size": 15218,
+      "sha256": "37cbd6cfa7d94a9f2857cdfd33b2bc7055116b46b0ce65796d1298778c806751",
+      "url": "files/mods/ProjectEchoSP/profiles/default_SOLO.txt"
+    },
+    {
       "path": "mods/ProjectEchoSpongieClothingRUFix/42/mod.info",
       "size": 149,
       "sha256": "c301cd9c2fc5615854d0bb32e7e3422f6aa296b82a856d92b6937a184cffd18d",
@@ -1990,6 +2056,24 @@
       "size": 4420,
       "sha256": "a2d34c1e73ebf79ae3139dc2d93f1262d2cce68578ddb4dc8344f24c0604f9df",
       "url": "files/mods/ProjectEchoSpongieClothingRUFix/common/media/lua/shared/Translate/RU/ItemName.json"
+    },
+    {
+      "path": "mods/ProjectEchoStreetLightFix/42/media/lua/client/ProjectEchoStreetLightFix/PEStreetLightFix.lua",
+      "size": 8060,
+      "sha256": "76a76b111dcb5d2ad53ed0c863e35dbc770e28e24eb5d5f2afe14ddc7d5f928b",
+      "url": "files/mods/ProjectEchoStreetLightFix/42/media/lua/client/ProjectEchoStreetLightFix/PEStreetLightFix.lua"
+    },
+    {
+      "path": "mods/ProjectEchoStreetLightFix/42/mod.info",
+      "size": 235,
+      "sha256": "0ee3ae652c3a6e5aacad89cfd7d4cab817f67d92614cf4fc1c02bdeb1e5cae77",
+      "url": "files/mods/ProjectEchoStreetLightFix/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoStreetLightFix/README_RU.txt",
+      "size": 2893,
+      "sha256": "1474c36571b019e41d24697154eb890a4e0fa4427406575668f7119de5253809",
+      "url": "files/mods/ProjectEchoStreetLightFix/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoVGERU/42/media/lua/shared/Translate/RU/ItemName.json",

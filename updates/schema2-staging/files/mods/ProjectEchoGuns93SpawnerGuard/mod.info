@@ -1,0 +1,5 @@
+name=PROJECT ECHO - Guns93 Spawner Guard v0.1.0 TEST
+id=ProjectEchoGuns93SpawnerGuard
+description=Server fallback for leftover Guns93*Spawner placeholders (containers, corpses, nearby ground). Load after guns93 and ProjectEcho; preserves vanilla mod.
+require=guns93
+loadModAfter=guns93,ProjectEcho
