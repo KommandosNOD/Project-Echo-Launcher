@@ -1,4 +1,4 @@
-name=PROJECT ECHO - Direct Ammo Compatibility v0.2.8 (B42.21)
+name=PROJECT ECHO - Direct Ammo Compatibility v0.3.0 (B42.21)
 id=ProjectEcho_AmmoCompat
-description=Direct equivalent-caliber ammo support for Gunworks, PSA and Guns93. Test on backup. Direct ammo adapter plus native B42 ammo-box unpack repair + Guns93/internal-magazine/revolver reload selection; no crafted conversion.
-modversion=0.2.8
+description=Bidirectional compatible magazines for Guns93/Marz plus direct equivalent-caliber ammo support for Gunworks, PSA and Guns93. Test on backup. Direct ammo adapter plus native B42 ammo-box unpack repair + Guns93/internal-magazine/revolver reload selection; no crafted conversion.
+modversion=0.3.0

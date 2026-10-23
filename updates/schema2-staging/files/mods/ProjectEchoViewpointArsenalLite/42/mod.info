@@ -1,0 +1,12 @@
+name=PROJECT ECHO - Viewpoint Arsenal Lite (NO PIP / JAVA)
+id=ProjectEchoViewpointArsenalLite
+description=Experimental PROJECT ECHO fork. Native PiP second world pass disabled; classic full-screen scopes. Never enable alongside original ViewpointArsenal.
+modversion=0.1.0
+versionMin=42.21
+versionMax=42.21
+require=\ZombieBuddy,\Viewpoint
+loadModAfter=XannyArmsCore,XannyArmsGunPack,ViewpointFreeAim,FMR,guns93,ViewpointTrueBallistics,Gunsmith1993,Viewpoint,ViewpointAdvancedMovement,MarzVanillaGuns,VFExpansion1,VFExpansion2,VFExpansion3,GunsOfMarz,MarzGuns
+javaJarFile=media/java/client/ViewpointArsenalLite.jar
+javaPkgName=viewpointcombined
+ZBVersionMin=2.3.0
+ZBVersionMax=2.3.4

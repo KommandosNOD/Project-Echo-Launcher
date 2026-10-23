@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261022-124850-333",
-  "createdUtc": "2026-10-22T12:48:50.6768648+00:00",
+  "version": "20261023-084403-901",
+  "createdUtc": "2026-10-23T08:44:04.4387751+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -1932,6 +1932,390 @@
       "url": "files/mods/ProjectEchoVGERU/README_INSTALL_RU.txt"
     },
     {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/java/client/ViewpointArsenalLite.jar",
+      "size": 202039,
+      "sha256": "0cf4a49dc642b0c5f08ea31c3d15d99be886b6a5b026628c7a440c59889c0d7a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/java/client/ViewpointArsenalLite.jar"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Calibrator.lua",
+      "size": 12399,
+      "sha256": "1e86ec2faeeacc242816796bc9d96a624841ef18c0f9bdfb71f4838050c2f251",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Calibrator.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_ContextMenu.lua",
+      "size": 729,
+      "sha256": "5d199c48c3c275f95a4604438ff50755b518c5f17172b749229f99775d0c9625",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_ContextMenu.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Controller.lua",
+      "size": 10896,
+      "sha256": "0db253d9add6241ab4b2ca4c0595df661bbb7dd6ffcbdde9d6a7d589b6644589",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Controller.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Detect.lua",
+      "size": 3134,
+      "sha256": "25712df3902f0e315e73694efee27b21004be02c9be7ba887fd5c54d56500c64",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Detect.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Options.lua",
+      "size": 13635,
+      "sha256": "71385660110bbcb9df07d2a46ede39650a564645a1f232c448e0dfb30f49a173",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Options.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Overlay.lua",
+      "size": 13825,
+      "sha256": "c7ecede3605bf7c562086b35a70d697b477665a45a0b7add610cd75208d07fe5",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Overlay.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Priority.lua",
+      "size": 3475,
+      "sha256": "9fdf9317d6668156c6210887962857f5232e66659f78033d2393acec665bd258",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Priority.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Scope.lua",
+      "size": 7530,
+      "sha256": "6462d95aab1f23dd6c1ebc02b802fbb793afb34c715b7d35d04eaffc0359d3f8",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Scope.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Validate.lua",
+      "size": 3661,
+      "sha256": "0b92c0470f23128c4bfe1a908a5b5f2c735f81c2802b14514c24efae4b75e0ae",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS/VPCADS_Validate.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS_Compat_VFEModels.lua",
+      "size": 798,
+      "sha256": "8ba267d9d8d42e879074f3ee781c05ac64bd9341f84da7eebd528d931eb23205",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/client/VPCADS_Compat_VFEModels.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_Guns93.lua",
+      "size": 31154,
+      "sha256": "24853e0bd38d6a613597eeba6d496f0dbd5232f48ea4ff3dca2d008a50fe16a7",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_Guns93.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_Gunsmith.lua",
+      "size": 6731,
+      "sha256": "2ea04535082f3e414500da5eaa10a9c74ccdeac3d1b8954a250a9894b0801f71",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_Gunsmith.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_GunsOfMarz.lua",
+      "size": 7029,
+      "sha256": "2f77411f1aab0c4da8da638284ee36c3566bf8226a147c77bb2aa569c47bf7c7",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_GunsOfMarz.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_XannyArms.lua",
+      "size": 14896,
+      "sha256": "a42f4a55571c8cc5b9b728f1c8db80e621215fe1f2fe2757d4367ce5aa181b43",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Compat_XannyArms.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Core.lua",
+      "size": 14865,
+      "sha256": "b540e6e53a4a075a82f93936b6d61bd905c1b37376f80c932d24c85a014676c4",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Core.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Defaults.lua",
+      "size": 5891,
+      "sha256": "0e286bca29b9104317016f88b0d403f3e9811236d5a7ce7849d08869bc2b0d17",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Defaults.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_GeneratedProfiles.lua",
+      "size": 67042,
+      "sha256": "ebef670724c0a2e05cc8087c7c848b7e1fdcacda81b731a7e096bcf0207641b6",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_GeneratedProfiles.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Weapons.lua",
+      "size": 2413,
+      "sha256": "9620d95bbf8ca3f49fd898db0cb7736e88d6e708a1029bc32c02df0030a906d5",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/lua/shared/VPCADS/VPCADS_Weapons.lua"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/eyebox_shadow.png",
+      "size": 35120,
+      "sha256": "952386748916e129cc8acdda8a695c0b4697d3bb9d4d669837c3247ec1e19e2a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/eyebox_shadow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/lens_mask.png",
+      "size": 23987,
+      "sha256": "e9adbe442048d8edca7d4e511955c8d9af59a1cbf5bfc1fd26779b0ba222419a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/lens_mask.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_1p29_pointer.png",
+      "size": 11835,
+      "sha256": "952e6f36b849a19f6a82835d53f2c5e1a139d49453df30750dcbd33c3dd7c45b",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_1p29_pointer.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_1p29_pointer_glow.png",
+      "size": 7013,
+      "sha256": "f299073261e000b2a7ea4257f231f8902cc442d29190fa5863f34946ccc72900",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_1p29_pointer_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_accupoint_triangle.png",
+      "size": 7732,
+      "sha256": "993ca6c198022a429908a83135dfd7fe08a200bc2894d8769ca664c456324291",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_accupoint_triangle.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_accupoint_triangle_glow.png",
+      "size": 7590,
+      "sha256": "ffe1440a613cfd8b1dc2377fc413be744d4114786a2ea572b55f3c261ed08543",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_accupoint_triangle_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_acog_ta31f.png",
+      "size": 12490,
+      "sha256": "f1baa6dc12480def23d7690a08a59f8198f5830626c0d3662bc2069de74d7e25",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_acog_ta31f.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_acog_ta31f_glow.png",
+      "size": 9889,
+      "sha256": "aad8d27dac082e08d0cfca5a98b09ee3600e01daaf2a9b1f3de55cfccdb3113a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_acog_ta31f_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_bushnell_3030.png",
+      "size": 7246,
+      "sha256": "4c1c5601a596f7fa3cfcc26d8469c083c553e789e516b4b34e0fa5e1705df610",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_bushnell_3030.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_chevron.png",
+      "size": 3422,
+      "sha256": "81b140c07a7b03b94ac909bcfbc072572fe3bafb707fb0eb772b88f5f3817d98",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_chevron.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_chevron_glow.png",
+      "size": 2884,
+      "sha256": "6091b5f9ba54b7f06f1c0253509305f61e2fc51f1822445a8dd4b77d4d3a5ff8",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_chevron_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_colt_4x20.png",
+      "size": 7172,
+      "sha256": "a2c17eba2536026ec7fb7cb84504308b5ab28f34855467521dd22a5e25d4888a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_colt_4x20.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_crossdot.png",
+      "size": 2459,
+      "sha256": "f77b248ec3dcccd5ca17cda8491b5758bf0950bc2c4fa5da84d7c2537a05af8d",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_crossdot.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_crossdot_glow.png",
+      "size": 2455,
+      "sha256": "b918a75b64c32618c91e9d001c7d415dfd267a93ca18e7fe7b8a0b5d91cf49df",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_crossdot_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_dot.png",
+      "size": 1071,
+      "sha256": "2c7e15fd9bf881ee57dc27628d3f03887a97e7caf6422aff205998a0295e9f19",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_dot.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex.png",
+      "size": 2914,
+      "sha256": "e36e6b77f125cbc11e7f9685cbffb5fb0e4c16e1ec741c197cbafa95be2c1afe",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex_glow.png",
+      "size": 2369,
+      "sha256": "ea7354e502606bba457b83a0cf52d72aecc8696c92126f931d7e6e6c30353272",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex_real.png",
+      "size": 7290,
+      "sha256": "6142630575567ea9ede0fb0b9d97bf0f301c87b4880a47d80d675877abdadcaa",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_duplex_real.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_eastern.png",
+      "size": 6224,
+      "sha256": "85900dc7556fe5414f896342e17907f1ef028a5d6337f69aa02a2f0dde49eb46",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_eastern.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_eastern_glow.png",
+      "size": 2845,
+      "sha256": "641b390894419be9abf88177f6604189f73f0e69729d19547f48c4570f4357c3",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_eastern_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_elcan_post.png",
+      "size": 8369,
+      "sha256": "57a3cfcb493228c7b59b3aa8009bc579f946b54bdb81002adb8727d31f8b9596",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_elcan_post.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_elcan_post_glow.png",
+      "size": 7228,
+      "sha256": "9456c05c35988f31ce42615421fe941cf5183d604bb1bdf30ea8faa5fedf6f4a",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_elcan_post_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_german4.png",
+      "size": 7130,
+      "sha256": "0468fa13ed6e05a0aa5a0d17c9be0d9adc22ca029ed71924251226fe5a831df9",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_german4.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_holo.png",
+      "size": 11396,
+      "sha256": "028322845075deb1ed83d83b3f1e627a4bde14012b1dce8455fd2b69ef46b1b8",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_holo.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_kengs_crosshair.png",
+      "size": 6687,
+      "sha256": "7f84edb24c99ba0bc7f9d7cb87ab2132cb81764a98503889da15284be15a6c49",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_kengs_crosshair.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot.png",
+      "size": 6992,
+      "sha256": "acac46420b5c82164dffe6c63b4a953b5be9e415a1d94e24ab93e959c9709188",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot_glow.png",
+      "size": 2325,
+      "sha256": "d8e91411a2f3d2ec0c048684eff8aa522a664ef1648fc3461cbe274a16f84f3f",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot_real.png",
+      "size": 12212,
+      "sha256": "87e044c84f5f140d96d3538d1c4eac2c87298cded4b1a9ff1564abad1775251c",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mildot_real.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mosin_pu.png",
+      "size": 7622,
+      "sha256": "db8a9b387d44b57b0dcce18900079bee7e72292d64586fd7e55a5043da673a10",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_mosin_pu.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_po35_bdc.png",
+      "size": 21151,
+      "sha256": "d210780a6e4a84b1af2fbddb15c1e3c9b8720eb14fe91f2e09a8c45a87902bd3",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_po35_bdc.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_po35_bdc_glow.png",
+      "size": 21151,
+      "sha256": "d210780a6e4a84b1af2fbddb15c1e3c9b8720eb14fe91f2e09a8c45a87902bd3",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_po35_bdc_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_post.png",
+      "size": 3146,
+      "sha256": "b0b4fe3d5370306e91282965978f2cef39bb2509ace241da6248b314774cc1c0",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_post.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_post_glow.png",
+      "size": 2470,
+      "sha256": "fce88de6d362c08a7b7413efc327a658ee7f3c3e220e183dd1901322916cafff",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_post_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pso1_real.png",
+      "size": 16351,
+      "sha256": "58e12c57f78346cc29d5ca3fd548b5bcb9a1ac92234810929f0f2751bf6ea3dd",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pso1_real.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pso1_real_glow.png",
+      "size": 16351,
+      "sha256": "58e12c57f78346cc29d5ca3fd548b5bcb9a1ac92234810929f0f2751bf6ea3dd",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pso1_real_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pvs4_m16.png",
+      "size": 8854,
+      "sha256": "8edc8fde9df42b7397cf266e0ff841a5267168f44e96d8be224c75beff8aff0c",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pvs4_m16.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pvs4_m16_glow.png",
+      "size": 8854,
+      "sha256": "8edc8fde9df42b7397cf266e0ff841a5267168f44e96d8be224c75beff8aff0c",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_pvs4_m16_glow.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_tmr_real.png",
+      "size": 12551,
+      "sha256": "6d41caeddb778bb91cb4a5df9f334e53d8c777bf1b0b99be2b8ef0d0a1b4962c",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/PVADS/ret_tmr_real.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope10x.png",
+      "size": 54899,
+      "sha256": "8ae5d1a3a7230f5e99da2f3267601618a25d0657b840bc9b697b53dc700ac4ae",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope10x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope12x.png",
+      "size": 58016,
+      "sha256": "b089aba557b58d1e886ad5b4203fce78261f7228d2cdd671545c0b87825f1f74",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope12x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope2x.png",
+      "size": 61205,
+      "sha256": "b63cf36880b251a0071fa5c3a541d765d731c7a050d615af6bb8e2851e1060f4",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope2x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope4x.png",
+      "size": 51101,
+      "sha256": "9fe6a26599ee22e7a40bdc6eaf079b9ae6f974414b3dbc6a44fb0f0e7bfa7d64",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope4x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope6x.png",
+      "size": 53018,
+      "sha256": "7700a2e1160739a3d758fa3bd97ddd8d766335bd83d6fe7588e6cf20a3d1e648",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope6x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope8x.png",
+      "size": 56410,
+      "sha256": "184a528e230447b7f1fbf47c4d279b5373cf4a460925557bbea97e3266e2f106",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/media/textures/ViewpointOptics/scope8x.png"
+    },
+    {
+      "path": "mods/ProjectEchoViewpointArsenalLite/42/mod.info",
+      "size": 681,
+      "sha256": "44c825fe148dfb1982e9f0511512e610098b4842e84c7573ba6407d4f05529fd",
+      "url": "files/mods/ProjectEchoViewpointArsenalLite/42/mod.info"
+    },
+    {
       "path": "mods/ProjectEchoViewpointNullModelFix/42/media/java/client/ProjectEchoViewpointNullModelFix.jar",
       "size": 1697,
       "sha256": "6590dac3fe8a574affcf9589ebd68ad55825b5e46fd609a7b9c120104b49a3f8",
@@ -2048,8 +2432,14 @@
     {
       "path": "mods/ProjectEcho_AmmoCompat/42/media/lua/shared/PEAC_Registry.lua",
       "size": 9462,
-      "sha256": "6e80bd0047ee36b5e00a3d92659a88daf36e31360b19e5c9a18b937dc4a8c9b2",
+      "sha256": "94abe75449b2c5a11ce5d85214dbd55e3a13f1b03c473893fb863e7ddbd05f75",
       "url": "files/mods/ProjectEcho_AmmoCompat/42/media/lua/shared/PEAC_Registry.lua"
+    },
+    {
+      "path": "mods/ProjectEcho_AmmoCompat/42/media/lua/shared/zzzzz_PEAC_MagazineCrossCompat.lua",
+      "size": 5800,
+      "sha256": "f77a6e3a7312fb9d112bfc253f071af71d834efbd74980fdc97c0029fe072760",
+      "url": "files/mods/ProjectEcho_AmmoCompat/42/media/lua/shared/zzzzz_PEAC_MagazineCrossCompat.lua"
     },
     {
       "path": "mods/ProjectEcho_AmmoCompat/42/media/lua/shared/zzzz_PEAC_Guns93AmmoSwitchFix.lua",
@@ -2071,14 +2461,14 @@
     },
     {
       "path": "mods/ProjectEcho_AmmoCompat/42/mod.info",
-      "size": 338,
-      "sha256": "a11704ab8c9b1ae5a0b6cbf7d9bbc7edfd000e4ab6ffe61e3b582b25eb9b5bb4",
+      "size": 394,
+      "sha256": "11c521eab74d8376522ab4d4249ffb1657a2921a74c9598ce379b1191440fdec",
       "url": "files/mods/ProjectEcho_AmmoCompat/42/mod.info"
     },
     {
       "path": "mods/ProjectEcho_AmmoCompat/mod.info",
-      "size": 285,
-      "sha256": "c00b2e2b0749c07ebd7283e47f45387babbc29d4929d0931ffd01551d78e4186",
+      "size": 341,
+      "sha256": "ffbc941e11fc4dc2f47619511dc8ec62a03511dc9813ac76636a09ae153e741e",
       "url": "files/mods/ProjectEcho_AmmoCompat/mod.info"
     },
     {

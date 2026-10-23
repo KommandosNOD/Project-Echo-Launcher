@@ -1,9 +1,9 @@
--- PROJECT ECHO Ammo Compatibility B42.21 (v0.2.8), shared client/server
+-- PROJECT ECHO Ammo Compatibility B42.21 (v0.3.0), shared client/server
 -- No item ID replacements; no cross-caliber or silent inventory conversion.
 -- The source files were provided by the PROJECT ECHO administrator 2026-10-13.
 local C = rawget(_G, "ProjectEchoAmmoCompat") or {}
 _G.ProjectEchoAmmoCompat = C
-C.VERSION = "0.2.8"
+C.VERSION = "0.3.0"
 C.groups = {
     ["9x19"] = { "SWMG.9x19_Bullet", "Base.Bullets9mm", "Base.Bullets9x19mm" },
     ["545x39"] = { "SWMG.545x39_Bullet", "Base.Bullets545x39" },
