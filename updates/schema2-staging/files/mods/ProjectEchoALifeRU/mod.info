@@ -1,0 +1,8 @@
+name=PROJECT ECHO - A-Life Russian Polish [TEST]
+id=ProjectEchoALifeRU
+author=PROJECT ECHO
+modversion=0.1.0
+versionMin=42.21.0
+require=ProjectALifeNPCs,ProjectALifeNPCsRU_Easy
+loadModAfter=ProjectALifeNPCs,ProjectALifeNPCsRU_Easy,ViewpointALife
+description=Russian localization polish for A-Life 1.4.6, based on original 1.7.4 RU Easy dictionary. UI, settings, missing 1.4.6 strings, 3D Viewpoint integration and selected NPC dialogue barks. No gameplay code replaced.

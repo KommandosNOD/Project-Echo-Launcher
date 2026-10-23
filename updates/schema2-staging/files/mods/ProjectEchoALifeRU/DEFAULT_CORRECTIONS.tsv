@@ -1,0 +1,34 @@
+﻿Ключ	Английский оригинал	Старый русский перевод	Исправлено
+Sandbox_ProjectALife.PresetDifficulty_tooltip	Default Easy (1).	По умолчанию: стандартная (2).	По умолчанию: лёгкая (1)
+Sandbox_ProjectALife.PersistentSquadCap_tooltip	Default 60.	По умолчанию 45.	По умолчанию: 60.
+Sandbox_ProjectALife.OutpostTaskSquadCap_tooltip	Default 3.	По умолчанию 2.	По умолчанию: 3.
+Sandbox_ProjectALife.Party_LoneWeight_tooltip	Default 2.	По умолчанию 3.	По умолчанию: 2.
+Sandbox_ProjectALife.Party_GroupWeight_tooltip	Default 2.	По умолчанию 1.	По умолчанию: 2.
+Sandbox_ProjectALife.Offline_FoundGapHours_tooltip	Default 3.	По умолчанию 6.	По умолчанию: 3.
+Sandbox_ProjectALife.Raid_MinDay_tooltip	Default 21.	По умолчанию 30.	По умолчанию: 21.
+Sandbox_ProjectALife.Raid_CooldownDays_tooltip	Default 14.	По умолчанию 21.	По умолчанию: 14.
+Sandbox_ProjectALife.Raid_Chance_tooltip	Default 0.025.	По умолчанию 0.01.	По умолчанию: 0.025.
+Sandbox_ProjectALife.Raid_Waves_tooltip	Default 4.	По умолчанию 3.	По умолчанию: 4.
+Sandbox_ProjectALife.Raid_GroupSize_tooltip	Default 8.	По умолчанию 6.	По умолчанию: 8.
+Sandbox_ProjectALife.Raid_MaxAttackers_tooltip	Default 12.	По умолчанию: 8.	По умолчанию: 12.
+Sandbox_ProjectALife.Raid_ScoutSize_tooltip	Default 4.	По умолчанию 3.	По умолчанию: 4.
+Sandbox_ProjectALife.Support_Chance_tooltip	Default 35.	По умолчанию 20.	По умолчанию: 35.
+Sandbox_ProjectALife.Support_CooldownHours_tooltip	Default 1.5.	По умолчанию 3.	По умолчанию: 1.5.
+Sandbox_ProjectALife.Support_GroupSize_tooltip	Default 4.	По умолчанию 3.	По умолчанию: 4.
+Sandbox_ProjectALife.Support_MaxCalls_tooltip	Default 2.	По умолчанию 1.	По умолчанию: 2.
+Sandbox_ProjectALife.Support_SpotlightChance_tooltip	Default 20.	По умолчанию 12.	По умолчанию: 20.
+Sandbox_ProjectALife.OfflineSquadCap_tooltip	Default 45.	По умолчанию 30.	По умолчанию: 45.
+Sandbox_ProjectALife.OutpostsMaxSites_tooltip	Default 9.	По умолчанию 6.	По умолчанию: 9.
+Sandbox_ProjectALife.OutpostsPerCity_tooltip	Default 2.	По умолчанию 1.	По умолчанию: 2.
+Sandbox_ProjectALife.OutpostsInterval_tooltip	Default 20.	По умолчанию 30.	По умолчанию: 20.
+Sandbox_ProjectALife.OutpostsChance_tooltip	Default 35.	По умолчанию 20.	По умолчанию: 35.
+Sandbox_ProjectALife.PopulationRate_tooltip	Default 200.	По умолчанию 150.	По умолчанию: 200.
+Sandbox_ProjectALife.GroupScale_tooltip	Default 125.	По умолчанию 100.	По умолчанию: 125.
+Sandbox_ProjectALife.MaxHostiles_tooltip	Default 32.	По умолчанию 12.	По умолчанию: 32.
+Sandbox_ProjectALife.EncounterInterval_tooltip	Default 3.	По умолчанию 8.	По умолчанию: 3.
+Sandbox_ProjectALife.PopulateOnStart_tooltip	Default Uncommon (3).	По умолчанию «Выкл.» (1).	По умолчанию: редко (3)
+Sandbox_ProjectALife.PopulateMax_tooltip	Default 75.	По умолчанию 45.	По умолчанию: 75.
+Sandbox_ProjectALife.CensusSize_tooltip	Default 360.	По умолчанию: 200.	По умолчанию: 360.
+Sandbox_ProjectALife.EncounterRollInterval_tooltip	Default 45.	По умолчанию 120.	По умолчанию: 45.
+Sandbox_ProjectALife.OutpostsOutsideCity_tooltip	Default 4.	По умолчанию 2.	По умолчанию: 4.
+Sandbox_ProjectALife.OutpostsBuildBudget_tooltip	Default 100.	По умолчанию: 250.	По умолчанию: 100.

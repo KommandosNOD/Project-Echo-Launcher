@@ -1,0 +1,239 @@
+{
+  "source_original_version": "1.4.6",
+  "source_existing_ru_version": "1.7.4 (says original 1.4.4)",
+  "original_keys": {
+    "IG_UI": 2609,
+    "Sandbox": 1119,
+    "UI": 4
+  },
+  "existing_ru_keys": {
+    "IG_UI": 2705,
+    "Sandbox": 1200,
+    "UI": 4
+  },
+  "new_untranslated_keys_resolved": {
+    "IG_UI": 43,
+    "Sandbox": 5,
+    "Viewpoint_x_ALife": 30
+  },
+  "polish": {
+    "UI_key_edits": 81,
+    "Sandbox_key_edits": 34,
+    "Dialogue_barks": 85,
+    "outdated_numeric_defaults_fixed": 33,
+    "manually_rewritten_tooltips": 2,
+    "invalid_percent_labels_fixed": 16
+  },
+  "coverage": {
+    "IG_UI": 2609,
+    "Sandbox": 1119,
+    "UI": 4
+  },
+  "absent_optional_polish_inputs": {
+    "UI": [],
+    "Sandbox": [
+      "NPC gun reaction delay (%%)"
+    ]
+  },
+  "default_corrections": [
+    {
+      "key": "Sandbox_ProjectALife.PresetDifficulty_tooltip",
+      "EN": "Default Easy (1).",
+      "previous_RU": "По умолчанию: стандартная (2).",
+      "new_RU": "По умолчанию: лёгкая (1)"
+    },
+    {
+      "key": "Sandbox_ProjectALife.PersistentSquadCap_tooltip",
+      "EN": "Default 60.",
+      "previous_RU": "По умолчанию 45.",
+      "new_RU": "По умолчанию: 60."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostTaskSquadCap_tooltip",
+      "EN": "Default 3.",
+      "previous_RU": "По умолчанию 2.",
+      "new_RU": "По умолчанию: 3."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Party_LoneWeight_tooltip",
+      "EN": "Default 2.",
+      "previous_RU": "По умолчанию 3.",
+      "new_RU": "По умолчанию: 2."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Party_GroupWeight_tooltip",
+      "EN": "Default 2.",
+      "previous_RU": "По умолчанию 1.",
+      "new_RU": "По умолчанию: 2."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Offline_FoundGapHours_tooltip",
+      "EN": "Default 3.",
+      "previous_RU": "По умолчанию 6.",
+      "new_RU": "По умолчанию: 3."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_MinDay_tooltip",
+      "EN": "Default 21.",
+      "previous_RU": "По умолчанию 30.",
+      "new_RU": "По умолчанию: 21."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_CooldownDays_tooltip",
+      "EN": "Default 14.",
+      "previous_RU": "По умолчанию 21.",
+      "new_RU": "По умолчанию: 14."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_Chance_tooltip",
+      "EN": "Default 0.025.",
+      "previous_RU": "По умолчанию 0.01.",
+      "new_RU": "По умолчанию: 0.025."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_Waves_tooltip",
+      "EN": "Default 4.",
+      "previous_RU": "По умолчанию 3.",
+      "new_RU": "По умолчанию: 4."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_GroupSize_tooltip",
+      "EN": "Default 8.",
+      "previous_RU": "По умолчанию 6.",
+      "new_RU": "По умолчанию: 8."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_MaxAttackers_tooltip",
+      "EN": "Default 12.",
+      "previous_RU": "По умолчанию: 8.",
+      "new_RU": "По умолчанию: 12."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Raid_ScoutSize_tooltip",
+      "EN": "Default 4.",
+      "previous_RU": "По умолчанию 3.",
+      "new_RU": "По умолчанию: 4."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Support_Chance_tooltip",
+      "EN": "Default 35.",
+      "previous_RU": "По умолчанию 20.",
+      "new_RU": "По умолчанию: 35."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Support_CooldownHours_tooltip",
+      "EN": "Default 1.5.",
+      "previous_RU": "По умолчанию 3.",
+      "new_RU": "По умолчанию: 1.5."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Support_GroupSize_tooltip",
+      "EN": "Default 4.",
+      "previous_RU": "По умолчанию 3.",
+      "new_RU": "По умолчанию: 4."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Support_MaxCalls_tooltip",
+      "EN": "Default 2.",
+      "previous_RU": "По умолчанию 1.",
+      "new_RU": "По умолчанию: 2."
+    },
+    {
+      "key": "Sandbox_ProjectALife.Support_SpotlightChance_tooltip",
+      "EN": "Default 20.",
+      "previous_RU": "По умолчанию 12.",
+      "new_RU": "По умолчанию: 20."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OfflineSquadCap_tooltip",
+      "EN": "Default 45.",
+      "previous_RU": "По умолчанию 30.",
+      "new_RU": "По умолчанию: 45."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsMaxSites_tooltip",
+      "EN": "Default 9.",
+      "previous_RU": "По умолчанию 6.",
+      "new_RU": "По умолчанию: 9."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsPerCity_tooltip",
+      "EN": "Default 2.",
+      "previous_RU": "По умолчанию 1.",
+      "new_RU": "По умолчанию: 2."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsInterval_tooltip",
+      "EN": "Default 20.",
+      "previous_RU": "По умолчанию 30.",
+      "new_RU": "По умолчанию: 20."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsChance_tooltip",
+      "EN": "Default 35.",
+      "previous_RU": "По умолчанию 20.",
+      "new_RU": "По умолчанию: 35."
+    },
+    {
+      "key": "Sandbox_ProjectALife.PopulationRate_tooltip",
+      "EN": "Default 200.",
+      "previous_RU": "По умолчанию 150.",
+      "new_RU": "По умолчанию: 200."
+    },
+    {
+      "key": "Sandbox_ProjectALife.GroupScale_tooltip",
+      "EN": "Default 125.",
+      "previous_RU": "По умолчанию 100.",
+      "new_RU": "По умолчанию: 125."
+    },
+    {
+      "key": "Sandbox_ProjectALife.MaxHostiles_tooltip",
+      "EN": "Default 32.",
+      "previous_RU": "По умолчанию 12.",
+      "new_RU": "По умолчанию: 32."
+    },
+    {
+      "key": "Sandbox_ProjectALife.EncounterInterval_tooltip",
+      "EN": "Default 3.",
+      "previous_RU": "По умолчанию 8.",
+      "new_RU": "По умолчанию: 3."
+    },
+    {
+      "key": "Sandbox_ProjectALife.PopulateOnStart_tooltip",
+      "EN": "Default Uncommon (3).",
+      "previous_RU": "По умолчанию «Выкл.» (1).",
+      "new_RU": "По умолчанию: редко (3)"
+    },
+    {
+      "key": "Sandbox_ProjectALife.PopulateMax_tooltip",
+      "EN": "Default 75.",
+      "previous_RU": "По умолчанию 45.",
+      "new_RU": "По умолчанию: 75."
+    },
+    {
+      "key": "Sandbox_ProjectALife.CensusSize_tooltip",
+      "EN": "Default 360.",
+      "previous_RU": "По умолчанию: 200.",
+      "new_RU": "По умолчанию: 360."
+    },
+    {
+      "key": "Sandbox_ProjectALife.EncounterRollInterval_tooltip",
+      "EN": "Default 45.",
+      "previous_RU": "По умолчанию 120.",
+      "new_RU": "По умолчанию: 45."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsOutsideCity_tooltip",
+      "EN": "Default 4.",
+      "previous_RU": "По умолчанию 2.",
+      "new_RU": "По умолчанию: 4."
+    },
+    {
+      "key": "Sandbox_ProjectALife.OutpostsBuildBudget_tooltip",
+      "EN": "Default 100.",
+      "previous_RU": "По умолчанию: 250.",
+      "new_RU": "По умолчанию: 100."
+    }
+  ],
+  "important": "Translation-only. Source mod mechanics, actual SandboxVars and JAR files are not modified. Translation entries copied from prior RU are not all retranslated."
+}

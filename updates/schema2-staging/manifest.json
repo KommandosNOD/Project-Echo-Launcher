@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261023-171010-841",
-  "createdUtc": "2026-10-23T17:10:11.2292363+00:00",
+  "version": "20261023-191951-866",
+  "createdUtc": "2026-10-23T19:19:52.5200623+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -496,6 +496,60 @@
       "size": 3657,
       "sha256": "835108722ef953dda34ea504819161c6e7f0f33d23d37cd8b8b9d9379ab04472",
       "url": "files/mods/ProjectEchoAdminCommands/README_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/42.20/media/lua/client/ProjectEchoALifeRU_DialoguePolish.lua",
+      "size": 10846,
+      "sha256": "7da87113b520ce8688d32ea726913e183b613358c09dc4f7b68c1fba06f3fbe6",
+      "url": "files/mods/ProjectEchoALifeRU/42.20/media/lua/client/ProjectEchoALifeRU_DialoguePolish.lua"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/IG_UI.json",
+      "size": 261717,
+      "sha256": "5325aeeb84dda8634930ba117e3277fa793f9245158a22f91580bfecb64e2ab0",
+      "url": "files/mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/IG_UI.json"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/Sandbox.json",
+      "size": 277017,
+      "sha256": "edaa3a2c14f3fcac56d67dd020aa2a60bb324cf7d0017a139c7d4c00925b966a",
+      "url": "files/mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/Sandbox.json"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/UI.json",
+      "size": 5453,
+      "sha256": "68ac74d449a119007d5258db5d8d306d271daa35e96ad4cb7bf1a29bd838adac",
+      "url": "files/mods/ProjectEchoALifeRU/42.20/media/lua/shared/Translate/RU/UI.json"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/42.20/mod.info",
+      "size": 469,
+      "sha256": "8dbf154bcd0d21e6f9a14ee9bb3dcc44997c43c464ea45534c50c5d5d974386a",
+      "url": "files/mods/ProjectEchoALifeRU/42.20/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/AUDIT.json",
+      "size": 7667,
+      "sha256": "8050750754f7728ae88a4944d0ec4eeb5238dd000b7e7ffb215fbe7b0c0d4044",
+      "url": "files/mods/ProjectEchoALifeRU/AUDIT.json"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/DEFAULT_CORRECTIONS.tsv",
+      "size": 3995,
+      "sha256": "00754f4d785e22f18a3dea1ea5893d8fab1b68778eb70f577814a96d50bd1898",
+      "url": "files/mods/ProjectEchoALifeRU/DEFAULT_CORRECTIONS.tsv"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/mod.info",
+      "size": 469,
+      "sha256": "8dbf154bcd0d21e6f9a14ee9bb3dcc44997c43c464ea45534c50c5d5d974386a",
+      "url": "files/mods/ProjectEchoALifeRU/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoALifeRU/README_RU.txt",
+      "size": 2992,
+      "sha256": "2a73ef38b320fa4f2031ec1afe5403327fde450b7b64d48f1c79f3ebd133e450",
+      "url": "files/mods/ProjectEchoALifeRU/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoAuthenticZRU/42/media/lua/shared/Translate/RU/ContextMenu.json",
