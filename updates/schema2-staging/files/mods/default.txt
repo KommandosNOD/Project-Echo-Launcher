@@ -13,7 +13,6 @@ mods
     mod = TombGothTexNUDE,
     mod = Lugli_FastLoading,
     mod = NoMenuMusic,
-    mod = PZOptPreloader,
     mod = Tempo_PerfKit,
     mod = Viewpoint,
     mod = ViewpointFixes,
