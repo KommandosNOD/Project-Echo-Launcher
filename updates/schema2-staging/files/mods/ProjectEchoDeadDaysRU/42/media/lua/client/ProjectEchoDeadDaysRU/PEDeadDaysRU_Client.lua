@@ -10,6 +10,15 @@ local function install()
     UI.sentence = function(s)
         return sentence0(R.translate(s))
     end
+    -- The original journal positions its saga title using the width of the
+    -- hard-coded English "DEAD DAYS". Measure the localized text instead.
+    local textW0 = UI.textW
+    UI.textW = function(font, s)
+        if s == "DEAD DAYS" then
+            return textW0(font, R.translate(s))
+        end
+        return textW0(font, s)
+    end
     UI.wrap = function(text, font, width)
         return wrap0(R.translate(text), font, width)
     end
@@ -57,7 +66,7 @@ local function install()
         end)
     end
     installed = true
-    print('[PROJECT ECHO] Dead Days RU v0.1.1 native getText Unicode overlay enabled')
+    print('[PROJECT ECHO] Dead Days RU v0.1.2 dynamic mission texts and localized title width active')
 end
 Events.OnGameStart.Add(install)
 Events.OnCreatePlayer.Add(install)

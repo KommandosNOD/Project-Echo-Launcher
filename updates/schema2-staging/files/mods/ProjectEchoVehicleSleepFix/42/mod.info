@@ -1,0 +1,6 @@
+name=PROJECT ECHO | Vehicle Sleep Recursion Fix
+id=ProjectEchoVehicleSleepFix
+author=PROJECT ECHO
+description=Build 42.21 MP client patch. Avoids recursive ISVehicleMenu.onSleep from YouDriveISleep. Does not change server game state.
+modversion=1.0.0
+require=YouDriveISleep

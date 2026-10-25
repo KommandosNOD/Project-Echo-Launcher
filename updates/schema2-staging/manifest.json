@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261025-170313-783",
-  "createdUtc": "2026-10-25T17:03:14.3699798+00:00",
+  "version": "20261025-175417-391",
+  "createdUtc": "2026-10-25T17:54:17.8770895+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -769,14 +769,14 @@
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua",
-      "size": 3063,
-      "sha256": "55688589127fb8de0c26345882af72f2ce66a0515e52f9ac103667a6dc638bdd",
+      "size": 3423,
+      "sha256": "01022aaa100fb5377fdd9b0e99e2e6acb9cf05bf38fa415cca76ff470eae4522",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary.lua",
-      "size": 66964,
-      "sha256": "6bc1f107f90363e2444c641c7ebd30762539aee15c381628151a67f24d5ba192",
+      "size": 70744,
+      "sha256": "c50fcb7330f59ccf03f67c99964f64b913ca8af32f8e712e336c0dc859c8a7a4",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary.lua"
     },
     {
@@ -787,20 +787,20 @@
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json",
-      "size": 84163,
-      "sha256": "cb9e50dddcc77f0a032c87e065ff45ed7c93b6e13733c491dd3bead66a1a63a0",
+      "size": 85493,
+      "sha256": "68fcaeaae3bde0fa6ef07394e096317cacfaeafc7ca108b232a911797a0b08fc",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/mod.info",
-      "size": 350,
-      "sha256": "79e9acab29f638ca2e3587713f9bb71491e803bb857d0dff140c2cd7999bec97",
+      "size": 379,
+      "sha256": "805dc4ea407773f3e98cbfb2b7a31d1112f2ad632108c029a540b72a6db26175",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/mod.info"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/README_RU.txt",
-      "size": 2124,
-      "sha256": "2c979d6a15977c05e5f25372ddc9f129b522da4b6777e3ebafcbe6ac19e4e505",
+      "size": 2574,
+      "sha256": "ec316e7f0123b0a3a3c2baa496ecb716465adcd87b03f88d39a987c503492866",
       "url": "files/mods/ProjectEchoDeadDaysRU/README_RU.txt"
     },
     {
@@ -2140,6 +2140,24 @@
       "size": 2893,
       "sha256": "1474c36571b019e41d24697154eb890a4e0fa4427406575668f7119de5253809",
       "url": "files/mods/ProjectEchoStreetLightFix/README_RU.txt"
+    },
+    {
+      "path": "mods/ProjectEchoVehicleSleepFix/42/media/lua/client/zz_ProjectEchoVehicleSleepFix.lua",
+      "size": 2437,
+      "sha256": "f5668143a9796cdc5e8ef269116d80389390b080954fa277c0cae08a79a348a8",
+      "url": "files/mods/ProjectEchoVehicleSleepFix/42/media/lua/client/zz_ProjectEchoVehicleSleepFix.lua"
+    },
+    {
+      "path": "mods/ProjectEchoVehicleSleepFix/42/mod.info",
+      "size": 274,
+      "sha256": "a917289fc1a1442867b5db22fa874c8c0a3ce0a4c268689434b299735457cdb0",
+      "url": "files/mods/ProjectEchoVehicleSleepFix/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoVehicleSleepFix/common/README.txt",
+      "size": 56,
+      "sha256": "04a92094db836dce8def0fadc33d5a22e0fe40a2b1b7b49d11a152ecb6d293fa",
+      "url": "files/mods/ProjectEchoVehicleSleepFix/common/README.txt"
     },
     {
       "path": "mods/ProjectEchoVGERU/42/media/lua/shared/Translate/RU/ItemName.json",

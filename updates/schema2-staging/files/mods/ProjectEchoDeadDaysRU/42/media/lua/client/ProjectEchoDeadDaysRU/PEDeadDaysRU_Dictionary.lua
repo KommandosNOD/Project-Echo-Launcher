@@ -4,6 +4,20 @@
 PEDeadDaysRU = PEDeadDaysRU or {}
 local R = PEDeadDaysRU
 R.exact = {
+    ["Valley Station"] = "UI_ProjectEchoDDS_DYN_VALLEY",
+    ["VALLEY STATION"] = "UI_ProjectEchoDDS_DYN_VALLEY",
+    ["False Checkpoint Crew"] = "UI_ProjectEchoDDS_DYN_CHECKPOINT",
+    ["FALSE CHECKPOINT CREW"] = "UI_ProjectEchoDDS_DYN_CHECKPOINT",
+    ["Tessa Spurlock"] = "UI_ProjectEchoDDS_DYN_TESSA",
+    ["Dottie Osborne"] = "UI_ProjectEchoDDS_DYN_DOTTIE",
+    ["N"] = "UI_ProjectEchoDDS_DYN_N",
+    ["S"] = "UI_ProjectEchoDDS_DYN_S",
+    ["E"] = "UI_ProjectEchoDDS_DYN_E",
+    ["W"] = "UI_ProjectEchoDDS_DYN_W",
+    ["NE"] = "UI_ProjectEchoDDS_DYN_NE",
+    ["NW"] = "UI_ProjectEchoDDS_DYN_NW",
+    ["SE"] = "UI_ProjectEchoDDS_DYN_SE",
+    ["SW"] = "UI_ProjectEchoDDS_DYN_SW",
     ["      DISLIKES: "] = "UI_ProjectEchoDDS_00001",
     ["      Dislikes: "] = "UI_ProjectEchoDDS_00002",
     ["      PERK: "] = "UI_ProjectEchoDDS_00003",
@@ -944,8 +958,66 @@ local function nativeText(key)
     return value
 end
 
+-- UI-only dynamic text formatting. The original missions concatenate English
+-- prefixes with player-generated NPC names / place names / distances.
+-- Do not modify server quest data: only translate the final strings on draw.
+local function ruFormat(key, values)
+    local translated = nativeText(key)
+    if not translated then return nil end
+    for i, value in ipairs(values) do
+        translated = string.gsub(translated, "@@" .. i .. "@@", function() return tostring(value) end)
+    end
+    return translated
+end
+
+local function dynamicMissionText(input)
+    local name = string.match(input, "^From: (.+)$")
+    if name then return ruFormat("UI_ProjectEchoDDS_DYN_FROM", { R.translate(name) }) end
+
+    local location = string.match(input, "^[Aa] clearing near (.+)$")
+    if location then return ruFormat("UI_ProjectEchoDDS_DYN_CLEARING", { R.translate(location) }) end
+    location = string.match(input, "^A CLEARING NEAR (.+)$")
+    if location then return ruFormat("UI_ProjectEchoDDS_DYN_CLEARING", { R.translate(location) }) end
+
+    local person, place = string.match(input,
+        "^(.+)'s people work out of (.-)%. Find out how many there are and how they operate%.$")
+    if person then
+        return ruFormat("UI_ProjectEchoDDS_DYN_ROADCREW", { R.translate(person), R.translate(place) })
+    end
+
+    local crew, place2 = string.match(input, "^Watch the (.-) at (.+)$")
+    if not crew then crew, place2 = string.match(input, "^WATCH THE (.-) AT (.+)$") end
+    if crew then return ruFormat("UI_ProjectEchoDDS_DYN_WATCH", { R.translate(crew), R.translate(place2) }) end
+
+    local action = string.match(input, "^Right%-click at the spot: (.+)$")
+    if action then return ruFormat("UI_ProjectEchoDDS_DYN_RIGHTCLICK", { R.translate(action) }) end
+
+    local day, act, actName = string.match(input, "^Day (%d+)%s+|%s+Act (%d+): (.+)$")
+    if day then return ruFormat("UI_ProjectEchoDDS_DYN_DAYACT", { day, act, R.translate(actName) }) end
+
+    local distText, metres, dir = string.match(input, "^(.-)%s+%((%d+)m%s+([NSEW]+)%)$")
+    if metres then
+        return ruFormat("UI_ProjectEchoDDS_DYN_DISTANCE",
+            { R.translate(distText), metres, R.translate(dir) })
+    end
+    local onlyMetres, onlyDir = string.match(input, "^(%d+)m%s+([NSEW]+)$")
+    if onlyMetres then
+        return ruFormat("UI_ProjectEchoDDS_DYN_METRES", { onlyMetres, R.translate(onlyDir) })
+    end
+
+    local hrs = string.match(input, "^(%d+)h left$")
+    if hrs then return ruFormat("UI_ProjectEchoDDS_DYN_HOURS", { hrs }) end
+
+    -- Current screenshot: the developer already puts '(optional)' in the
+    -- mission objective name, and the journal appends it a second time.
+    return nil
+end
+
 function R.translate(input)
     if type(input) ~= "string" then return input end
+    -- Normalize the source mod's doubled optional suffix before exact match.
+    -- Operates on ASCII English; no Cyrillic is stored in Lua byte strings.
+    input = string.gsub(input, "%s+%(optional%)%s+%(optional%)$", " (optional)")
     local key = R.exact[input]
     if key then
         local translated = nativeText(key)
@@ -958,6 +1030,9 @@ function R.translate(input)
         local translated = R.translate(body)
         if translated ~= body then return lead .. translated end
     end
+    -- Generated quest title, summary, directions and interaction instructions.
+    local dynamic = dynamicMissionText(input)
+    if dynamic then return dynamic end
     -- Dynamic mission hints: English captures are preserved, translated template from getText().
     for _, rule in ipairs(R.templates) do
         local cap = { string.match(input, rule.pattern) }
