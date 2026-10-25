@@ -2,13 +2,13 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261025-153021-890",
-  "createdUtc": "2026-10-25T15:30:22.3249104+00:00",
+  "version": "20261025-170313-783",
+  "createdUtc": "2026-10-25T17:03:14.3699798+00:00",
   "files": [
     {
       "path": "mods/default.txt",
-      "size": 1049,
-      "sha256": "1d87c4d7baf643c76a88af0b2d9600199e27a789728404ee98514e6f75070e02",
+      "size": 1096,
+      "sha256": "d5b21427ec4e432b8b0309b067f27eeb5cf2f5390841bdcb69aba2ab1f6859f9",
       "url": "files/mods/default.txt"
     },
     {
@@ -40,6 +40,12 @@
       "size": 48031,
       "sha256": "326d0bf3aa9ff8fb6b92d0ee80968fa0fb01f2e8805a7c19ba1df15def60154a",
       "url": "files/mods/ProjectEcho/42/media/lua/client/StoryItemSpawnerManager.lua"
+    },
+    {
+      "path": "mods/ProjectEcho/42/media/lua/client/zzz_ProjectEcho_NeatBuilding_NilGuard.lua",
+      "size": 2524,
+      "sha256": "aed946c094e9db8bafdae147c996553db2120aabb1ebce29b1af7d5a5a58822f",
+      "url": "files/mods/ProjectEcho/42/media/lua/client/zzz_ProjectEcho_NeatBuilding_NilGuard.lua"
     },
     {
       "path": "mods/ProjectEcho/42/media/lua/client/zzz_ProjectEcho_ViewpointUI_Workshop_RU.lua",
