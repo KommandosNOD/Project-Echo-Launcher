@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261025-175417-391",
-  "createdUtc": "2026-10-25T17:54:17.8770895+00:00",
+  "version": "20261025-181622-167",
+  "createdUtc": "2026-10-25T18:16:22.6145229+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -769,8 +769,8 @@
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua",
-      "size": 3423,
-      "sha256": "01022aaa100fb5377fdd9b0e99e2e6acb9cf05bf38fa415cca76ff470eae4522",
+      "size": 3587,
+      "sha256": "4fa84e95d7e6bf052226446c69e822101860e62bb1c59323b0e9007ca2d56b4c",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua"
     },
     {
@@ -780,6 +780,12 @@
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary.lua"
     },
     {
+      "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Extended.lua",
+      "size": 13724,
+      "sha256": "31577d3abed1e2ec79c9bc3561bdc631b8cd687fe5d98dde5a8bd4780c94a1fd",
+      "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Extended.lua"
+    },
+    {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/Sandbox.json",
       "size": 2872,
       "sha256": "4c9ea9c9b2546c7ebaa2ddcd2bcdfbe52aedf1965624b501e0215dd5ed105730",
@@ -787,20 +793,26 @@
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json",
-      "size": 85493,
-      "sha256": "68fcaeaae3bde0fa6ef07394e096317cacfaeafc7ca108b232a911797a0b08fc",
+      "size": 99862,
+      "sha256": "a3d49be65b8ef20fa975efbb89e48871a486c5f392932d66d9d7e43e66ea7807",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/mod.info",
       "size": 379,
-      "sha256": "805dc4ea407773f3e98cbfb2b7a31d1112f2ad632108c029a540b72a6db26175",
+      "sha256": "366623c3c4f7d2755a0fadd9fca0a763cbe4f58b18e2920eafa048021a847b49",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/mod.info"
     },
     {
+      "path": "mods/ProjectEchoDeadDaysRU/EXTRA_TRANSLATIONS_AUDIT.csv",
+      "size": 19154,
+      "sha256": "9ee36dcc7650714fd5f9099507cec29d3cc10eea82a4db7dea2a9e7941e093ef",
+      "url": "files/mods/ProjectEchoDeadDaysRU/EXTRA_TRANSLATIONS_AUDIT.csv"
+    },
+    {
       "path": "mods/ProjectEchoDeadDaysRU/README_RU.txt",
-      "size": 2574,
-      "sha256": "ec316e7f0123b0a3a3c2baa496ecb716465adcd87b03f88d39a987c503492866",
+      "size": 1472,
+      "sha256": "8186b874807cd3f5da3b184ce6d3e110edb1de967a460f3ed5f614b501ff28ad",
       "url": "files/mods/ProjectEchoDeadDaysRU/README_RU.txt"
     },
     {

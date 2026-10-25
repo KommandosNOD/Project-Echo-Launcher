@@ -1,32 +1,31 @@
-PROJECT ECHO — DEAD DAYS: STORYTELLER / RU 0.1.2 TEST
+PROJECT ECHO / DEAD DAYS STORYTELLER RU v0.1.3 TEST
 
-Заменяет локальный мод v0.1.1 с тем же Mod ID ProjectEchoDeadDaysRU.
+This is a local client-side translation extension to Dead Days: Storyteller.
+It replaces earlier ProjectEchoDeadDaysRU (0.1.0-0.1.2); do NOT install both.
 
-Исправлено на экране миссии «Дорожная банда»:
-- «От:» и отображаемые имена персонажей Тесса Спёрлок и Дотти Осборн.
-- Динамические описания поселений («Поляна возле ...»), расстояние и направления.
-- Текст задания «Понаблюдайте за ...» и динамическое описание банды.
-- Инструкция поиска документов по ПКМ.
-- Дублирование суффикса «(optional)» в целях.
-- Ширина «МЁРТВЫЕ ДНИ» теперь измеряется по русскому названию, а не английскому.
-- Укороченная надпись «Риск» рядом с индикатором риска.
+Changes:
+- Translates the reported screens: leads, daily missions, buddies, factions, log.
+- Converts story mission titles composed from names, groups, sites into Russian.
+- Handles dynamic locations near towns and common site types.
+- Translates many quest descriptions and event feed prefixes.
+- Fixes risk bar overlap by measuring localized arc label width.
+- Preserves existing 0.1.2 encodings, dialogue and on-screen toasts.
+- Does not change any game quest state, rewards, A-Life, maps or Workshop files.
 
-Все переводы хранятся в native UTF-8 Translate/RU/UI.json, Lua содержит ASCII.
-Оригинальный DeadDaysStoryteller и серверные данные сюжетных миссий не изменяются.
+INSTALL:
+1. Close the game.
+2. Remove OLD Zomboid/mods/ProjectEchoDeadDaysRU folder.
+3. Extract the NEW ProjectEchoDeadDaysRU folder to Zomboid/mods/.
+4. Keep same Mod ID: ProjectEchoDeadDaysRU, loaded after DeadDaysStoryteller.
+5. No WorkshopItems changes. Restart the client completely.
+6. Distribute via Builder to all clients if using MP.
 
-УСТАНОВКА:
-1. Закрой игру.
-2. Удали старую папку ProjectEchoDeadDaysRU из Zomboid/mods.
-3. Положи туда новую папку ProjectEchoDeadDaysRU из ZIP.
-4. Убедись, что мод включён ПОСЛЕ DeadDaysStoryteller в клиенте и в Mods=.
-5. Полностью перезапусти клиент. Прогресс миссий не сбрасывается.
+ROLLBACK: Replace with v0.1.2 folder.
 
-Mod ID: ProjectEchoDeadDaysRU; WorkshopItems: без изменений.
-Откат: верни папку предыдущей версии v0.1.1.
+IMPORTANT:
+Static ZIP / JSON / ASCII-source integrity checks can be run here; the mod still
+needs an in-game B42.21 multiplayer test. Procedurally composed lines unseen in
+the sources or supplied screenshots may still remain English.
 
-ОГРАНИЧЕНИЯ:
-Этот выпуск устраняет конкретные непереведённые строки со скриншота и несколько
-схожих динамических строк. Это ещё НЕ 100% перевод всех случайных миссий/диалогов.
-Русификация не заменяет генерацию имён на сервере и не изменяет поведение квестов.
-Проверено: целостность архива, структура файлов, JSON, ASCII в Lua,
-статическое сопоставление с исходниками. В самой игре ещё не проверено.
+Translation additions: 85 direct strings + 75 generated-phrase patterns.
+Previously available native UI strings remain intact (923).

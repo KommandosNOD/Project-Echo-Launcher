@@ -1,0 +1,161 @@
+﻿type,English source,Russian text,Native localization key
+exact,Neutral,Нейтрально,UI_ProjectEchoDDS_EXT_0001
+exact,Wary,Настороженно,UI_ProjectEchoDDS_EXT_0002
+exact,Hostile,Враждебно,UI_ProjectEchoDDS_EXT_0003
+exact,Trusted,Доверяют,UI_ProjectEchoDDS_EXT_0004
+exact,Allied,Союзники,UI_ProjectEchoDDS_EXT_0005
+exact,Kill on sight,Стреляют без предупреждения,UI_ProjectEchoDDS_EXT_0006
+exact,Neighbours,Соседи,UI_ProjectEchoDDS_EXT_0007
+exact,Neighbors,Соседи,UI_ProjectEchoDDS_EXT_0008
+exact,Church Volunteers,Церковные добровольцы,UI_ProjectEchoDDS_EXT_0009
+exact,Slackwater Rats,Крысы Слэквотера,UI_ProjectEchoDDS_EXT_0010
+exact,County Sheriff,Окружной шериф,UI_ProjectEchoDDS_EXT_0011
+exact,5th SFG (Airborne) - Isolated Detachment,5-я группа спецназа (ВДВ) — изолированный отряд,UI_ProjectEchoDDS_EXT_0012
+exact,5th SFG (Airborne),5-я группа спецназа (ВДВ),UI_ProjectEchoDDS_EXT_0013
+exact,False Checkpoint Crew,Люди ложного блокпоста,UI_ProjectEchoDDS_EXT_0014
+exact,COMMUNITY,ОБЩИНА,UI_ProjectEchoDDS_EXT_0015
+exact,MILITARY,ВОЕННЫЕ,UI_ProjectEchoDDS_EXT_0016
+exact,ANTAGONIST,ПРОТИВНИК,UI_ProjectEchoDDS_EXT_0017
+exact,WILDCARD,НЕЗАВИСИМЫЕ,UI_ProjectEchoDDS_EXT_0018
+exact,Community,Община,UI_ProjectEchoDDS_EXT_0019
+exact,Military,Военные,UI_ProjectEchoDDS_EXT_0020
+exact,Antagonist,Противник,UI_ProjectEchoDDS_EXT_0021
+exact,Wildcard,Независимые,UI_ProjectEchoDDS_EXT_0022
+exact,Visitors,Посетители,UI_ProjectEchoDDS_EXT_0023
+exact,Law Enforcement,Правоохранители,UI_ProjectEchoDDS_EXT_0024
+exact,MILITARY | 1993 / Late Factions,ВОЕННЫЕ | 1993 / Поздние группировки,UI_ProjectEchoDDS_EXT_0025
+exact,1993 / Late Factions,1993 / Поздние группировки,UI_ProjectEchoDDS_EXT_0026
+exact,Fall 1993,Осень 1993 года,UI_ProjectEchoDDS_EXT_0027
+exact,Wolfe,Вулф,UI_ProjectEchoDDS_EXT_0028
+exact,Wolfes,Вулфы,UI_ProjectEchoDDS_EXT_0029
+exact,Jasper,Джаспер,UI_ProjectEchoDDS_EXT_0030
+exact,Bub,Баб,UI_ProjectEchoDDS_EXT_0031
+exact,Marisol,Марисоль,UI_ProjectEchoDDS_EXT_0032
+exact,Jolene,Джолин,UI_ProjectEchoDDS_EXT_0033
+exact,Otis,Отис,UI_ProjectEchoDDS_EXT_0034
+exact,March Ridge,Марч-Ридж,UI_ProjectEchoDDS_EXT_0035
+exact,Valley Station,Вэлли-Стейшен,UI_ProjectEchoDDS_EXT_0036
+exact,Muldraugh,Малдро,UI_ProjectEchoDDS_EXT_0037
+exact,Rosewood,Роузвуд,UI_ProjectEchoDDS_EXT_0038
+exact,Riverside,Риверсайд,UI_ProjectEchoDDS_EXT_0039
+exact,West Point,Вест-Пойнт,UI_ProjectEchoDDS_EXT_0040
+exact,Louisville,Луисвилл,UI_ProjectEchoDDS_EXT_0041
+exact,Spurlock,Спёрлок,UI_ProjectEchoDDS_EXT_0042
+exact,Church Volunteers want to know,Церковные добровольцы хотят узнать,UI_ProjectEchoDDS_EXT_0043
+exact,Bounty: Bub,Награда за голову: Баб,UI_ProjectEchoDDS_EXT_0044
+exact,Recon: Slackwater Rats,Разведка: Крысы Слэквотера,UI_ProjectEchoDDS_EXT_0045
+exact,Taken: Jasper,Похищен: Джаспер,UI_ProjectEchoDDS_EXT_0046
+exact,The Vault at clearing,Хранилище на поляне,UI_ProjectEchoDDS_EXT_0047
+exact,Lightfoot,Лёгкая поступь,UI_ProjectEchoDDS_EXT_0048
+exact,Aiming,Прицеливание,UI_ProjectEchoDDS_EXT_0049
+exact,Maintenance,Обслуживание,UI_ProjectEchoDDS_EXT_0050
+exact,Lightfoot XP,опыта «Лёгкая поступь»,UI_ProjectEchoDDS_EXT_0051
+exact,Aiming XP,опыта «Прицеливание»,UI_ProjectEchoDDS_EXT_0052
+exact,Maintenance XP,опыта «Обслуживание»,UI_ProjectEchoDDS_EXT_0053
+exact,EXP,опыт,UI_ProjectEchoDDS_EXT_0054
+exact,XP,опыт,UI_ProjectEchoDDS_EXT_0055
+exact,EXPIRED,СРОК ИСТЁК,UI_ProjectEchoDDS_EXT_0056
+exact,Expired,Срок истёк,UI_ProjectEchoDDS_EXT_0057
+exact,RECENT,НЕДАВНЕЕ,UI_ProjectEchoDDS_EXT_0058
+exact,New lead,Новая зацепка,UI_ProjectEchoDDS_EXT_0059
+exact,Incoming radio,Радиовызов,UI_ProjectEchoDDS_EXT_0060
+exact,The Long Winter,Долгая зима,UI_ProjectEchoDDS_EXT_0061
+exact,The Fence,Забор,UI_ProjectEchoDDS_EXT_0062
+exact,Smoke from a chimney. Washing on a line.,Дым из трубы. Бельё на верёвке.,UI_ProjectEchoDDS_EXT_0063
+exact,No one rides with you yet.,Пока с вами нет напарников.,UI_ProjectEchoDDS_EXT_0064
+exact,"The Church Volunteers want to know how many guns the Slackwater Rats have at a tree line near the backroads outside March Ridge. Look, count, don't touch.","Церковные добровольцы хотят узнать, сколько оружия у Крыс Слэквотера возле лесополосы у просёлочных дорог за Марч-Риджем. Наблюдайте и считайте. Ничего не трогайте.",UI_ProjectEchoDDS_EXT_0065
+exact,Nobody's heard from the Wolfe place at the the backroads outside March Ridge warehouse in days. Go look.,"О семье Вулфов, живущей у склада на просёлочных дорогах за Марч-Риджем, уже несколько дней нет вестей. Проверьте, что случилось.",UI_ProjectEchoDDS_EXT_0066
+exact,"look, count, don't touch.","наблюдайте, считайте, ничего не трогайте.",UI_ProjectEchoDDS_EXT_0067
+exact,"Look, count, don't touch.","Наблюдайте, считайте, ничего не трогайте.",UI_ProjectEchoDDS_EXT_0068
+exact,No one rides with you yet. Help the Spurlock place and they'll send someone. People you rescue may offer to come along too.,"Пока с вами нет напарников. Помогите поселению Спёрлоков, и они пришлют человека. Спасённые вами люди тоже могут присоединиться.",UI_ProjectEchoDDS_EXT_0069
+exact,Daily: Check on the Wolfes,Ежедневно: проверить семью Вулф,UI_ProjectEchoDDS_EXT_0070
+exact,The backroads outside March Ridge warehouse,Склад у просёлочных дорог за Марч-Риджем,UI_ProjectEchoDDS_EXT_0071
+exact,A tree line near the backroads outside March Ridge,Лесополоса у просёлочных дорог за Марч-Риджем,UI_ProjectEchoDDS_EXT_0072
+exact,COMMUNITY | Visitors,ОБЩИНА | Посетители,UI_ProjectEchoDDS_EXT_0073
+exact,Neutral (5),Нейтрально (5),UI_ProjectEchoDDS_EXT_0074
+exact,Wary (-10),Настороженно (-10),UI_ProjectEchoDDS_EXT_0075
+exact,Hostile (-42),Враждебно (-42),UI_ProjectEchoDDS_EXT_0076
+exact,Trusted (25),Доверяют (25),UI_ProjectEchoDDS_EXT_0077
+exact,"Fall, 1993",Осень 1993 года,UI_ProjectEchoDDS_EXT_0078
+exact,WORLD,МИР,UI_ProjectEchoDDS_EXT_0079
+exact,Visitor,Посетитель,UI_ProjectEchoDDS_EXT_0080
+exact,visitors,посетители,UI_ProjectEchoDDS_EXT_0081
+exact,New lead: The Fence,Новая зацепка: Забор,UI_ProjectEchoDDS_EXT_0082
+exact,New lead: The Vault at clearing,Новая зацепка: Хранилище на поляне,UI_ProjectEchoDDS_EXT_0083
+exact,Incoming radio: Tessa Spurlock (the Spurlock place),Радиовызов: Тесса Спёрлок (поселение Спёрлоков),UI_ProjectEchoDDS_EXT_0084
+exact,Storyline,Сюжетная линия,UI_ProjectEchoDDS_EXT_0085
+pattern,^New lead: (.+)$,Новая зацепка: @@1@@,UI_ProjectEchoDDS_EXT_0086
+pattern,^New mission: (.+)$,Новое задание: @@1@@,UI_ProjectEchoDDS_EXT_0087
+pattern,^Incoming radio: (.+)$,Входящий радиовызов: @@1@@,UI_ProjectEchoDDS_EXT_0088
+pattern,"^Day (%d+) %- The Long Winter, Act (%d+)%. A new story begins: The Long Winter%. Daily ops are posted%.$","День @@1@@ — «Долгая зима», акт @@2@@. Началась новая сюжетная глава. Открыты ежедневные задания.",UI_ProjectEchoDDS_EXT_0089
+pattern,"^Day (%d+) %- (.-), Act (%d+)%. A new story begins: (.-)%. Daily ops are posted%.$","День @@1@@ — @@2@@, акт @@3@@. Началась новая история: @@4@@. Доступны ежедневные задания.",UI_ProjectEchoDDS_EXT_0090
+pattern,^Day (%d+) (%d%d:%d%d)$,"День @@1@@, @@2@@",UI_ProjectEchoDDS_EXT_0091
+pattern,^Day (%d+)$,День @@1@@,UI_ProjectEchoDDS_EXT_0092
+pattern,^Act (%d+): (.+)$,Акт @@1@@: @@2@@,UI_ProjectEchoDDS_EXT_0093
+pattern,^Bounty: (.+)$,Награда за голову: @@1@@,UI_ProjectEchoDDS_EXT_0094
+pattern,^Recon: (.+)$,Разведка: @@1@@,UI_ProjectEchoDDS_EXT_0095
+pattern,^Taken: (.+)$,Похищен: @@1@@,UI_ProjectEchoDDS_EXT_0096
+pattern,^Ransom: (.+)$,Выкуп: @@1@@,UI_ProjectEchoDDS_EXT_0097
+pattern,^Gone Missing: (.+)$,Пропал без вести: @@1@@,UI_ProjectEchoDDS_EXT_0098
+pattern,^No One Left Behind: (.+)$,Никого не бросаем: @@1@@,UI_ProjectEchoDDS_EXT_0099
+pattern,^Distress: (.+)$,Сигнал бедствия: @@1@@,UI_ProjectEchoDDS_EXT_0100
+pattern,^The Vault at (.+)$,Хранилище в месте: @@1@@,UI_ProjectEchoDDS_EXT_0101
+pattern,^Daily: Check on the (.+)s$,Ежедневно: проверить семью @@1@@,UI_ProjectEchoDDS_EXT_0102
+pattern,^Daily: (.+)$,Ежедневное задание: @@1@@,UI_ProjectEchoDDS_EXT_0103
+pattern,^The Long Road: (.+)$,Долгая дорога: @@1@@,UI_ProjectEchoDDS_EXT_0104
+pattern,^Nest: (.+)$,Гнездо: @@1@@,UI_ProjectEchoDDS_EXT_0105
+pattern,^Trade: (.+)$,Обмен: @@1@@,UI_ProjectEchoDDS_EXT_0106
+pattern,^Project: (.+)$,Проект: @@1@@,UI_ProjectEchoDDS_EXT_0107
+pattern,^Supply Run: (.+)$,Поход за припасами: @@1@@,UI_ProjectEchoDDS_EXT_0108
+pattern,^Shopping List: (.+)$,Список покупок: @@1@@,UI_ProjectEchoDDS_EXT_0109
+pattern,^Empty Shelves: (.+)$,Пустые полки: @@1@@,UI_ProjectEchoDDS_EXT_0110
+pattern,^Dispute: (.+) and (.+)$,Спор: @@1@@ и @@2@@,UI_ProjectEchoDDS_EXT_0111
+pattern,^From: (.+)$,От: @@1@@,UI_ProjectEchoDDS_EXT_0112
+pattern,^([%a ]+) ([%+%-]?%d+)$,@@1@@ @@2@@,UI_ProjectEchoDDS_EXT_0113
+pattern,^([A-Z]+)%s+|%s+(.+)$,@@1@@ | @@2@@,UI_ProjectEchoDDS_EXT_0114
+pattern,"^The (.+) want to know how many guns the (.+) have at (.+)%. Look, count, don't touch%.$","@@1@@ хотят узнать, сколько оружия у @@2@@ в районе @@3@@. Понаблюдайте и посчитайте. Ничего не трогайте.",UI_ProjectEchoDDS_EXT_0115
+pattern,^Nobody's heard from the (.+) place at (.+) in days%. Go look%.$,Уже несколько дней ничего не известно о семье @@1@@ в районе @@2@@. Отправляйтесь проверить.,UI_ProjectEchoDDS_EXT_0116
+pattern,^No one rides with you yet%. Help (.+) and they'll send someone%. People you rescue may offer to come along too%.$,"Пока с вами нет напарников. Помогите людям из @@1@@, и они пришлют помощника. Спасённые вами люди тоже могут присоединиться.",UI_ProjectEchoDDS_EXT_0117
+pattern,^[Aa] tree line near (.+)$,Лесополоса неподалёку от @@1@@,UI_ProjectEchoDDS_EXT_0118
+pattern,^[Aa] clearing near (.+)$,Поляна неподалёку от @@1@@,UI_ProjectEchoDDS_EXT_0119
+pattern,^[Aa] field near (.+)$,Поле неподалёку от @@1@@,UI_ProjectEchoDDS_EXT_0120
+pattern,^A ([%a ]+) near (.+)$,@@1@@ неподалёку от @@2@@,UI_ProjectEchoDDS_EXT_0121
+pattern,^[Tt]he backroads outside (.+)$,просёлочных дорог за @@1@@,UI_ProjectEchoDDS_EXT_0122
+pattern,^the (.+) warehouse$,склад возле @@1@@,UI_ProjectEchoDDS_EXT_0123
+pattern,^the (.+) hospital$,больница возле @@1@@,UI_ProjectEchoDDS_EXT_0124
+pattern,^the (.+) school$,школа возле @@1@@,UI_ProjectEchoDDS_EXT_0125
+pattern,^the (.+) gas station$,заправка возле @@1@@,UI_ProjectEchoDDS_EXT_0126
+pattern,^the (.+) house$,дом возле @@1@@,UI_ProjectEchoDDS_EXT_0127
+pattern,^the (.+) church$,церковь возле @@1@@,UI_ProjectEchoDDS_EXT_0128
+pattern,^the (.+) motel$,мотель возле @@1@@,UI_ProjectEchoDDS_EXT_0129
+pattern,^the (.+) police station$,полицейский участок возле @@1@@,UI_ProjectEchoDDS_EXT_0130
+pattern,^the (.+) supermarket$,супермаркет возле @@1@@,UI_ProjectEchoDDS_EXT_0131
+pattern,^the (.+) pharmacy$,аптека возле @@1@@,UI_ProjectEchoDDS_EXT_0132
+pattern,^the (.+) store$,магазин возле @@1@@,UI_ProjectEchoDDS_EXT_0133
+pattern,^the (.+) outpost$,пост группировки «@@1@@»,UI_ProjectEchoDDS_EXT_0134
+pattern,^the (.+) place$,поселение семьи @@1@@,UI_ProjectEchoDDS_EXT_0135
+pattern,^the (.+) settlement$,поселение @@1@@,UI_ProjectEchoDDS_EXT_0136
+pattern,^the (.+) farm$,ферма семьи @@1@@,UI_ProjectEchoDDS_EXT_0137
+pattern,^the (.+) warehouse$,склад возле @@1@@,UI_ProjectEchoDDS_EXT_0138
+pattern,^((%a+)) place$,поселение семьи @@1@@,UI_ProjectEchoDDS_EXT_0139
+pattern,^([%a ]+) %(the (.+) place%)$,@@1@@ (поселение семьи @@2@@),UI_ProjectEchoDDS_EXT_0140
+pattern,^([%a ]+) %(the (.+)%)$,@@1@@ (@@2@@),UI_ProjectEchoDDS_EXT_0141
+pattern,^(.+) of the (.+) says (.+) was taken by the (.+) and is being held at (.+)%.$,"@@1@@ из группировки «@@2@@» сообщает, что @@3@@ похищен людьми «@@4@@» и удерживается в районе @@5@@.",UI_ProjectEchoDDS_EXT_0142
+pattern,^(.+) of the (.+) needs (.+) %- (.+)%. Try (.+)%.$,@@1@@ из группировки «@@2@@» просит доставить @@3@@: @@4@@. Ищите в районе @@5@@.,UI_ProjectEchoDDS_EXT_0143
+pattern,"^(.+), called (.+), (.+)%. The (.+) want him gone%. Last seen near (.+)%.$",@@1@@ по прозвищу @@2@@ — @@3@@. Группировка «@@4@@» хочет избавиться от него. Последний раз его видели возле @@5@@.,UI_ProjectEchoDDS_EXT_0144
+pattern,^A voice on the emergency band %- (.+) %- says they're trapped at (.+) with family%. It sounds real%. It always sounds real%.$,"По аварийной частоте @@1@@ сообщает, что вместе с семьёй оказался в ловушке в районе @@2@@. Звучит убедительно. Как всегда.",UI_ProjectEchoDDS_EXT_0145
+pattern,^(.+) of the (.+) needs a sealed letter carried to (.+) of the (.+) at (.+)%. Don't open it%.$,@@1@@ из группировки «@@2@@» просит доставить запечатанное письмо @@3@@ из группировки «@@4@@» в район @@5@@. Не вскрывайте письмо.,UI_ProjectEchoDDS_EXT_0146
+pattern,^A (.+) patrol went silent near (.+) two days ago%. Find out why%.$,Патруль @@1@@ пропал со связи возле @@2@@ два дня назад. Узнайте причину.,UI_ProjectEchoDDS_EXT_0147
+pattern,^The dead have packed into (.+) and every noise draws more%. The (.+) can't farm the fields around it until it's cleared%.$,"Мертвецы заполнили @@1@@, а каждый шум привлекает новых. Группировка «@@2@@» не может работать на полях, пока местность не зачистят.",UI_ProjectEchoDDS_EXT_0148
+pattern,^(.+) of the (.+) will trade for (.+)%. Leave it at the drop and they'll pay up%.$,@@1@@ из группировки «@@2@@» предлагает обмен на @@3@@. Оставьте предметы в месте передачи и получите оплату.,UI_ProjectEchoDDS_EXT_0149
+pattern,^The (.+) and the (.+) both claim (.+)%. Somebody's going to get shot%. Both sides agreed to let an outsider decide%. That's you%.$,@@1@@ и @@2@@ претендуют на @@3@@. Может пролиться кровь. Обе стороны согласились доверить решение постороннему — вам.,UI_ProjectEchoDDS_EXT_0150
+pattern,"^(.+) swears there's an untouched evidence locker in (.+)%. Two doors, one key somewhere inside, and a whole lot of noise if you do it wrong%.$","@@1@@ утверждает, что в @@2@@ есть нетронутый сейф с уликами. Две двери, где-то внутри ключ. Ошибка поднимет страшный шум.",UI_ProjectEchoDDS_EXT_0151
+pattern,^(.+) has been following letters left by (.+) since July%. Four drop points%. Days apart%. (.+) can't walk anymore%. You can%.$,"С июля @@1@@ идёт по следу писем @@2@@. Четыре тайника, между ними несколько дней пути. @@3@@ больше не может идти. Вы можете.",UI_ProjectEchoDDS_EXT_0152
+pattern,^(.+) wants to build something that'll outlast this winter: (.+)%. It'll take days and a lot of hauling%.$,"@@1@@ хочет построить нечто, что переживёт зиму: @@2@@. На это понадобятся дни и много материалов.",UI_ProjectEchoDDS_EXT_0153
+pattern,^Every dead one you drop today is one fewer at somebody's fence%.$,Каждый уничтоженный сегодня мертвец — на одного врага меньше у чьего-то забора.,UI_ProjectEchoDDS_EXT_0154
+pattern,^(.+) is short on (.+)%. Leave (.+) at the drop%.$,@@1@@ нуждается в @@2@@. Оставьте @@3@@ в пункте передачи.,UI_ProjectEchoDDS_EXT_0155
+pattern,^Walk the perimeter%. Two points%. Eyes open%.$,Обойдите периметр. Две контрольные точки. Будьте начеку.,UI_ProjectEchoDDS_EXT_0156
+pattern,^Keep the (.+) honest%. Put (%d+) of them down today%.$,Не дайте группировке «@@1@@» расслабиться. Сегодня устраните @@2@@ её бойцов.,UI_ProjectEchoDDS_EXT_0157
+pattern,^(.+) has been on the emergency channel for a week%. The group is holding out at (.+)%. Go and see them%.$,@@1@@ уже неделю выходит на аварийную частоту. Группа держится в @@2@@. Отправляйтесь к ним.,UI_ProjectEchoDDS_EXT_0158
+pattern,^([%a ]+) now see you as: (.+)$,Отношение группировки «@@1@@» к вам теперь: @@2@@,UI_ProjectEchoDDS_EXT_0159
+pattern,^(.+) %(optional%) %(optional%)$,@@1@@ (необязательно),UI_ProjectEchoDDS_EXT_0160

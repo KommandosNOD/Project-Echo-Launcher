@@ -1,5 +1,6 @@
 -- ProjectEchoDeadDaysRU - game-safe UI localization overlay for B42.
 require "ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary"
+require "ProjectEchoDeadDaysRU/PEDeadDaysRU_Extended"
 local R = PEDeadDaysRU
 local installed = false
 local function install()
@@ -14,7 +15,7 @@ local function install()
     -- hard-coded English "DEAD DAYS". Measure the localized text instead.
     local textW0 = UI.textW
     UI.textW = function(font, s)
-        if s == "DEAD DAYS" then
+        if s == "DEAD DAYS" or s == "STORY" or s == "SIDE" or s == "DAILY" or s == "LOYALTY" or s == "LONG HAUL" or s == "URGENT" then
             return textW0(font, R.translate(s))
         end
         return textW0(font, s)
@@ -66,7 +67,7 @@ local function install()
         end)
     end
     installed = true
-    print('[PROJECT ECHO] Dead Days RU v0.1.2 dynamic mission texts and localized title width active')
+    print('[PROJECT ECHO] Dead Days RU v0.1.3 extended narrative, factions and objective translations active')
 end
 Events.OnGameStart.Add(install)
 Events.OnCreatePlayer.Add(install)
