@@ -1,0 +1,3 @@
+name=PROJECT ECHO - MIR Microstutter Fix (TEST)
+id=ProjectEchoMIRPerfFix
+description=Experimental B42.21 client-side fix for MultiPurposeItemRack OnContainerUpdate callback. Original Workshop mod required. No Workshop files modified.

@@ -1,0 +1,16 @@
+{
+    "Sandbox_DeadDaysStory_1Story": "Dead Days — СЮЖЕТ",
+    "Sandbox_DeadDaysStory_2World": "Dead Days — КОНВОИ",
+    "Sandbox_DeadDaysStory.BuddyMortal": "Напарники могут погибнуть",
+    "Sandbox_DeadDaysStory.BuddyMortal_tooltip": "Выключено (по умолчанию): напарники могут получать ранения, но не погибают от пуль или заражённых. Убить их может только сюжет. Включено: погибший напарник теряется навсегда.",
+    "Sandbox_DeadDaysStory.DailyOps": "Ежедневных заданий в день",
+    "Sandbox_DeadDaysStory.DailyOps_tooltip": "Небольшие задания появляются каждый день в 6:00. Выполнение всех заданий увеличивает серию. Серия из 3 и более дней даёт бонусный опыт.",
+    "Sandbox_DeadDaysStory.MaxLeads": "Открытых побочных заданий на игрока",
+    "Sandbox_DeadDaysStory.MaxLeads_tooltip": "Максимальное количество предложенных или активных побочных миссий на игрока. Сюжетные главы и ежедневные задания не учитываются.",
+    "Sandbox_DeadDaysStory.IncidentRate": "Вероятность происшествия (%)",
+    "Sandbox_DeadDaysStory.IncidentRate_tooltip": "Вероятность события проверяется каждые 10 игровых минут, если после предыдущего прошло 8 часов: сигнал бедствия или нападение, если фракция главаря достаточно сильна.",
+    "Sandbox_DeadDaysStory.LockALifeCreator": "Заблокировать меню A-Life Creator и спавна",
+    "Sandbox_DeadDaysStory.LockALifeCreator_tooltip": "Скрывает Creator мода Project A-Life и меню спавна по ПКМ для всех, включая администраторов. Сюжетная система создаёт и размещает объекты сама. Отключите, если хотите пользоваться Creator вручную.",
+    "Sandbox_DeadDaysStory.ConvoysEnabled": "Движущиеся конвои",
+    "Sandbox_DeadDaysStory.ConvoysEnabled_tooltip": "Конвои группировок путешествуют по дорогам вне экрана и останавливаются на привалах. Рядом с игроками появляются реальные машины с вооружённым сопровождением: можно устроить засаду, обойти их или проследить за ними."
+}
