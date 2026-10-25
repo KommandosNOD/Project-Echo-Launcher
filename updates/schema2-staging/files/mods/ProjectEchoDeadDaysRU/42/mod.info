@@ -1,7 +1,7 @@
 name=PROJECT ECHO - Dead Days RU (Text Overlay)
 id=ProjectEchoDeadDaysRU
 author=PROJECT ECHO / Community Localization
-modversion=0.1.0
+modversion=0.1.1
 versionMin=42.21.0
 description=Russian client text overlay for Dead Days: Storyteller. No changes to server story logic, saves, dialogue choices, voice keys, or original Workshop files.
 require=\DeadDaysStoryteller

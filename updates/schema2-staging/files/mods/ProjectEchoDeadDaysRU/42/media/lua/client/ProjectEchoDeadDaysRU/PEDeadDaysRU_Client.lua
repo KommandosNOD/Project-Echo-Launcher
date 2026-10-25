@@ -57,7 +57,7 @@ local function install()
         end)
     end
     installed = true
-    print('[PROJECT ECHO] Dead Days RU client text overlay enabled')
+    print('[PROJECT ECHO] Dead Days RU v0.1.1 native getText Unicode overlay enabled')
 end
 Events.OnGameStart.Add(install)
 Events.OnCreatePlayer.Add(install)

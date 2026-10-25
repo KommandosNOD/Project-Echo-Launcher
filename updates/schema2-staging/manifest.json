@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261025-145820-657",
-  "createdUtc": "2026-10-25T14:58:21.0696791+00:00",
+  "version": "20261025-153021-890",
+  "createdUtc": "2026-10-25T15:30:22.3249104+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -763,14 +763,14 @@
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua",
-      "size": 3045,
-      "sha256": "99a1f40ad4da8570e6b35c10f7912ad4fb180a7a406939c8dfcc82bff30f2f7f",
+      "size": 3063,
+      "sha256": "55688589127fb8de0c26345882af72f2ce66a0515e52f9ac103667a6dc638bdd",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Client.lua"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary.lua",
-      "size": 99880,
-      "sha256": "b680e3dffa2a9b2f46ee464dffc0eabce12149bb0371c6d05feec28c6f9e7cdb",
+      "size": 66964,
+      "sha256": "6bc1f107f90363e2444c641c7ebd30762539aee15c381628151a67f24d5ba192",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/client/ProjectEchoDeadDaysRU/PEDeadDaysRU_Dictionary.lua"
     },
     {
@@ -780,15 +780,21 @@
       "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/Sandbox.json"
     },
     {
+      "path": "mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json",
+      "size": 84163,
+      "sha256": "cb9e50dddcc77f0a032c87e065ff45ed7c93b6e13733c491dd3bead66a1a63a0",
+      "url": "files/mods/ProjectEchoDeadDaysRU/42/media/lua/shared/Translate/RU/UI.json"
+    },
+    {
       "path": "mods/ProjectEchoDeadDaysRU/42/mod.info",
       "size": 350,
-      "sha256": "18b298d730a4b5c98c69b24b963882408a22c2f7928d7024f4f4c1a0ee7c6b5d",
+      "sha256": "79e9acab29f638ca2e3587713f9bb71491e803bb857d0dff140c2cd7999bec97",
       "url": "files/mods/ProjectEchoDeadDaysRU/42/mod.info"
     },
     {
       "path": "mods/ProjectEchoDeadDaysRU/README_RU.txt",
-      "size": 2796,
-      "sha256": "ab46e5f47ce5a3ea9391c3ca4bcadcdd05c99a93c09617bc3db3dcdd29f26763",
+      "size": 2124,
+      "sha256": "2c979d6a15977c05e5f25372ddc9f129b522da4b6777e3ebafcbe6ac19e4e505",
       "url": "files/mods/ProjectEchoDeadDaysRU/README_RU.txt"
     },
     {
