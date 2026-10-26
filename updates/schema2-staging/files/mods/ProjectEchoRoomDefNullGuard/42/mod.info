@@ -1,0 +1,8 @@
+name=PROJECT ECHO | RoomDef Null Guard v0.3.0 TEST
+id=ProjectEchoRoomDefNullGuard
+description=CLIENT Java guard for stale RoomDef NPE, compatible with ZombieBuddy v2.3.4 legacy root Patch API. Test only; no world edits.
+require=\ZombieBuddy
+javaJarFile=media/java/client/ProjectEchoRoomDefNullGuard.jar
+javaPkgName=com.projectecho.roomdefguard
+ZBVersionMin=2.3.4
+ZBVersionMax=2.9.9

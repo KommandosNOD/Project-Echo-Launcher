@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261025-181622-167",
-  "createdUtc": "2026-10-25T18:16:22.6145229+00:00",
+  "version": "20261026-134505-387",
+  "createdUtc": "2026-10-26T13:45:05.9181819+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -2044,6 +2044,24 @@
       "size": 195,
       "sha256": "4003e74cdc3e72f3ed7518394fc6020ae30ff0567e648a2b4ac9c9b7764f701b",
       "url": "files/mods/ProjectEchoRadioSyncFix/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoRoomDefNullGuard/42/media/java/client/ProjectEchoRoomDefNullGuard.jar",
+      "size": 5745,
+      "sha256": "b225414b54f662c6aa142379a75047609f572765371f9679bcb24f4d054b1753",
+      "url": "files/mods/ProjectEchoRoomDefNullGuard/42/media/java/client/ProjectEchoRoomDefNullGuard.jar"
+    },
+    {
+      "path": "mods/ProjectEchoRoomDefNullGuard/42/mod.info",
+      "size": 382,
+      "sha256": "97527b0e5609da4f5db1d33c5163efe4a87cbb0ad953ad8890c3ec29270bb552",
+      "url": "files/mods/ProjectEchoRoomDefNullGuard/42/mod.info"
+    },
+    {
+      "path": "mods/ProjectEchoRoomDefNullGuard/README_RU.txt",
+      "size": 3282,
+      "sha256": "a6e75fd3fd31c6ba7c20e4a13a21731993f56ce422fa5fed4683d171de05a78a",
+      "url": "files/mods/ProjectEchoRoomDefNullGuard/README_RU.txt"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua",
