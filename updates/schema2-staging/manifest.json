@@ -2,8 +2,8 @@
   "schema": 2,
   "kind": "PROJECT_ECHO_LOCAL_MODS",
   "channel": "stable",
-  "version": "20261026-134505-387",
-  "createdUtc": "2026-10-26T13:45:05.9181819+00:00",
+  "version": "20261026-164421-587",
+  "createdUtc": "2026-10-26T16:44:22.1964505+00:00",
   "files": [
     {
       "path": "mods/default.txt",
@@ -2065,26 +2065,26 @@
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua",
-      "size": 4546,
-      "sha256": "b47511f8265703d13f0f743347e7a402604245714e30edf746f8520f60cea061",
+      "size": 7861,
+      "sha256": "94d00a2a9a3a6c0afa6f8b8360c34764c45a1ee5429b969aee59c6032132b9b3",
       "url": "files/mods/ProjectEchoRVInteriorSafety/42/media/lua/client/ProjectEchoRVInteriorSafety_Client.lua"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/media/lua/server/ProjectEchoRVInteriorSafety_Server.lua",
-      "size": 5556,
-      "sha256": "842ffd63fd05b441bcba4b9c061bab65992c183f9bb1c0560f67b986cd483f5c",
+      "size": 12494,
+      "sha256": "7674862dc6f5be9dac1c248202501ad59a0fe3761618ff1f065034881223b87e",
       "url": "files/mods/ProjectEchoRVInteriorSafety/42/media/lua/server/ProjectEchoRVInteriorSafety_Server.lua"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/42/mod.info",
-      "size": 279,
-      "sha256": "94afe2b5953140171b83ea63fcef91706e8516609b6ae43dfbeb40e6f773f08f",
+      "size": 314,
+      "sha256": "6909d1410796b42030bdbb1bf3f58168a171fae98da3f2264196b0f467deb115",
       "url": "files/mods/ProjectEchoRVInteriorSafety/42/mod.info"
     },
     {
       "path": "mods/ProjectEchoRVInteriorSafety/README_RU.txt",
-      "size": 5082,
-      "sha256": "e3a7ec8c29cb47b038d1904eb6d1e563d97ac7d6a516bef8dbfe2ec6a01e84ad",
+      "size": 4497,
+      "sha256": "7be0a478396725cf613fe42e0d75496738a17c4c21bdc554885e44087bcc1ce3",
       "url": "files/mods/ProjectEchoRVInteriorSafety/README_RU.txt"
     },
     {

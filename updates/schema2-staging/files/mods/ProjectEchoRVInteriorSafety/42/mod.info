@@ -1,7 +1,8 @@
-name=PROJECT ECHO - RV Interior Safety (B42.21 MP)
+name=PROJECT ECHO - RV Interior Safety v0.2.0 (B42.21 MP)
 id=ProjectEchoRVInteriorSafety
-description=Temporary anti-fall and rescue guard for Project RV Interior teleport in multiplayer. TEST ON A COPY OF YOUR SAVE.
 author=PROJECT ECHO
-modversion=0.1.0
+modversion=0.2.0
 versionMin=42.0
+require=PROJECTRVInterior42
 category=vehicle
+description=Anti-fall entry guard and safe RV exit recovery with Ctrl Shift F9. Client and server. Experimental; backup first.

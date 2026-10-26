@@ -1,4 +1,4 @@
--- PROJECT ECHO RV Interior Safety, B42.21 MP, experimental 0.1.0
+-- PROJECT ECHO RV Interior Safety, B42.21 MP, v0.2.0 TEST
 -- Companion patch; never overwrite the original RV mod.
 if isClient() or not isMultiplayer() then return end
 
@@ -108,8 +108,147 @@ local function install()
     wrapped = true
     log("hooked original GetInToRV")
 end
+
+-- v0.2.0: RV exit recovery inside SAME safety mod. No separate Mod ID.
+local nativeExitWrapped = false
+local exitCooldown = {}
+local exitTicks = 0
+local rvTypes = nil
+
+local function isFinite(n)
+    return type(n) == "number" and n == n and n > -1e9 and n < 1e9
+end
+local function isInsideInterior(player)
+    if not player then return false end
+    local x, y = tonumber(player:getX()), tonumber(player:getY())
+    return isFinite(x) and isFinite(y) and x > 22500 and y > 12000
+end
+local function reportExit(player, result, reason)
+    log("EXIT " .. tostring(player and player:getUsername()) .. " status=" .. tostring(result) .. " reason=" .. tostring(reason))
+    if player then
+        sendServerCommand(player, "ProjectEchoRVSafety", "exitStatus", {
+            result=tostring(result), reason=tostring(reason)
+        })
+    end
+end
+local function getTypes()
+    if rvTypes then return rvTypes end
+    local ok, data = pcall(require, "RVVehicleTypes")
+    if ok and data and type(data.VehicleTypes) == "table" then
+        rvTypes = data.VehicleTypes
+    end
+    return rvTypes
+end
+local function validVehiclePos(md, id)
+    if not id or not md or type(md.Vehicles) ~= "table" then return false end
+    local pos = md.Vehicles[id] or md.Vehicles[tostring(id)]
+    if not pos then return false end
+    local x, y, z = tonumber(pos.x), tonumber(pos.y), tonumber(pos.z)
+    if not isFinite(x) or not isFinite(y) or not isFinite(z) then return false end
+    -- Do not return into another virtual RV interior.
+    if x < 0 or y < 0 or z < -1 or z > 32 or (x > 22500 and y > 12000) then return false end
+    return true
+end
+local function recordValid(md, record, types)
+    return type(record) == "table" and record.ActualRoom ~= nil
+        and record.VehicleId ~= nil
+        and record.RoomType ~= nil and types[record.RoomType] ~= nil
+        and validVehiclePos(md, record.VehicleId)
+end
+local function findUniqueRoom(player, md, types)
+    local x, y, z = tonumber(player:getX()), tonumber(player:getY()), tonumber(player:getZ())
+    if not isFinite(x) or not isFinite(y) or not isFinite(z) then
+        return nil, "invalid-player-position"
+    end
+    local count, found = 0, nil
+    for typeKey, def in pairs(types) do
+        if type(def) == "table" then
+            local key = typeKey == "normal" and "AssignedRooms" or ("AssignedRooms" .. tostring(typeKey))
+            local assigned = md[key]
+            if type(assigned) == "table" then
+                for vehicleId, room in pairs(assigned) do
+                    local rx, ry, rz = room and tonumber(room.x), room and tonumber(room.y), room and tonumber(room.z)
+                    local w, h = math.abs(tonumber(def.roomWidth) or 2), math.abs(tonumber(def.roomHeight) or 3)
+                    if isFinite(rx) and isFinite(ry) and isFinite(rz)
+                       and z == rz and x >= rx - 1 and x <= rx + w + 1
+                       and y >= ry - 1 and y <= ry + h + 1
+                       and validVehiclePos(md, vehicleId) then
+                        count = count + 1
+                        found = { ActualRoom=room, VehicleId=vehicleId, Seat=-1, RoomType=typeKey }
+                    end
+                end
+            end
+        end
+    end
+    if count == 1 then return found, "unique-assigned-room" end
+    if count == 0 then return nil, "no-unique-room-or-vehicle-position" end
+    return nil, "ambiguous-room-matches-" .. tostring(count)
+end
+local function guardedExit(player, nativeExit)
+    if not player or not isInsideInterior(player) then
+        reportExit(player, "declined", "not-in-interior")
+        return
+    end
+    local types = getTypes()
+    if not types then reportExit(player, "declined", "RVVehicleTypes-not-loaded"); return end
+    local md = ModData.getOrCreate("modPROJECTRVInterior")
+    local pmd = player:getModData()
+    if not md or not pmd then
+        reportExit(player, "declined", "RV-moddata-missing")
+        return
+    end
+    local id = pmd.projectRV_playerId
+    local record = id and md.Players and md.Players[id]
+    local didRestore = false
+    if not recordValid(md, record, types) then
+        -- Original RV code silently returns on a missing mapping. Do not teleport
+        -- blindly: recover only from ONE assigned room with a valid parked vehicle.
+        local candidate, why = findUniqueRoom(player, md, types)
+        if not candidate then
+            reportExit(player, "declined", "missing-or-stale-link;" .. tostring(why))
+            return
+        end
+        md.Players = md.Players or {}
+        if not id then
+            for attempt=1,20 do
+                local proposed = tostring(ZombRand(1,99999999))
+                if not md.Players[proposed] then id=proposed; break end
+            end
+            if not id then reportExit(player, "declined", "cannot-generate-player-id"); return end
+            pmd.projectRV_playerId = id
+        end
+        md.Players[id] = candidate
+        record = candidate
+        didRestore = true
+        log("EXIT recovered RV link for " .. tostring(player:getUsername()) .. " vehicle=" .. tostring(candidate.VehicleId))
+    end
+    -- At this point original GetOutFromRV cannot clear ActualRoom and THEN
+    -- bail out merely due to missing stored vehicle coordinates.
+    local ok, err = pcall(nativeExit, player)
+    if not ok then
+        reportExit(player, "error", "native-exit-exception:" .. tostring(err))
+        return
+    end
+    if active[player] then
+        finish(player, active[player], "exit-request-processed")
+    end
+    reportExit(player, "native-exit-invoked", didRestore and "recovered-room-link" or "existing-room-link")
+end
+local function installNativeExit()
+    if nativeExitWrapped then return end
+    if not RVServer or type(RVServer.GetOutFromRV) ~= "function" then return end
+    local original = RVServer.GetOutFromRV
+    RVServer.GetOutFromRV = function(player)
+        return guardedExit(player, original)
+    end
+    nativeExitWrapped = true
+    log("v0.2.0 hooked original RVServer.GetOutFromRV; entry safety active")
+end
+
 local function onTick()
     if not wrapped then install() end
+    if not nativeExitWrapped then installNativeExit() end
+    exitTicks = exitTicks + 1
     for player, state in pairs(active) do
         state.ticks = state.ticks + 1
         if state.recovering then
@@ -124,6 +263,24 @@ local function onTick()
 end
 local function onClientCommand(module, command, player, args)
     if module ~= "ProjectEchoRVSafety" or not player then return end
+    if command == "requestExit" then
+        -- Cooldown only applies to fallback, not to the base RV context menu.
+        if exitCooldown[player] and exitTicks - exitCooldown[player] < 150 then
+            reportExit(player, "declined", "exit-cooldown")
+            return
+        end
+        exitCooldown[player] = exitTicks
+        if not nativeExitWrapped then installNativeExit() end
+        if not nativeExitWrapped then
+            reportExit(player, "declined", "native-RVServer-not-loaded")
+            return
+        end
+        RVServer.GetOutFromRV(player)
+        return
+    elseif command == "exitAck" then
+        log("EXIT ACK from " .. tostring(player:getUsername()))
+        return
+    end
     local state = active[player]
     if not state then return end
     if command == "arrived" and not state.recovering then
@@ -136,3 +293,6 @@ end
 Events.OnTick.Add(onTick)
 Events.OnClientCommand.Add(onClientCommand)
 install()
+
+installNativeExit()
+log("v0.2.0 server: original RV entry safety + guarded native exit installed")
