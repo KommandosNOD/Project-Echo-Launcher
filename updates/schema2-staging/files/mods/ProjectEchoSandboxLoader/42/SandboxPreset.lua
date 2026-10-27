@@ -1897,6 +1897,12 @@ SandboxVars = {
         LightningDeathChance = 0.3,
         -- How many extra ground strikes come down at random over a thunderstorm (the game's own are spread over kilometres). 1 = about one every 45 seconds within a few hundred metres of each player; 0 = only the game's own strikes. Мин: 0,00 Макс: 4,00 По умолчанию: 1,00
         LightningFrequency = 1.0,
+        Meteorites = true,
+        -- Мин: 3,00 Макс: 365,00 По умолчанию: 30,00
+        MeteoriteDays = 30.0,
+        DeepSnowSlows = true,
+        -- Мин: 0,00 Макс: 0,85 По умолчанию: 0,45
+        DeepSnowSlowdown = 0.45,
     },
     ZomVisFix = {
         -- let zombies revealed by this mod also detect the player (default: true)
@@ -2002,6 +2008,14 @@ SandboxVars = {
         FurnitureCollision = true,
         -- Multiplayer: the server rejects firearm hits that had no line of fire or impossible damage. Needs the True Ballistics jar on the server.
         ServerValidation = true,
+    },
+    ViewpointCompass = {
+        RequireCompassItem = false,
+        AllowMapWaypoints = true,
+        AllowFactionPlayers = true,
+        -- Мин: 25 Макс: 1000 По умолчанию: 1000
+        MaxFactionPlayerRange = 1000,
+        ShowFactionPlayerDistance = true,
     },
     SPNCharCustom = {
         -- Администраторы или игроки, держащие «Изменитель внешности», игнорируют это По умолчанию = Отключено
@@ -3842,6 +3856,10 @@ SandboxVars = {
         -- Default on.
         Outposts_BridgeHostile = true,
     },
+    ALifeDriving = {
+        Enabled = true,
+        VehicleArrivals = true,
+    },
     NeatLockpicking = {
         -- Если выключено, транспорт использует ванильный запуск проводами вместо мини-игры.
         EnableHotwire = true,
@@ -4440,87 +4458,6 @@ SandboxVars = {
         PushCooldownSeconds = 1.0,
         -- Vehicles heavier than this cannot be pushed. Set to 0 for no weight limit. Мин: 0 Макс: 100000 По умолчанию: 0
         MaximumPushableWeight = 0,
-    },
-    ImmersiveBlackouts = {
-        -- Включение этой опции сбросит сохранённые данные мода.
-        -- Включайте эту опцию только если вы изменили день, когда произойдут отключения.
-        -- Она отключится автоматически.
-        ModReset = false,
-        -- Включает автоматические экстренные радиопередачи службы Knox Emergency Regional Infrastructure Service.
-        -- Радио будет сообщать о предстоящих отключениях, текущем состоянии инфраструктуры и других аварийных событиях.
-        Radio = true,
-        -- Устанавливает частоту экстренных радиопередач в МГц.
-        RadioFrequency = "89.2",
-        -- Задаёт диапазон дней для случайного постоянного отключения.
-        -- Формат: минимальный день - максимальный день
-        -- 0-30 = случайный день
-        -- 30-30 = фиксированный день.
-        -- Заменяет ванильную настройку дня отключения воды.
-        -- Если значение стало пустым, введённый формат был некорректным и был отклонён.
-        WaterShutoffDayRange = "",
-        -- За сколько дней до запланированного постоянного отключения начинать случайные перебои.
-        -- Ванильное отключение: 30, Начало случайных отключений: 5 = случайные отключения начинаются на 25-й день.
-        -- Ванильное отключение: Отключено, Начало случайных отключений: 2147483647 = случайные отключения начинаются с 0-го дня. Мин: 1 Макс: 2147483647 По умолчанию: 7
-        WaterOffset = 7,
-        -- Определяет, как часто проверяется вероятность отключения или восстановления.
-        -- Значение указывается в игровых минутах. Мин: 1 Макс: 1440 По умолчанию: 10
-        WaterCheckInterval = 10,
-        -- Время ожидания (в игровых часах) перед следующим возможным изменением состояния.
-        -- Формат: после восстановления|после отключения
-        -- 2-2 = кулдаун 2 часа после восстановления и после отключения
-        -- 1-3|12-24 = случайный кулдаун от 1 до 3 часов после восстановления и от 12 до 24 часов после отключения
-        -- 0-0|2-2 = без кулдауна после восстановления и фиксированный кулдаун 2 часа после отключения.
-        WaterCooldown = "0-0|0-0",
-        -- Вероятность (в процентах) отключения.
-        -- Проверяется в соответствии с заданным интервалом проверки. Мин: 0,00 Макс: 100,00 По умолчанию: 1,00
-        WaterPercentOFF = 1.0,
-        -- Вероятность (в процентах) восстановления.
-        -- Проверяется в соответствии с заданным интервалом проверки. Мин: 0,00 Макс: 100,00 По умолчанию: 5,00
-        WaterPercentON = 5.0,
-        -- Погодные условия влияют на вероятность отключений.
-        -- Плохая погода повышает вероятность отключений и снижает вероятность восстановления.
-        -- Определяет максимальный процент влияния погоды на вероятность. Мин: 0,00 Макс: 100,00 По умолчанию: 0,00
-        WeatherInfluenceWater = 0.0,
-        -- Динамически изменяет вероятность отключений и восстановления в зависимости от того, насколько близок запланированный день отключения.
-        -- Использует максимальный шанс, указанный в настройках 'Шанс отключения' и 'Шанс восстановления'.
-        -- При восстановлении всегда сохраняется минимальный шанс 5%.
-        -- При использовании этой опции рекомендуется установить кулдаун больше 0.
-        DynamicWaterChance = false,
-        -- Задаёт диапазон дней для случайного постоянного отключения.
-        -- Формат: минимальный день - максимальный день
-        -- 0-30 = случайный день
-        -- 30-30 = фиксированный день.
-        -- Заменяет ванильную настройку дня отключения электричества.
-        -- Если значение стало пустым, введённый формат был некорректным и был отклонён.
-        ElectricityShutoffDayRange = "",
-        -- За сколько дней до запланированного постоянного отключения начинать случайные перебои.
-        -- Ванильное отключение: 30, Начало случайных отключений: 5 = случайные отключения начинаются на 25-й день.
-        -- Ванильное отключение: Отключено, Начало случайных отключений: 2147483647 = случайные отключения начинаются с 0-го дня. Мин: 1 Макс: 2147483647 По умолчанию: 7
-        ElectricityOffset = 7,
-        -- Определяет, как часто проверяется вероятность отключения или восстановления.
-        -- Значение указывается в игровых минутах. Мин: 1 Макс: 1440 По умолчанию: 10
-        ElectricityCheckInterval = 10,
-        -- Время ожидания (в игровых часах) перед следующим возможным изменением состояния.
-        -- Формат: после восстановления|после отключения
-        -- 2-2 = кулдаун 2 часа после восстановления и после отключения
-        -- 1-3|12-24 = случайный кулдаун от 1 до 3 часов после восстановления и от 12 до 24 часов после отключения
-        -- 0-0|2-2 = без кулдауна после восстановления и фиксированный кулдаун 2 часа после отключения.
-        ElectricityCooldown = "0-0|0-0",
-        -- Вероятность (в процентах) отключения.
-        -- Проверяется в соответствии с заданным интервалом проверки. Мин: 0,00 Макс: 100,00 По умолчанию: 1,00
-        ElectricityPercentOFF = 1.0,
-        -- Вероятность (в процентах) восстановления.
-        -- Проверяется в соответствии с заданным интервалом проверки. Мин: 0,00 Макс: 100,00 По умолчанию: 5,00
-        ElectricityPercentON = 5.0,
-        -- Погодные условия влияют на вероятность отключений.
-        -- Плохая погода повышает вероятность отключений и снижает вероятность восстановления.
-        -- Определяет максимальный процент влияния погоды на вероятность. Мин: 0,00 Макс: 100,00 По умолчанию: 0,00
-        WeatherInfluenceElectricity = 0.0,
-        -- Динамически изменяет вероятность отключений и восстановления в зависимости от того, насколько близок запланированный день отключения.
-        -- Использует максимальный шанс, указанный в настройках 'Шанс отключения' и 'Шанс восстановления'.
-        -- При восстановлении всегда сохраняется минимальный шанс 5%.
-        -- При использовании этой опции рекомендуется установить кулдаун больше 0.
-        DynamicElectricityChance = false,
     },
     SkillRecoveryJournal = {
         -- Количество опыта, восстанавливаемого при чтении переплетенных дневников.
@@ -7183,41 +7120,16 @@ SandboxVars = {
     COF_Spawns = {
         -- Off: stops new Human Flowers. Existing flowers remain. This stationary creature cannot be killed and is deadly within 3 tiles.
         HumanFlowers = false,
-        -- Slowers, Fasters, Children and others. They chase you. They live all over the map, most in towns. Recommended: Rare with zombies on; Normal or High with zombies set to None. По умолчанию = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Uncommon
-        -- 4 = Normal
-        -- 5 = High
-        Regular = 1,
-        -- He sprints at you with two chainsaws and saws through doors and fences. Recommended: Rare with zombies on; Normal or High with zombies set to None. По умолчанию = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Uncommon
-        -- 4 = Normal
-        -- 5 = High
-        Sawcrazy = 1,
-        -- He sprints at you with a chainsaw. Needs ordinary Sawrunner spawning on. Recommended: Rare with zombies on; Normal or High with zombies set to None. По умолчанию = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Uncommon
-        -- 4 = Normal
-        -- 5 = High
-        Sawrunner = 1,
-        -- Looking at him damages you. Recommended: Rare with zombies on; Normal or High with zombies set to None. По умолчанию = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Uncommon
-        -- 4 = Normal
-        -- 5 = High
-        Stranger = 1,
-        -- Looking at her makes you turn your gun on yourself: mash left click to resist. Recommended: Rare with zombies on; Normal or High with zombies set to None. По умолчанию = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Uncommon
-        -- 4 = Normal
-        -- 5 = High
-        Drowned = 1,
+        -- Мин: 0,00 Макс: 100,00 По умолчанию: 12,00
+        RegularAmount = 0.0,
+        -- Мин: 0,00 Макс: 10,00 По умолчанию: 0,50
+        SawcrazyAmount = 0.0,
+        -- Мин: 0,00 Макс: 10,00 По умолчанию: 1,00
+        SawrunnerAmount = 0.0,
+        -- Мин: 0,00 Макс: 10,00 По умолчанию: 1,00
+        StrangerAmount = 0.0,
+        -- Мин: 0,00 Макс: 10,00 По умолчанию: 1,00
+        DrownedAmount = 0.0,
         -- Natural spawn amounts: day 0.5x; night 1.5x (8 PM-6 AM). Combines with population growth. Existing monsters stay. Night-only still applies. Sawrunner events unaffected.
         DayNightSpawns = false,
         -- On: monsters only appear from 8 PM to 4 AM, and they are back every night. In daylight the ones far from you disappear; the ones still near you stay.
@@ -7261,6 +7173,7 @@ SandboxVars = {
         ChainsawDestruction = true,
         -- On: a monster hit hard by a car is thrown as a ragdoll and gets up again. Single-player only (the game has no ragdolls in multiplayer) and only with the game's own ragdoll option on. Not the Taller, the Human Flower or the Flygare.
         Ragdolls = true,
+        Loudness = 3,
     },
     COF_Stranger = {
         -- How far away the Stranger can hurt you when you look at him. Мин: 2,00 Макс: 60,00 По умолчанию: 20,00
@@ -8119,6 +8032,11 @@ SandboxVars = {
         -- Мин: 0 Макс: 1000 По умолчанию: 25
         RoomLootBaseChanceOnFurniture = 30,
     },
+    SurvivorBriefing = {
+        Look = 1,
+        Sounds = 1,
+        Motion = 1,
+    },
     ZCollision = {
         -- Количество зомби, обрабатываемых за тик для коллизии хитбоксов. Меньшие значения обеспечивают плавную производительность для всех. Мин: 3 Макс: 15 По умолчанию: 6
         MaxHitboxes = 6,
@@ -8501,5 +8419,402 @@ SandboxVars = {
     AH1SC = {
         -- How long the engine keeps running with nobody in the pilot's seat before it switches itself off. 0 switches it off straight away. -1 never switches it off. Default 60. Мин: -1 Макс: 3600 По умолчанию: 60
         EngineAutoOff = 60,
+        MissilesDestroyBuildings = true,
+        SpawnRate = 5,
+        SpawnAtAirports = true,
+        SpawnAtMilitaryBases = true,
+        -- Мин: 0 Макс: 9999 По умолчанию: 0
+        SpawnMax = 0,
+        -- Мин: 0 Макс: 3650 По умолчанию: 0
+        SpawnFromDay = 0,
+        FoundCondition = 1,
+        FoundFuel = 1,
+        FoundBattery = 1,
+        FoundKey = 1,
+        FoundDoors = 1,
+        FoundStorage = 1,
+        FoundAmmo = 1,
+        Hotwire = true,
+        SpawnLog = false,
+    },
+    ActualDoorRattling = {
+        Enabled = true,
+        -- Мин: 0,00 Макс: 2,00 По умолчанию: 1,00
+        Strength = 1.0,
+        NativeMotion = true,
+        GarageDoors = true,
+    },
+    ProperRoofs = {
+        Mode = 1,
+    },
+    ViewpointOfMarz = {
+        CorrectHandgunMuzzle = true,
+        AddGripPoints = true,
+        AddPistolProp = true,
+    },
+    GydeTraitMags = {
+        NegativeToPositive = false,
+        ReadRemove = false,
+        ReadDelete = false,
+        -- Мин: 0 Макс: 8766 По умолчанию: 0
+        DaysBeforeRead = 0,
+        SpawnRate = 3,
+        SpawnSpeedDemon = true,
+        SpawnNutritionist = true,
+        SpawnOrganized = true,
+        SpawnOutdoorsman = true,
+        SpawnFastReader = true,
+        SpawnFastLearner = true,
+        SpawnHandy = true,
+        SpawnAxeMan = true,
+        SpawnBurglar = true,
+        SpawnGraceful = true,
+        SpawnDextrous = true,
+        SpawnInconspicuous = true,
+        SpawnKeenHearing = true,
+    },
+    MinidoracatSafeSpawn = {
+        EnableGhostOnSpawn = true,
+        -- Мин: 1 Макс: 600 По умолчанию: 30
+        NormalGhostSeconds = 30,
+        -- Мин: 0 Макс: 20 По умолчанию: 0
+        NormalGhostLimit = 0,
+        -- Мин: 1 Макс: 1440 По умолчанию: 60
+        NormalGhostWindowMinutes = 60,
+        -- Мин: 1 Макс: 600 По умолчанию: 60
+        NewStartSeconds = 60,
+    },
+    VisibleDoorDamage = {
+        EnableTestMenu = false,
+    },
+    VPP = {
+        PropsBreak = true,
+        ImpactNoise = true,
+        Explosions = true,
+    },
+    MoreTraits = {
+        -- Мин: 1 Макс: 999 По умолчанию: 4
+        PreparedMedicalBandageAmount = 4,
+        PreparedCarGasToggle = true,
+        InjuredBurns = true,
+        AlcoholicFreeDrink = true,
+        SmokerStart = true,
+        -- Мин: 0 Макс: 200 По умолчанию: 100
+        LuckImpact = 100,
+        -- Мин: 1 Макс: 720 По умолчанию: 24
+        AlcoholicFrequency = 24,
+        -- Мин: 1 Макс: 720 По умолчанию: 72
+        AlcoholicWithdrawal = 72,
+        -- Мин: 0 Макс: 90 По умолчанию: 75
+        SpecializationXPPercent = 75,
+        -- Мин: 1 Макс: 100 По умолчанию: 5
+        BouncerEffectiveness = 5,
+        -- Мин: 1 Макс: 240 По умолчанию: 60
+        BouncerCooldown = 60,
+        -- Мин: 0,25 Макс: 5,00 По умолчанию: 1,75
+        BouncerDistance = 1.75,
+        -- Мин: 100 Макс: 1000 По умолчанию: 200
+        GymGoerPercent = 200,
+        GymGoerNoExerciseFatigue = true,
+        IndefatigableOneUse = true,
+        -- Мин: 7 Макс: 30 По умолчанию: 7
+        IndefatigableRecharge = 7,
+        -- Мин: 0 Макс: 1000 По умолчанию: 100
+        GordaniteEffectiveness = 100,
+        -- Мин: 25 Макс: 1000 По умолчанию: 100
+        MartialScaling = 100,
+        BatteringRamMartialCombo = true,
+        -- Мин: 0 Макс: 100 По умолчанию: 33
+        EvasiveChance = 33,
+        EvasiveAnimation = true,
+        EvasiveBlocksPVP = false,
+        -- Мин: 100 Макс: 10000 По умолчанию: 2000
+        ButterfingersChance = 2000,
+        -- Мин: 0,10 Макс: 100,00 По умолчанию: 1,00
+        GraveRobberChance = 1.0,
+        -- Мин: 0 Макс: 10 По умолчанию: 1
+        GraveRobberGuaranteedLoot = 1,
+        -- Мин: 1 Макс: 100 По умолчанию: 20
+        ScroungerChance = 20,
+        -- Мин: 1 Макс: 100 По умолчанию: 10
+        ScroungerItemChance = 10,
+        -- Мин: 10 Макс: 1000 По умолчанию: 30
+        ScroungerLootModifier = 30,
+        -- Мин: 1 Макс: 100 По умолчанию: 10
+        IncomprehensiveChance = 10,
+        -- Мин: 1 Макс: 100 По умолчанию: 33
+        VagabondChance = 33,
+        -- Мин: 0 Макс: 10 По умолчанию: 1
+        VagabondGuaranteedExtraLoot = 1,
+        -- Мин: 1 Макс: 100 По умолчанию: 10
+        WeightPackMule = 10,
+        -- Мин: 1 Макс: 100 По умолчанию: 6
+        WeightPackMouse = 6,
+        -- Мин: 1 Макс: 100 По умолчанию: 8
+        WeightDefault = 8,
+        -- Мин: -100 Макс: 100 По умолчанию: 0
+        WeightGlobalMod = 0,
+        -- Мин: 0 Макс: 100 По умолчанию: 50
+        QuickWorkerScaler = 50,
+        -- Мин: 0 Макс: 100 По умолчанию: 50
+        SlowWorkerScaler = 50,
+        IngenuitiveLimit = false,
+        -- Мин: 5 Макс: 95 По умолчанию: 50
+        IngenuitiveLimitAmount = 50,
+        -- Мин: 0,00 Макс: 10,00 По умолчанию: 2,00
+        UnwaveringDamageBoost = 2.0,
+        MartialWeapons = false,
+        -- Мин: 100 Макс: 10000 По умолчанию: 1500
+        AntiqueChance = 1500,
+        AntiqueAnywhere = false,
+        ForgivingDeprived = false,
+        NonlethalAlcoholic = false,
+        -- Мин: 1 Макс: 30 По умолчанию: 14
+        SecondWindCooldown = 14,
+        -- Мин: 5 Макс: 50 По умолчанию: 25
+        HardyEndurance = 25,
+        -- Мин: 5 Макс: 60 По умолчанию: 10
+        SuperImmuneMinDays = 10,
+        -- Мин: 5 Макс: 60 По умолчанию: 30
+        SuperImmuneMaxDays = 30,
+        SuperImmuneFirstInfectionBonus = true,
+        SuperImmuneWeakness = false,
+        QuickSuperImmune = false,
+        -- Мин: 0 Макс: 100 По умолчанию: 25
+        ImmunoChance = 25,
+        ProwessGunsAmmoRestore = true,
+        HoarderCompatibility = true,
+        BurnedFireAversion = true,
+        -- Мин: 5 Макс: 50 По умолчанию: 20
+        BurnedDistance = 20,
+        -- Мин: 1 Макс: 10 По умолчанию: 1
+        BurnedPanic = 1,
+        -- Мин: 1 Макс: 10 По умолчанию: 1
+        BurnedStress = 1,
+        -- Мин: 0,00 Макс: 5,00 По умолчанию: 0,75
+        FastSprint = 0.75,
+        -- Мин: 0,00 Макс: 5,00 По умолчанию: 0,50
+        FastRunning = 0.5,
+        -- Мин: 0,00 Макс: 5,00 По умолчанию: 0,25
+        FastWalking = 0.25,
+        -- Мин: -5,00 Макс: 0,00 По умолчанию: -0,25
+        GimpSprint = -0.25,
+        -- Мин: -5,00 Макс: 0,00 По умолчанию: -0,50
+        GimpRunning = -0.5,
+        -- Мин: -5,00 Макс: 0,00 По умолчанию: -0,75
+        GimpWalking = -0.75,
+    },
+    MoreTraitsList = {
+        preparedammo = true,
+        preparedcamp = true,
+        preparedcar = true,
+        preparedcoordination = true,
+        preparedfood = true,
+        preparedmedical = true,
+        preparedpack = true,
+        preparedrepair = true,
+        preparedweapon = true,
+        generator = true,
+        leadfoot = true,
+        quiet = true,
+        swift = true,
+        blissful = true,
+        flexible = true,
+        noxpaxe = true,
+        noxpfirstaid = true,
+        noxpmaintenance = true,
+        noxpshooter = true,
+        noxpsneaky = true,
+        noxptechnician = true,
+        quickrest = true,
+        scrapper = true,
+        tavernbrawler = true,
+        vagabond = true,
+        fitted = true,
+        gourmand = true,
+        grunt = true,
+        idealweight = true,
+        lucky = true,
+        natural = true,
+        thickblood = true,
+        bladetwirl = true,
+        blunttwirl = true,
+        bouncer = true,
+        expertdriver = true,
+        gymgoer = true,
+        martial = true,
+        olympian = true,
+        scrounger = true,
+        tinkerer = true,
+        antique = true,
+        fast = true,
+        gordanite = true,
+        hardy = true,
+        restfulsleeper = true,
+        unwavering = true,
+        batteringram = true,
+        graverobber = true,
+        packmule = true,
+        problade = true,
+        problunt = true,
+        progun = true,
+        prospear = true,
+        actionhero = true,
+        evasive = true,
+        gunspecialist = true,
+        wildsman = true,
+        ingenuitive = true,
+        quickworker = true,
+        indefatigable = true,
+        secondwind = true,
+        superimmune = true,
+        specaid = true,
+        speccrafting = true,
+        specfood = true,
+        specguns = true,
+        specmove = true,
+        specweapons = true,
+        terminator = true,
+        badteeth = true,
+        anemic = true,
+        ascetic = true,
+        depressive = true,
+        injured = true,
+        paranoia = true,
+        selfdestructive = true,
+        unlucky = true,
+        albino = true,
+        poordriver = true,
+        antigun = true,
+        deprived = true,
+        gimp = true,
+        noodlelegs = true,
+        fearful = true,
+        packmouse = true,
+        broke = true,
+        mundane = true,
+        slowworker = true,
+        glassbody = true,
+        immunocompromised = true,
+        incomprehensive = true,
+        butterfingers = true,
+        drinker = true,
+        amputee = true,
+        burned = true,
+    },
+    VisibleVehicleCoupling = {
+        TripEnabled = true,
+        WalkChancePreset = 7,
+        -- Мин: 0,00 Макс: 100,00 По умолчанию: 10,00
+        WalkChanceCustom = 10.0,
+        RunChancePreset = 2,
+        -- Мин: 0,00 Макс: 100,00 По умолчанию: 30,00
+        RunChanceCustom = 30.0,
+        SprintChancePreset = 7,
+        -- Мин: 0,00 Макс: 100,00 По умолчанию: 50,00
+        SprintChanceCustom = 50.0,
+        ZombieChancePreset = 5,
+        -- Мин: 0,00 Макс: 100,00 По умолчанию: 75,00
+        ZombieChanceCustom = 75.0,
+        Status_fatigue = true,
+        Status_fatigueMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_fatigueMultiplierCustom = 1.2,
+        Status_panic = true,
+        Status_panicMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_panicMultiplierCustom = 1.2,
+        Status_drunk = true,
+        Status_drunkMultiplierPreset = 6,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,90
+        Status_drunkMultiplierCustom = 1.9,
+        Status_coldIllness = false,
+        Status_coldIllnessMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_coldIllnessMultiplierCustom = 1.2,
+        Status_heavyLoad = false,
+        Status_heavyLoadMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_heavyLoadMultiplierCustom = 1.2,
+        Status_hungry = false,
+        Status_hungryMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_hungryMultiplierCustom = 1.2,
+        Status_injured = false,
+        Status_injuredMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_injuredMultiplierCustom = 1.2,
+        Status_pain = false,
+        Status_painMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_painMultiplierCustom = 1.2,
+        Status_sick = false,
+        Status_sickMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_sickMultiplierCustom = 1.2,
+        Status_tired = false,
+        Status_tiredMultiplierPreset = 1,
+        -- Мин: 0,10 Макс: 5,00 По умолчанию: 1,20
+        Status_tiredMultiplierCustom = 1.2,
+        -- Мин: 0 Макс: 100 По умолчанию: 5
+        FitnessTripReduction = 5,
+        Trait_clumsy = true,
+        Trait_shortSighted = true,
+        Trait_agoraphobic = true,
+        Trait_hardOfHearing = true,
+        Trait_feeble = true,
+        Trait_unfit = true,
+        Trait_weak = true,
+        RopeDurabilityEnabled = true,
+        -- Мин: 1 Макс: 100 По умолчанию: 100
+        RopeDurabilityPercent = 100,
+        SheetRopeDurabilityEnabled = true,
+        -- Мин: 1 Макс: 100 По умолчанию: 100
+        SheetRopeDurabilityPercent = 100,
+        HeavyChainDurabilityEnabled = false,
+        -- Мин: 1 Макс: 100 По умолчанию: 100
+        HeavyChainDurabilityPercent = 100,
+        -- Мин: 0,01 Макс: 5,00 По умолчанию: 0,05
+        WearSpeedThreshold = 0.05,
+    },
+    DeadDaysStory = {
+        BuddyMortal = false,
+        -- Мин: 0 Макс: 5 По умолчанию: 3
+        DailyOps = 3,
+        -- Мин: 1 Макс: 8 По умолчанию: 4
+        MaxLeads = 4,
+        -- Мин: 0 Макс: 100 По умолчанию: 20
+        IncidentRate = 20,
+        LockALifeCreator = true,
+        ConvoysEnabled = true,
+    },
+    BagAndBind = {
+        RequireConsent = true,
+        -- Мин: 0 Макс: 100 По умолчанию: 12
+        StruggleChanceRope = 12,
+        -- Мин: 0 Макс: 100 По умолчанию: 2
+        StruggleChanceZip = 2,
+        -- Мин: 3 Макс: 120 По умолчанию: 12
+        StruggleSeconds = 12,
+        SearchTakesWorn = true,
+        HideMap = true,
+    },
+    PlayerBulletControl = {
+        DisableBulletHitReaction = false,
+        -- Мин: 0 Макс: 300 По умолчанию: 100
+        PistolDamagePercent = 100,
+        -- Мин: 0 Макс: 300 По умолчанию: 100
+        ShotgunDamagePercent = 100,
+        -- Мин: 0 Макс: 300 По умолчанию: 100
+        AssaultRifleDamagePercent = 100,
+        -- Мин: 0 Макс: 300 По умолчанию: 100
+        SniperRifleDamagePercent = 100,
+        BulletWoundBleeding = true,
+        DisableHeadHits = false,
+        DisableNeckHits = false,
+        DisableTorsoHits = false,
+        DisableArmHits = false,
+        DisableLegHits = false,
+        DebugLog = false,
     },
 }
